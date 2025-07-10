@@ -6,11 +6,12 @@
 
 - [Installation and setup](./install.md)
 - [Initializing a repository](./initialize.md)
-- [Inspecting the state of a repository](./log.md)
+- [Inspecting the state of a repository](./jj_log.md)
 - [Making changes](./making_changes.md)
 - [Describing changes](./describe.md)
-- [Creating a new commit](./new.md)
-- [Identifying and inspecting changes](./identify_and_inspect.md)
+- [Creating a new commit](./create_commit.md)
+- [Inspecting the working copy](./inspect.md)
+- [Identifying a commit](./identify.md)
 - [Working with remotes]() <!-- main: github. also explain local path remote. (no account needed) -->
 - [Branching]()
 - [Ignoring files]() <!-- use .DS_Store as example -->
