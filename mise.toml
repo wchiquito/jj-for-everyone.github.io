@@ -1,0 +1,5 @@
+[tools]
+mdbook = "latest"
+
+[tasks]
+serve = "mdbook serve"
