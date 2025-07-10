@@ -1,4 +1,4 @@
-# Inspecting the working copy
+# Inspecting a commit
 
 Let's create a second commit to make the following section more interesting.
 Copy the following commands:

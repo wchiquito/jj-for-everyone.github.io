@@ -10,16 +10,18 @@
 - [Making changes](./making_changes.md)
 - [Describing changes](./describe.md)
 - [Creating a new commit](./create_commit.md)
-- [Inspecting the working copy](./inspect.md)
-- [Identifying a commit](./identify.md)
-- [Working with remotes]() <!-- main: github. also explain local path remote. (no account needed) -->
-- [Branching]()
-- [Ignoring files]() <!-- use .DS_Store as example -->
+- [Working with remotes](./remotes.md)
+- [Updating bookmarks](./update_bookmark.md)
 
 # Level 1
+
+- [Branching]()
+- [Ignoring files]() <!-- use .DS_Store as example -->
+- [Inspecting a commit](./inspect.md)
+- [Identifying a commit](./identify.md)
+
+# Level N
 
 - [edit & squash]()
 - [op log]()
 - [merge, rebase, resolve]()
-
-# Level 2

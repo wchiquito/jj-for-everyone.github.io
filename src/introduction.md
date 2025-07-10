@@ -1,29 +1,73 @@
 # Introduction
 
-This is a tutorial for [Jujutsu](https://github.com/jj-vcs/jj) that requires **no previous experience with Git** or any version control system for that matter.
+This is a tutorial for the [Jujutsu](https://github.com/jj-vcs/jj) version control system.
+It requires **no previous experience with Git** or any other version control system.
 
 At the time of writing, most Jujutsu tutorials are targeted at experienced Git users, teaching them how to transfer their existing Git skills over to Jujutsu. This blog post is my attempt to fill the void of beginner learning material for Jujutsu.
+If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](https://steveklabnik.github.io/jujutsu-tutorial) instead of this book.
 
-While no prior experience with version control is required, I do assume you know the basics of the terminal.
+I do assume you know how to run commands in the terminal.
 I will often suggest you run commands to modify files, which only work on Unix-like operating systems like Linux and Mac.
 If you're using Windows, you could use WSL or do the file modifications manually.
 
 ## How to read this book
 
 The book is split into **levels**, which are indicated in the sidebar.
-The idea is that once you complete a level, you should probably put this book away and gain some practical experience, before coming back to learn more.
+The idea is that once you complete a level, you should probably put this book away and practice what you've learned.
+When you're comfortable with those skills, come back for the next level.
+
+There is one exception to this:
+If you're here because you need to **collaborate with other people**, you should push through to the end of **level 1** right away.
+
 Here's an overview of the levels:
 
 | level | description |
 | :-: | --- |
-| **0** | The bare minimum to get started. This is enough for the simplest use cases. Stopping here and not coming back for level 1 is very limiting long-term. |
-| **1** | A little more advanced, but still essential. Once you are comfortable with what you learn here, you will probably use it all the time. It's recommended to come back here once your mind has recovered from level 0. |
-| **2** | 🚧 under construction 🚧 |
+| **0** | The bare minimum to get started. This is only enough for the simplest use cases where you're working alone. For example, students who track and submit their homework with a Git repository can get by with only this. |
+| **1** | The bare minimum for any sort of collaboration. Students who are working on a group project and professional software developers need to know this. Going further is highly recommended, but you can take a break after this. |
+| **2** | Basic problem solving skills like conflict resolution. Without this knowledge, it's only a matter of time until you have to ask one of your peers to fix something for you, or you will actually lose chunks of work and have to redo it. Completing this level is probably comparable to the skill level of the average software developer. |
+| **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. |
+| **4** | Major productivity boosters and advanced workflows. If you find yourself making regular use of the skills learned in level 3, you'll want to complete this one too. |
+| **5** | Situational skills: tags, submodules, workspaces. |
+| **N** | ? |
 
 <!-- level X: actually learn some Git for stuff Jujutsu can't do yet -->
 
+Only a few levels are complete right now, you can see the available chapters in the sidebar.
+If you want to be notified when a new level becomes available, **subscribe to releases of the GitHub repo**.
+I will "cut a release" every time a new level is complete, causing you to get an email from GitHub.
+Go to [the repo](https://github.com/senekor/jj-for-everyone) and click on "watch > custom > releases".
+
+Throughout the book, you will build an example repository.
+The further you go, the bigger it will become.
+If you lose the state of this example repository, it could be annoying to recreate everything from scratch.
+For this reason, there is [a script](./setup.sh) which automates that task.
+You can also use the script to get back to a sensible state if you made a mistake.
+
+It expects the number of your most recently completed chapter as the first argument.
+For example, to set everything up to continue with chapter **4**, you can run:
+
+```sh
+curl https://jj-for-everyone.buenzli.dev/setup.sh | bash -s 3
+#                                                          ^^^
+#                         your most recently completed chapter
+```
+
+I encourage you to **always be careful when executing scripts from the internet!**
+The source of the script is not complicated and you can easily verify that it's not doing anything shady, like uninstalling the french language pack.
+
+## Help make this book better
+
 If you find a typo, you can suggest a fix directly by clicking on the "edit" icon in the top-right corner.
 If you have general suggestions for improvement, please [open an issue](https://github.com/senekor/jj-for-everyone/issues/new).
+I am also very interested in experience reports, for example:
+- Was there a section that wasn't explained clearly?
+  (If you didn't understand something, it's probably the book's fault, not yours!)
+- Did you complete a level but didn't feel like you had the skills that were promised in the level overview?
+- Is there something missing that's not being taught but should?
+- Do you feel like the content could be structured better?
+
+Thank you for helping me improve this tutorial!
 
 ## What is version control and why should you use it?
 
@@ -75,9 +119,9 @@ Learning Jujutsu instead of Git as your first VCS does have some downsides:
   (solution: convince your peers to use Jujutsu 😉)
 
 - Jujutsu is relatively new and doesn't cover 100% of the features of Git yet.
-  When you do run into the rare problem where Jujutsu doesn't have an answer, you can always fall back to use Git directly.
-  Still, having to switch to a different tool is slightly annoying.
-  I actually plan to include learning these Git features in this book at a higher level.
+  When you do run into the rare problem where Jujutsu doesn't have an answer, you can always fall back to use Git directly, which works quite seamlessly.
+  Still, having to use two tools instead of one is slightly annoying.
+  I plan to teach these Git features in this book at a higher level.
   The book should be a one-stop-shop for all Jujutsu users.
 
 - The command line interface of Jujutsu is not yet stable.

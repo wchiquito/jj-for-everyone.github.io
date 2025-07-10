@@ -11,12 +11,11 @@ The project is over within a couple months and there is little chance of the stu
 That student probably won't waste time thinking about good commit descriptions.
 If in doubt, err on the side of good descriptions!
 
-You can change the description of the working copy by running\
-`jj describe`.
+You can change the description of the working copy by running `jj describe`.
 This command will open a text editor - which one depends on your environment.
 (Your EDITOR environment variable will be respected.)
 If you would like to use a specific editor, you can configure Jujutsu to do so.
-Let's say you would like to use [Visual Studio Code](https://code.visualstudio.com/), here's how you do it:
+Let's assume you want to use [Visual Studio Code](https://code.visualstudio.com/), here's how you do it:
 
 ```sh
 jj config set --user ui.editor "code --wait"
@@ -49,5 +48,5 @@ Lastly, the body should **not exceed 72 characters** per line.
 If you don't obey these rules, the world won't descend into chaos, but you might make some people sad.
 
 If you're working on a version-controlled project with other people, these people might have additional expectations about the content and structure of commit descriptions.
-Make sure to "read the room" and adhere to the conventions of the project.
+Make sure to adhere to existing conventions, consistency is key.
 

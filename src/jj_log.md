@@ -43,6 +43,10 @@ It's also an identification number, but this one is called the **commit hash** o
 The change ID is more important than the commit hash, which is reflected in their position in the log output: the important one comes first.
 We'll discuss the purpose of these IDs in more detail later.
 
+Note that in the example output I provide in this book, the change IDs and timestamps are not always consistent.
+While writing the book, I go back and forth, changing stuff and recreating my example repository.
+This causes change IDs and timestamps to change.
+
 On the second line, the word "(empty)" indicates that none of the files in this commit were changed compared to the previous commit.
 Lastly, "(no description set)" is self-explanatory and foreshadows the possibility of giving descriptions to commits.
 
@@ -50,3 +54,17 @@ Even though the repository is empty at this point, we already get a decent under
 It consist of a set of **commits** which are related to each other, where one commit is said to be the **parent** or the **child** of another.
 These commits store snapshots of the state of your files, as well as relevant metadata like authorship, timestamp and description.
 
+## Getting help about using Jujutsu
+
+We've now used two of Jujutsu's commands: `jj git init` and `jj log`.
+There are **a lot** of commands and flags to modify their behavior.
+I will introduce everything you need, but sometimes you may need to refresh your mind.
+It can also just be valuable to explore on your own.
+
+You can **pass the `--help` flag to any command** to view contextual documentation.
+For example, `jj --help` will show you the full list of top-level commands that Jujutsu supports.
+`jj log --help` will show you specific information about how to use the `log` command, i.e. how to modify its behavior according to your needs.
+
+These help pages will feel overwhelming at first.
+But something always sticks, even if you don't notice at first.
+If you keep coming back, you will soon become very efficient at finding relevant information this way.

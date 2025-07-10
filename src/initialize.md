@@ -27,10 +27,12 @@ Why two directories?
 The `.git` directory contains all the important stuff, stored in a way that is compatible with Git.
 The `.jj` directory contains additional metadata which enable some of Jujutsu's advanced features.
 
-**WARNING!** You should never manipulate files in these directories directly!
+```admonish warning
+You should never manipulate files in these directories directly!
 Their content is a well-structured database.
 If you corrupt the database format, you might completely brick the repository.
 We'll talk about a second layer of backup later.
+```
 
 Files and directories staring with a dot are hidden by default, but you can verify they were created with `ls -a`:
 
