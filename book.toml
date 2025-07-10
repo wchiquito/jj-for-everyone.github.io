@@ -8,6 +8,12 @@ description = "A Jujutsu tutorial that requires no previous experience with Git 
 [output.html]
 default-theme = "macchiato"
 preferred-dark-theme = "macchiato"
-additional-css = ["theme/aha_styles.css", "theme/catppuccin.css"]
+additional-css = ["./theme/aha_styles.css", "./theme/catppuccin.css", "./theme/mdbook-admonish.css"]
 git-repository-url = "https://github.com/senekor/jj-for-everyone"
 edit-url-template = "https://github.com/senekor/jj-for-everyone/edit/main/{path}"
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`

@@ -1,4 +1,5 @@
 [tools]
+"cargo:mdbook-admonish" = "latest"
 mdbook = "latest"
 
 [tasks]
