@@ -9,3 +9,5 @@ description = "A Jujutsu tutorial that requires no previous experience with Git 
 default-theme = "macchiato"
 preferred-dark-theme = "macchiato"
 additional-css = ["theme/catppuccin.css", "aha_styles.css"]
+git-repository-url = "https://github.com/senekor/jj-for-everyone"
+edit-url-template = "https://github.com/senekor/jj-for-everyone/edit/main/{path}"

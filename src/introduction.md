@@ -22,6 +22,9 @@ Here's an overview of the levels:
 
 <!-- level X: actually learn some Git for stuff Jujutsu can't do yet -->
 
+If you find a typo, you can suggest a fix directly by clicking on the "edit" icon in the top-right corner.
+If you have general suggestions for improvement, please [open an issue](https://github.com/senekor/jj-for-everyone/issues/new).
+
 ## What is version control and why should you use it?
 
 I will assume you're using version control for software development, but it can be used for other things as well.
