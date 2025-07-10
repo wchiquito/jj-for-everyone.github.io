@@ -32,4 +32,5 @@
 pre.aha {
   background-color: #1a1a1a;
   padding: 1em;
+  overflow-x: scroll;
 }
