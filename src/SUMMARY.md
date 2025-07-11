@@ -17,8 +17,9 @@
 
 - [Branching](./branching.md)
 - [Inspecting a commit](./inspect.md)
-- [merge & rebase]()
-- [Ignoring files]() <!-- use .DS_Store as example -->
+- [merge]() <!-- Alice uses merge -->
+- [Ignoring files]() <!-- Bob makes second commit without fetching, use .DS_Store for global example and another local one -->
+- [rebase]() <!-- Bob uses rebase -->
 - [Identifying a commit](./identify.md)
 
 <!-- # Level 2 -->
