@@ -20,8 +20,15 @@
 - [Inspecting a commit](./inspect.md)
 - [Identifying a commit](./identify.md)
 
-# Level N
+<!-- # Level 2 -->
 
-- [edit & squash]()
-- [op log]()
-- [merge, rebase, resolve]()
+<!-- - [merge, rebase, resolve]() -->
+<!-- - [op log]() -->
+
+<!-- # Level 3 -->
+
+<!-- - [edit & squash]() -->
+
+<!-- # Level 4 -->
+
+<!-- - [absorb]() -->

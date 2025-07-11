@@ -28,8 +28,7 @@ Here's an overview of the levels:
 | **2** | Basic problem solving skills like conflict resolution. Without this knowledge, it's only a matter of time until you have to ask one of your peers to fix something for you, or you will actually lose chunks of work and have to redo it. Completing this level is probably comparable to the skill level of the average software developer. |
 | **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. |
 | **4** | Major productivity boosters and advanced workflows. If you find yourself making regular use of the skills learned in level 3, you'll want to complete this one too. |
-| **5** | Situational skills: tags, submodules, workspaces. |
-| **N** | ? |
+| **5** | Skills only needed in certain situations: tags, submodules, workspaces etc. |
 
 <!-- level X: actually learn some Git for stuff Jujutsu can't do yet -->
 
