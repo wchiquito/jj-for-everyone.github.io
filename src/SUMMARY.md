@@ -35,7 +35,11 @@
 
 <!-- # Level 4 -->
 
-<!-- - [DB internals, merkle tree]() -->
+<!-- - [database internals]() -->
+<!-- - [merkle trees]() -->
+<!-- - [configuration (aliases (tug))]() -->
+<!-- - [bookmark tracking]() -->
+<!-- - [revsets]() -->
 
 <!-- # Level 5 -->
 <!-- productivity -->
