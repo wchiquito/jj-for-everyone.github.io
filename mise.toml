@@ -4,3 +4,14 @@ mdbook = "latest"
 
 [tasks]
 serve = "mdbook serve"
+
+[tasks.build]
+run = "mdbook build"
+sources = ["book.toml", "src", "theme"]
+outputs = ["book"]
+
+[tasks.deploy]
+depends = "build"
+run = """
+tar cz book | ssh pi "cd /usr/share/caddy/www ; tar xz ; rm -rf jj-for-everyone ; mv book jj-for-everyone"
+"""
