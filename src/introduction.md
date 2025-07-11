@@ -62,6 +62,7 @@ The source of the script is not complicated and you can easily verify that it's 
 If you find a typo, you can suggest a fix directly by clicking on the "edit" icon in the top-right corner.
 If you have general suggestions for improvement, please [open an issue](https://github.com/senekor/jj-for-everyone/issues/new).
 I am also very interested in experience reports, for example:
+- Do you have any frustrations with Jujutsu which the tutorial did not help you overcome?
 - Was there a section that wasn't explained clearly?
   (If you didn't understand something, it's probably the book's fault, not yours!)
 - Did you complete a level but didn't feel like you had the skills that were promised in the level overview?
@@ -74,7 +75,7 @@ Thank you for helping me improve this tutorial!
 
 I will assume you're using version control for software development, but it can be used for other things as well.
 For example, authoring professionally formatted documents with tools like [typst](https://typst.app/).
-The source of this website is stored in version control too!
+The source of this book is stored in version control too!
 
 What these scenarios have in common is that a large body of work (mostly in the form of text) is slowly being expanded and improved over time.
 You don't want to lose any of it and you want to be able to go back to previous states of your work.
