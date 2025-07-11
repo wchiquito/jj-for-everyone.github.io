@@ -15,14 +15,18 @@
 
 # Level 1
 
-- [Branching]()
-- [Ignoring files]() <!-- use .DS_Store as example -->
+- [Branching](./branching.md)
 - [Inspecting a commit](./inspect.md)
+- [merge & rebase]()
+- [Ignoring files]() <!-- use .DS_Store as example -->
 - [Identifying a commit](./identify.md)
 
 <!-- # Level 2 -->
+<!-- problem solving -->
 
-<!-- - [merge, rebase, resolve]() -->
+<!-- - [history navigation]() -->
+<!-- - [conflict resolution]() -->
+<!-- - [restore]() -->
 <!-- - [op log]() -->
 
 <!-- # Level 3 -->
@@ -31,4 +35,10 @@
 
 <!-- # Level 4 -->
 
+<!-- - [DB internals, merkle tree]() -->
+
+<!-- # Level 5 -->
+<!-- productivity -->
+
 <!-- - [absorb]() -->
+<!-- - [megamerge]() -->

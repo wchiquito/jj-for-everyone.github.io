@@ -25,17 +25,19 @@ Here's an overview of the levels:
 | :-: | --- |
 | **0** | The bare minimum to get started. This is only enough for the simplest use cases where you're working alone. For example, students who track and submit their homework with a Git repository can get by with only this. |
 | **1** | The bare minimum for any sort of collaboration. Students who are working on a group project and professional software developers need to know this. Going further is highly recommended, but you can take a break after this. |
-| **2** | Basic problem solving skills like conflict resolution. Without this knowledge, it's only a matter of time until you have to ask one of your peers to fix something for you, or you will actually lose chunks of work and have to redo it. Completing this level is probably comparable to the skill level of the average software developer. |
-| **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. |
-| **4** | Major productivity boosters and advanced workflows. If you find yourself making regular use of the skills learned in level 3, you'll want to complete this one too. |
-| **5** | Skills only needed in certain situations: tags, submodules, workspaces etc. |
+| **2** | Basic history navigation and problem solving skills like conflict resolution. Without this knowledge, it's only a matter of time until you have to ask one of your peers to fix something for you. Completing this level is probably comparable to the skill level of the average software developer. |
+| **N** | 🚧 under construction 🚧 |
+<!-- | **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. | -->
+<!-- | **4** | Filling various gaps. In this level, I allow myself to cover topics are valuable long-term, but don't neatly fit into some category. database internals, merkle trees, configuration, bookmark tracking, revsets, (scripe jj docs for more) | -->
+<!-- | **5** | Major productivity boosters and advanced workflows. If you find yourself making regular use of the skills learned in level 3, you'll want to complete this one too. | -->
+<!-- | **6** | Skills only needed in certain situations: tags, submodules, workspaces etc. | -->
 
-<!-- level X: actually learn some Git for stuff Jujutsu can't do yet -->
-
-Only a few levels are complete right now, you can see the available chapters in the sidebar.
+Only a few levels are complete right now, but more are planned.
 If you want to be notified when a new level becomes available, **subscribe to releases of the GitHub repo**.
 I will "cut a release" every time a new level is complete, causing you to get an email from GitHub.
 Go to [the repo](https://github.com/senekor/jj-for-everyone) and click on "watch > custom > releases".
+
+### Restoring your progress
 
 Throughout the book, you will build an example repository.
 The further you go, the bigger it will become.

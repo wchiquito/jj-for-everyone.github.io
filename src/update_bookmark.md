@@ -75,7 +75,14 @@ If you omit the `--bookmark` flag on the `push` command, Jujutsu tries to be sma
 That usually works quite well.
 If you think it didn't work, just try again with the `--bookmark` flag.
 
-```admonish success title="You completed Level 0 🎉"
+You might be wondering:
+Since the remote requires a bookmark to receive commits and the `main` bookmark is **not** pointing to the first commit anymore... is that commit now lost or deleted?
+Luckily it is not.
+Commits store a reference to their parent commit, which is why Jujutsu knows the order in which to draw the commits in the output of `jj log`.
+When a bookmark is pushed to a remote, the commit it points to is sent **along with all its ancestors**.
+The remote knows that it shouldn't delete any ancestors of commits with bookmarks pointing to them.
+
+```admonish success title="You completed Level 0 ! 🎉"
 You made it!
 At this point, you have all the skills needed for simple solo projects with proper backup.
 Let's summarize the workflow again:

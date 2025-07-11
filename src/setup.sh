@@ -14,6 +14,7 @@ function success() {
 
 rm -rf ~/jj-tutorial
 rm -rf ~/jj-tutorial-remote
+rm -rf ~/jj-tutorial-bob
 
 if [ "$chapter" = 1 ] ; then success ; fi
 
@@ -60,7 +61,7 @@ cd ~/jj-tutorial
 if [ "$chapter" = 7 ] ; then success ; fi
 
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj describe -m "Add projcet description to readme" --quiet
+jj describe -m "Add project description to readme" --quiet
 jj new --quiet
 
 jj bookmark move main --to @- --quiet
@@ -68,6 +69,35 @@ jj bookmark move main --to @- --quiet
 jj git push --quiet
 
 if [ "$chapter" = 8 ] ; then success ; fi
+
+echo "print('Hello, world!')" > hello.py
+
+jj describe --author "Alice <alice@local>" -m "Add Python script for greeting the world
+
+Printing the text \"Hello, world!\" is a classic exercise in introductory
+programming courses. It's easy to complete in basically any language and
+makes students feel accomplished and curious for more at the same time." --quiet
+
+jj new --quiet
+
+jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob --quiet
+cd ~/jj-tutorial-bob
+
+echo "
+The file hello.py contains a script that greets the world.
+It can be executed with the command 'python hello.py'.
+Programming is fun!" >> README.md
+jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md" --quiet
+jj new --quiet
+
+jj bookmark move main --to @- --quiet
+jj git push --quiet
+
+cd ~/jj-tutorial
+jj bookmark move main --to @- --quiet
+jj git fetch --quiet
+
+if [ "$chapter" = 9 ] ; then success ; fi
 
 echo "Error: unrecognized chapter."
 exit 1
