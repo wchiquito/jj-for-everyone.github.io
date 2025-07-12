@@ -19,20 +19,18 @@ When you're comfortable with those skills, come back for the next level.
 There is one exception to this:
 If you're here because you need to **collaborate with other people**, you should push through to the end of **level 1** right away.
 
-Here's an overview of the levels:
+Here's an overview of the planned levels:
 
 | level | description |
 | :-: | --- |
 | **0** | The bare minimum to get started. This is only enough for the simplest use cases where you're working alone. For example, students who track and submit their homework with a Git repository can get by with only this. |
 | **1** | The bare minimum for any sort of collaboration. Students who are working on a group project and professional software developers need to know this. Going further is highly recommended, but you can take a break after this. |
 | **2** | Basic history navigation and problem solving skills like conflict resolution. Without this knowledge, it's only a matter of time until you have to ask one of your peers to fix something for you. Completing this level is probably comparable to the skill level of the average software developer. |
-| **N** | 🚧 under construction 🚧 |
-<!-- | **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. | -->
-<!-- | **4** | Filling various gaps. In this level, I allow myself to cover topics are valuable long-term, but don't neatly fit into some category. database internals, merkle trees, configuration, bookmark tracking, revsets, (scripe jj docs for more) | -->
-<!-- | **5** | Major productivity boosters and advanced workflows. If you find yourself making regular use of the skills learned in level 3, you'll want to complete this one too. | -->
-<!-- | **6** | Skills only needed in certain situations: tags, submodules, workspaces etc. | -->
+| **3** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. |
+| **4** | Rounding out the skill set with productivity boosters, advanced workflows, lesser-known CLI functions and a little VCS theory. At the end of this, you can pat yourself on the back and move on to new adventures. |
+| **5** | Additional topics that only come up in specific situations: tags, submodules, workspaces etc. Consider skimming the list of topics and come back once you have an actual need for it. |
 
-Only a few levels are complete right now, but more are planned.
+Only a few levels are complete right now, the rest are on the way.
 If you want to be notified when a new level becomes available, **subscribe to releases of the GitHub repo**.
 I will "cut a release" every time a new level is complete, causing you to get an email from GitHub.
 Go to [the repo](https://github.com/senekor/jj-for-everyone) and click on "watch > custom > releases".
@@ -40,11 +38,14 @@ Go to [the repo](https://github.com/senekor/jj-for-everyone) and click on "watch
 ### Restoring your progress
 
 Throughout the book, you will build an example repository.
-The further you go, the bigger it will become.
-If you lose the state of this example repository, it could be annoying to recreate everything from scratch.
-For this reason, there is [a script](./setup.sh) which automates that task.
-You can also use the script to get back to a sensible state if you made a mistake.
+Later chapters depend on the repo state of previous ones.
+Losing the state of the example repo can therefore block you from making smooth progress.
+This might happen for several valid reasons:
+- You change computers or reinstall the OS.
+- You intentionally delete it to clean up your home directory.
+- You use the example repo for off-road experimentation with Jujutsu.
 
+To solve this problem, there is a [script](./setup.sh) which automates the task of recreating the example repo.
 It expects the number of your most recently completed chapter as the first argument.
 For example, to set everything up to continue with chapter **4**, you can run:
 
@@ -54,8 +55,9 @@ curl https://jj-for-everyone.buenzli.dev/setup.sh | bash -s 3
 #                         your most recently completed chapter
 ```
 
-I encourage you to **always be careful when executing scripts from the internet!**
-The source of the script is not complicated and you can easily verify that it's not doing anything shady, like uninstalling the french language pack.
+```admonish info title="Always be careful when executing scripts from the internet!"
+The script is not complicated, you can easily verify that it's not doing anything malicious.
+```
 
 ## Help make this book better
 

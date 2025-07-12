@@ -31,19 +31,23 @@
 <!-- - [op log]() -->
 
 <!-- # Level 3 -->
+<!-- history rewirting -->
 
 <!-- - [edit & squash]() -->
 
 <!-- # Level 4 -->
-
-<!-- - [database internals]() -->
-<!-- - [merkle trees]() -->
-<!-- - [configuration (aliases (tug))]() -->
-<!-- - [bookmark tracking]() -->
-<!-- - [revsets]() -->
-
-<!-- # Level 5 -->
-<!-- productivity -->
+<!-- everything else a Jujutsu expert should know -->
 
 <!-- - [absorb]() -->
 <!-- - [megamerge]() -->
+<!-- - [configuration (aliases (tug))]() -->
+<!-- - [bookmark tracking]() -->
+<!-- - [revsets]() -->
+<!-- - [merkle trees]() -->
+
+<!-- # Level 5 -->
+<!-- situational topics -->
+
+<!-- - [tags]() -->
+<!-- - [submodules]() -->
+<!-- - [workspaces]() -->
