@@ -114,5 +114,24 @@ jj git push --quiet
 
 if [ "$chapter" = 11 ] ; then success ; fi
 
+tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+
+echo "
+## Submission
+
+Run the following command to create the submission tarball:
+
+~~~sh
+tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+~~~" >> README.md
+
+jj describe --author "Bob <bob@local>" -m "Add submission instructions"
+
+echo "*.tar.gz" > .gitignore
+
+jj file untrack submission_alice_bob.tar.gz
+
+if [ "$chapter" = 12 ] ; then success ; fi
+
 echo "Error: unrecognized chapter."
 exit 1
