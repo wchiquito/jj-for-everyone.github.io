@@ -20,7 +20,6 @@
 - [Creating a merge commit](./merge.md)
 - [Excluding files from version control](./gitignore.md)
 - [rebase]() <!-- Bob uses rebase -->
-- [Identifying a commit](./identify.md)
 
 <!-- # Level 2 -->
 <!-- problem solving -->
