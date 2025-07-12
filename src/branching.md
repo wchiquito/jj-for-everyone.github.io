@@ -82,11 +82,15 @@ That looks great.
 So now Bob is going to do his part the same way Alice did:
 
 ```sh
-echo "
+echo "# jj-tutorial
+
 The file hello.py contains a script that greets the world.
 It can be executed with the command 'python hello.py'.
-Programming is fun!" >> README.md
-jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md"
+Programming is fun!" > README.md
+jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md
+
+The file hello.py doesn't exist yet, because Alice is working on that.
+Once our changes are combined, this documentation will be accurate."
 jj new
 ```
 
@@ -122,7 +126,7 @@ Changes to push to origin:
 
 Alice is about to panic, so she opens social media and scrolls a little until she finds a cat video.
 Now that her nerves are calmed (the cat was snuggling with a bunch of baby ducks), she turns her attention back to the terminal and actually reads the error message.
-She realizes that it actually contains all the information about what went wrong and how to fix it.
+She is relieved to realize that it actually contains useful information about what went wrong and how to fix it.
 Following the hint, she first fetches from the remote:
 
 ```sh
@@ -151,10 +155,16 @@ Oh!
 That's something we haven't seen before.
 Our version history is split into two **branches**.
 This is not unusal and lies at the core of how Jujutsu enables people to work independently from one another.
+But we don't know how to deal with this situation yet.
 
-If Jujutsu allowed Alice to push the `main` bookmark where she wanted to, Bob's work would effectively get deleted.
+If Jujutsu allowed Alice to push the `main` bookmark without knowing about Bob's update, his work would accidentally get deleted.
 Remember: The remote only considers commits worth keeping around if they are **reachable** from a bookmark.
 But if the `main` bookmark points to Alice's commit, Bob's commit is **not reachable** anymore, because it is not an ancestor of Alice's commit.
+
+Notice that the `main` branch appears **twice** in the log, both times with question marks `??`.
+This means Jujutsu isn't sure where the bookmark should point.
+Alice moved it to her commit, while it was moved to Bob's commit on the remote.
+Once Alice has decided where it should actually point, she can tell Jujutsu by explicitly moving it there.
 
 That's all interesting and the tree-shaped graph of our commits looks very pretty, but the teacher wants a version that includes both the program and the documentation.
 What should Alice and Bob do now?

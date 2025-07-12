@@ -83,11 +83,15 @@ jj new --quiet
 jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob --quiet
 cd ~/jj-tutorial-bob
 
-echo "
+echo "# jj-tutorial
+
 The file hello.py contains a script that greets the world.
 It can be executed with the command 'python hello.py'.
-Programming is fun!" >> README.md
-jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md" --quiet
+Programming is fun!" > README.md
+jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md
+
+The file hello.py doesn't exist yet, because Alice is working on that.
+Once our changes are combined, this documentation will be accurate." --quiet
 jj new --quiet
 
 jj bookmark move main --to @- --quiet
@@ -98,6 +102,8 @@ jj bookmark move main --to @- --quiet
 jj git fetch --quiet
 
 if [ "$chapter" = 9 ] ; then success ; fi
+
+if [ "$chapter" = 10 ] ; then success ; fi
 
 echo "Error: unrecognized chapter."
 exit 1
