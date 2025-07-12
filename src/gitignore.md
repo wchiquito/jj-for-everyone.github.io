@@ -2,13 +2,18 @@
 
 <!-- Bob makes second commit without fetching, use .DS_Store for global example and another local one -->
 
-Let's check up on Bob.
+Let's check up on Bob:
+
+```sh
+cd ~/jj-tutorial-bob
+```
+
 Done with his part of the assignment, he's already thinking about the submission.
 The teacher expects to receive a tarball called `submission_alice_bob.tar.gz`.
 After a little [trial and error](https://xkcd.com/1168/), he comes up with the following command to create the tarball:
 
 ```sh
-tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+tar czf submission_alice_bob.tar.gz README.md
 ```
 
 Bob wants to spare Alice the hassle of having to figure that out, in case she ends up making the final submission.
@@ -21,7 +26,7 @@ echo "
 Run the following command to create the submission tarball:
 
 ~~~sh
-tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+tar czf submission_alice_bob.tar.gz [FILE...]
 ~~~" >> README.md
 
 jj describe --author "Bob <bob@local>" -m "Add submission instructions"
@@ -51,7 +56,7 @@ Committer: <span class="yellow ">Remo Senekowitsch</span> &lt;<span class="yello
      <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
-     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz ./*.md ./*.py</span><span class="green "></span>
+     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
      <span class="green ">  13</span>: <span class="underline "></span><span class="underline green ">~~~</span><span class="green "></span>
 <span class="yellow ">Added regular file submission_alice_bob.tar.gz:</span>
 <span class="cyan ">    (binary)</span>
@@ -114,7 +119,7 @@ Committer: <span class="yellow ">Remo Senekowitsch</span> &lt;<span class="yello
      <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
-     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz ./*.md ./*.py</span><span class="green "></span>
+     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
      <span class="green ">  13</span>: <span class="underline "></span><span class="underline green ">~~~</span><span class="green "></span>
 <span class="yellow ">Added regular file submission_alice_bob.tar.gz:</span>
 <span class="cyan ">    (binary)</span>
@@ -156,7 +161,7 @@ Committer: <span class="yellow ">Remo Senekowitsch</span> &lt;<span class="yello
      <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
-     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz ./*.md ./*.py</span><span class="green "></span>
+     <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
      <span class="green ">  13</span>: <span class="underline "></span><span class="underline green ">~~~</span><span class="green "></span>
 </pre>
 

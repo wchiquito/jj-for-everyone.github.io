@@ -114,7 +114,9 @@ jj git push --quiet
 
 if [ "$chapter" = 11 ] ; then success ; fi
 
-tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+cd ~/jj-tutorial-bob
+
+tar czf submission_alice_bob.tar.gz README.md
 
 echo "
 ## Submission
@@ -122,10 +124,10 @@ echo "
 Run the following command to create the submission tarball:
 
 ~~~sh
-tar czf submission_alice_bob.tar.gz ./*.md ./*.py
+tar czf submission_alice_bob.tar.gz [FILE...]
 ~~~" >> README.md
 
-jj describe --author "Bob <bob@local>" -m "Add submission instructions"
+jj describe --author "Bob <bob@local>" -m "Add submission instructions" --quiet
 
 echo "*.tar.gz" > .gitignore
 
