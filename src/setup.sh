@@ -105,5 +105,14 @@ if [ "$chapter" = 9 ] ; then success ; fi
 
 if [ "$chapter" = 10 ] ; then success ; fi
 
+jj new main@origin @- --quiet
+
+jj describe --author "Alice <alice@local>" -m "Combine code and documentation for hello-world" --quiet
+jj new --quiet
+jj bookmark move main --to @- --quiet
+jj git push --quiet
+
+if [ "$chapter" = 11 ] ; then success ; fi
+
 echo "Error: unrecognized chapter."
 exit 1
