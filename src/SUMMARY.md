@@ -20,7 +20,7 @@
 - [Creating a merge commit](./merge.md)
 - [Excluding files from version control](./gitignore.md)
 - [Rebasing](./rebase.md)
-- [Short-lived bookmarks](./short_lived_bookmarks.md) <!-- jj git push -c @- -->
+- [Adding more bookmarks](./more_bookmarks.md)
 
 <!-- # Level 2 -->
 <!-- problem solving -->

@@ -143,5 +143,21 @@ jj git push --quiet
 
 if [ "$chapter" = 13 ] ; then success ; fi
 
+cd ~/jj-tutorial
+
+echo "
+for (i = 0; i < 10; i = i + 1):
+    print('Hello, world!')" >> hello.py
+
+jj describe --author "Alice <alice@local>" -m "WIP add for loop (need to fix syntax)" --quiet
+jj new --quiet
+
+jj git push --change @- --quiet
+
+jj git fetch --quiet
+jj new main --quiet
+
+if [ "$chapter" = 14 ] ; then success ; fi
+
 echo "Error: unrecognized chapter."
 exit 1
