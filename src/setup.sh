@@ -135,5 +135,13 @@ jj file untrack submission_alice_bob.tar.gz
 
 if [ "$chapter" = 12 ] ; then success ; fi
 
+jj new --quiet
+jj bookmark move main --to @- --quiet
+jj git fetch --quiet
+jj rebase --destination main@origin --quiet
+jj git push --quiet
+
+if [ "$chapter" = 13 ] ; then success ; fi
+
 echo "Error: unrecognized chapter."
 exit 1

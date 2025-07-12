@@ -86,7 +86,7 @@ Commits store a reference to their parent commit, which is why Jujutsu knows the
 When a bookmark is pushed to a remote, the commit it points to is sent **along with all its ancestors**.
 The remote knows that it shouldn't delete any ancestors of commits with bookmarks pointing to them.
 
-```admonish success title="You completed Level 0 ! 🎉"
+```admonish success title="You've completed Level 0 ! 🎉"
 You made it!
 At this point, you have all the skills needed for simple solo projects with proper backup.
 Let's summarize the workflow again:
