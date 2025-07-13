@@ -34,7 +34,7 @@ This can be faster than opening a separate text editor.
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">xxxnkln</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:44:16</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">23</span><span class="highlighted dimgray ">2d89bf</span>
 │  Add projcet description to readme
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">o</span><span class="highlighted dimgray ">tkvqyur</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:44:04</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">28</span><span class="highlighted dimgray ">bd8a65</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">o</span><span class="highlighted dimgray ">tkvqyur</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:44:04</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">28</span><span class="highlighted dimgray ">bd8a65</span>
 │  Add readme with project title
 ~
 </pre>
@@ -59,7 +59,7 @@ Let's see what `jj log` has to say:
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">n</span><span class="highlighted dimgray ">rosmspz</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:55:24</span> <span class="purple ">main*</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">c</span><span class="highlighted dimgray ">59322ad</span>
 │  Add projcet description to readme
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">q</span><span class="highlighted dimgray ">tzssony</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:55:14</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">3</span><span class="highlighted dimgray ">812d571</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">q</span><span class="highlighted dimgray ">tzssony</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 17:55:14</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">3</span><span class="highlighted dimgray ">812d571</span>
 │  Add readme with project title
 ~
 </pre>

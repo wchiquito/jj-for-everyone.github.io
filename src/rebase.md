@@ -23,12 +23,12 @@ Here's what Bob's log looks like now:
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tqpqnvl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:48:59</span> <span class="purple ">main?? main@git</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">8</span><span class="highlighted dimgray ">d715af9</span>
 │  Add submission instructions
-│ <span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">oozptoo</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 12:46:54</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9b41560</span>
+│ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">oozptoo</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 12:46:54</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9b41560</span>
 ╭─┤  <span class="green ">(empty)</span> Combine code and documentation for hello-world
 │ │
 │ ~
 │
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">puxswrq</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:09:45</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">64c9ef0</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">puxswrq</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:09:45</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">64c9ef0</span>
 │  Document hello.py in README.md
 ~
 </pre>
@@ -61,7 +61,7 @@ What does the log say?
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tqpqnvl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:50:25</span> <span class="purple ">main*</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">b0feeff</span>
 │  Add submission instructions
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">oozptoo</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 12:46:54</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9b41560</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">oozptoo</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 12:46:54</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9b41560</span>
 │  <span class="green ">(empty)</span> Combine code and documentation for hello-world
 ~
 </pre>

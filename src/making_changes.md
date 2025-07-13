@@ -14,7 +14,7 @@ Let's see what `jj log` has to say now:
 <pre class="aha">
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold purple ">r</span><span class="bold dimgray ">nyzwzlp</span><span class="bold "> </span><span class="bold yellow ">remo@buenzli.dev</span><span class="bold "> </span><span class="bold cyan ">2025-07-10 11:42:28</span><span class="bold "> </span><span class="bold blue ">6</span><span class="bold dimgray ">1ab0d8a</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold yellow ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold cyan ">◆</span> <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
+<span class="bold "></span><span class="bold cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
 </pre>
 
 A couple of things have changed:

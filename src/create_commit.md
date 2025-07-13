@@ -10,7 +10,7 @@ You can create a new one with the command `jj new` and see what happened with `j
 │  <span class="bold "></span><span class="bold green ">(empty)</span><span class="bold "> </span><span class="bold green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">r</span><span class="dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-10 14:21:14</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">8</span><span class="dimgray ">8938700</span>
 │  Add readme with project title
-<span class="bold "></span><span class="bold cyan ">◆</span> <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
+<span class="bold "></span><span class="bold cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
 </pre>
 
 There are a few things to observe here:

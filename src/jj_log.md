@@ -9,7 +9,7 @@ If you run it, you should see something like this:
 <pre class="aha">
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold purple ">r</span><span class="bold dimgray ">nyzwzlp</span><span class="bold "> </span><span class="bold yellow ">remo@buenzli.dev</span><span class="bold "> </span><span class="bold cyan ">2025-07-10 08:52:16</span><span class="bold "> </span><span class="bold blue ">b</span><span class="bold dimgray ">4cfe153</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold green ">(empty)</span><span class="bold "> </span><span class="bold green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold cyan ">◆</span> <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
+<span class="bold "></span><span class="bold cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
 </pre>
 
 There's a lot going on already, so let's unpack it one-by-one.

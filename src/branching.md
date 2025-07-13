@@ -55,7 +55,7 @@ Here's how the repository should look at this point:
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">rpmvwkz</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 11:59:11</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">13dc4df</span>
 │  Add Python script for greeting the world
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
 │  Add project description to readme
 ~
 </pre>
@@ -83,7 +83,7 @@ jj log
 <pre class="aha">
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">t</span><span class="bold highlighted dimgray ">puxswrq</span><span class="bold "> </span><span class="bold yellow ">bob@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-13 12:04:19</span><span class="bold "> </span><span class="bold highlighted blue ">a</span><span class="bold highlighted dimgray ">0f4c66a</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
 │  Add project description to readme
 ~
 </pre>
@@ -155,9 +155,9 @@ Here's the resulting `jj log`:
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">rpmvwkz</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-13 11:59:11</span> <span class="purple ">main?? main@git</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">13dc4df</span>
 │  Add Python script for greeting the world
-│ <span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">tp</span><span class="highlighted dimgray ">uxswrq</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:09:45</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">64c9ef0</span>
+│ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">tp</span><span class="highlighted dimgray ">uxswrq</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-13 12:09:45</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">64c9ef0</span>
 ├─╯  Document hello.py in README.md
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">tlxsmss</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-13 11:55:15</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">72b9718</span>
 │  Add project description to readme
 ~
 </pre>

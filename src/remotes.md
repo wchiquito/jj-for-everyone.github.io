@@ -90,7 +90,7 @@ Let's check the result with `jj log`:
 │  <span class="bold "></span><span class="bold green ">(empty)</span><span class="bold "> </span><span class="bold green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">r</span><span class="dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-10 14:21:14</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">8</span><span class="dimgray ">8938700</span>
 │  Add readme with project title
-<span class="bold "></span><span class="bold cyan ">◆</span> <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
+<span class="bold "></span><span class="bold cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="dimgray ">0000000</span>
 </pre>
 
 Great!
@@ -149,7 +149,7 @@ jj log
 <pre class="aha">
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">m</span><span class="bold highlighted dimgray ">qksopxt</span><span class="bold "> </span><span class="bold yellow ">remo@buenzli.dev</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-11 16:57:47</span><span class="bold "> </span><span class="bold highlighted blue ">5</span><span class="bold highlighted dimgray ">31e57ca</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 16:57:47</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">112d25d</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 16:57:47</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">112d25d</span>
 │  Add readme with project title
 ~
 </pre>
@@ -164,9 +164,9 @@ We can tell Jujutsu to show us _all_ commits with `jj log --revisions 'all()'`:
 <pre class="aha">
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">m</span><span class="bold highlighted dimgray ">qksopxt</span><span class="bold "> </span><span class="bold yellow ">remo@buenzli.dev</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-11 16:57:47</span><span class="bold "> </span><span class="bold highlighted blue ">5</span><span class="bold highlighted dimgray ">31e57ca</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 16:57:47</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">112d25d</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">nyzwzlp</span> <span class="yellow ">remo@buenzli.dev</span> <span class="cyan ">2025-07-11 16:57:47</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">112d25d</span>
 │  Add readme with project title
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span> <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
+<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
 </pre>
 
 Great!
