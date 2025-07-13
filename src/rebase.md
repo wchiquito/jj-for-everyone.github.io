@@ -91,7 +91,7 @@ I've glossed over a small detail.
 I said the `rebase` command moves commit from a _one base_ to a new one.
 What is that _previous_ base?
 When using the `--destination` flag (or `-d` for short), Jujutsu will select the first shared ancestor of your working copy and the new base as the _old base to rebase from_.
-In simple terms, the `rebase` command moves only those commits that's aren't on the destination branch yet.
+In simple terms, the `rebase` command moves only those commits that aren't on the destination branch yet.
 In our example, there was only one commit to move.
 
 Creating a merge commit and rebasing are both valid ways of recombining changes that branched-off into different directions.
