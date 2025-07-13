@@ -137,7 +137,7 @@ Changes to push to origin:
 
 Alice is about to panic, so she opens social media and scrolls a little until she finds a cat video.
 Now that her nerves are calmed (the cat was snuggling with a bunch of baby ducks), she turns her attention back to the terminal and actually reads the error message.
-She is relieved to realize that it actually contains useful information about what went wrong and how to fix it.
+She is relieved to find that it actually contains useful information about what went wrong and how to fix it.
 Following the hint, she first fetches from the remote:
 
 ```sh
