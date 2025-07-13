@@ -70,9 +70,13 @@ jj git push --quiet
 
 if [ "$chapter" = 8 ] ; then success ; fi
 
+jj config set --repo user.name Alice 2> /dev/null
+jj config set --repo user.email alice@local 2> /dev/null
+jj describe --reset-author --no-edit --quiet
+
 echo "print('Hello, world!')" > hello.py
 
-jj describe --author "Alice <alice@local>" -m "Add Python script for greeting the world
+jj describe -m "Add Python script for greeting the world
 
 Printing the text \"Hello, world!\" is a classic exercise in introductory
 programming courses. It's easy to complete in basically any language and
@@ -82,13 +86,16 @@ jj new --quiet
 
 jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob --quiet
 cd ~/jj-tutorial-bob
+jj config set --repo user.name Bob 2> /dev/null
+jj config set --repo user.email bob@local 2> /dev/null
+jj describe --reset-author --no-edit --quiet
 
 echo "# jj-tutorial
 
 The file hello.py contains a script that greets the world.
 It can be executed with the command 'python hello.py'.
 Programming is fun!" > README.md
-jj describe --author "Bob <bob@local>" -m "Document hello.py in README.md
+jj describe -m "Document hello.py in README.md
 
 The file hello.py doesn't exist yet, because Alice is working on that.
 Once our changes are combined, this documentation will be accurate." --quiet
@@ -107,7 +114,7 @@ if [ "$chapter" = 10 ] ; then success ; fi
 
 jj new main@origin @- --quiet
 
-jj describe --author "Alice <alice@local>" -m "Combine code and documentation for hello-world" --quiet
+jj describe -m "Combine code and documentation for hello-world" --quiet
 jj new --quiet
 jj bookmark move main --to @- --quiet
 jj git push --quiet
@@ -127,7 +134,7 @@ Run the following command to create the submission tarball:
 tar czf submission_alice_bob.tar.gz [FILE...]
 ~~~" >> README.md
 
-jj describe --author "Bob <bob@local>" -m "Add submission instructions" --quiet
+jj describe -m "Add submission instructions" --quiet
 
 echo "*.tar.gz" > .gitignore
 
@@ -149,7 +156,7 @@ echo "
 for (i = 0; i < 10; i = i + 1):
     print('Hello, world!')" >> hello.py
 
-jj describe --author "Alice <alice@local>" -m "WIP add for loop (need to fix syntax)" --quiet
+jj describe -m "WIP add for loop (need to fix syntax)" --quiet
 jj new --quiet
 
 jj git push --change @- --quiet
