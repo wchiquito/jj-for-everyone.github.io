@@ -161,10 +161,33 @@ If Jujutsu allowed Alice to push the `main` bookmark without knowing about Bob's
 Remember: The remote only considers commits worth keeping around if they are **reachable** from a bookmark.
 But if the `main` bookmark points to Alice's commit, Bob's commit is **not reachable** anymore, because it is not an ancestor of Alice's commit.
 
-Notice that the `main` branch appears **twice** in the log, both times with question marks `??`.
-This means Jujutsu isn't sure where the bookmark should point.
+Notice that the `main` bookmark appears **twice** in the log, both times with question marks `??`.
+This means Jujutsu isn't sure where the bookmark should point to.
 Alice moved it to her commit, while it was moved to Bob's commit on the remote.
 Once Alice has decided where it should actually point, she can tell Jujutsu by explicitly moving it there.
+
+```admonish info title="Confusing terms: bookmark and branch"
+The terms "bookmark" and "branch" are often used in very similar situations, which can be confusing.
+Let's define the difference very precisely and prepare ourselves to recognize potential sources of confusion.
+
+A **bookmark** is just a named label that's attached to, or points to, a single commit.
+That's it.
+
+A **branch** is specified by its **tip**, which is also a single commit.
+However, a branch refers to the **set of commits** that includes the tip and **all of its ancestors**.
+
+These two concepts can be combined in a phrase like this:
+"I pushed my changes to the `main` branch."
+This may be confusing, because `main` is a bookmark, right?
+Why are we talking about the "main" branch?
+Well, the `main` bookmark points to a commit, and that commit is the tip of the branch we mean when we say "the `main` branch".
+
+There's one more thing to look out for when talking to people who primarily use Git.
+Git always uses the word **branch** for both things.
+The term "bookmark" carries no meaning in Git.
+So, when Git users say the word "branch", they may be talking about an actual branch, meaning a chain of commits comprised of a tip and all its ancestors.
+They may also be talking about a bookmark, meaning a named label pointing to a single commit, without attaching any significance to the ancestors of that pointed-to commit.
+```
 
 That's all interesting and the tree-shaped graph of our commits looks very pretty, but the teacher wants a version that includes both the program and the documentation.
 What should Alice and Bob do now?

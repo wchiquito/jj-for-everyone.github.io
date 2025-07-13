@@ -43,7 +43,7 @@ To avoid that, Alice decides to push her commit to a **new bookmark**.
 What should be the name of that bookmark?
 Having a `main` bookmark is a strong convention, but for additional ones, anything goes.
 A simple approach is to just use a super short description of your changes, like `add-for-loop`.
-Some people like to prefix their branch names with their own name or username, allowing everyone to easily identify who's working on what: `alice/add-for-loop`.
+Some people like to prefix their bookmark names with their own name or username, allowing everyone to easily identify who's working on what: `alice/add-for-loop`.
 Still others include a ticket number from the bug-tracker software in the bookmark name.
 These are all fine options, but sometimes you _just don't care_.
 Jujutsu has a handy way to push changes by generating a generic bookmark name for you:

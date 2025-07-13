@@ -46,7 +46,7 @@ There is a Jujutsu command just for this purpose:
 It's called `rebase`.
 As the name implies, it takes commits from one "base" (some ancestor) and moves them on top of a different "base".
 `jj rebase` on its own doesn't work though, it needs to know the **destination** of the operation.
-In this case, Bob wants to move his commit on top of the state of the remote `main` branch, i.e. Alice's commit.
+In this case, Bob wants to move his commit on top of the state of the remote `main` bookmark, i.e. Alice's commit.
 Therefore, he runs the command:
 
 ```sh
@@ -67,7 +67,7 @@ What does the log say?
 </pre>
 
 Splendid, that's exactly what Bob wanted.
-Jujutsu even figured out that the `main` branch should probably point to Bob's new commit.
+Jujutsu even figured out that the `main` bookmark should probably point to Bob's new commit.
 All that's left to do is to rerun `jj git push`.
 
 What Bob has just done is a paradigm shift:
