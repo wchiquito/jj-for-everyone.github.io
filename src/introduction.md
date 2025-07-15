@@ -50,9 +50,9 @@ It expects the number of your most recently completed chapter as the first argum
 For example, to set everything up to continue with chapter **4**, you can run:
 
 ```sh
-curl https://jj-for-everyone.buenzli.dev/setup.sh | bash -s 3
-#                                                          ^^^
-#                         your most recently completed chapter
+curl https://senekor.github.io/jj-for-everyone/setup.sh | bash -s 3
+#                                                                ^^^
+#                               your most recently completed chapter
 ```
 
 ```admonish info title="Always be careful when executing scripts from the internet!"
