@@ -26,13 +26,6 @@
 .blink                { text-decoration: blink; }
 .crossed-out          { text-decoration: line-through; }
 
-@font-face {
-  font-family: 'AdwaitaMonoWeb';
-  src: url('/fonts/AdwaitaMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 pre.aha {
   background-color: #1a1a1a;
   padding: 1em;
