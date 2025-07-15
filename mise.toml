@@ -6,12 +6,19 @@ mdbook = "latest"
 serve = "mdbook serve"
 
 [tasks.build]
-run = "mdbook build"
+run = "mdbook build --dest-dir docs"
 sources = ["book.toml", "src", "theme"]
-outputs = ["book"]
+outputs = ["docs"]
 
 [tasks.deploy]
 depends = "build"
 run = """
-tar cz book | ssh pi "cd /usr/share/caddy/www ; tar xz ; rm -rf jj-for-everyone ; mv book jj-for-everyone"
+mise build
+touch .nojekyll
+jj describe --message "deploy to github pages"
+jj bookmark track gh-pages@origin &> /dev/null
+jj abandon --retain-bookmarks gh-pages
+jj bookmark move gh-pages --to @ --allow-backwards
+jj git push --bookmark gh-pages -N
+jj new @-
 """

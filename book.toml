@@ -11,6 +11,7 @@ preferred-dark-theme = "macchiato"
 additional-css = ["./theme/aha_styles.css", "./theme/catppuccin.css", "./theme/mdbook-admonish.css"]
 git-repository-url = "https://github.com/senekor/jj-for-everyone"
 edit-url-template = "https://github.com/senekor/jj-for-everyone/edit/main/{path}"
+site-url = "/jj-for-everyone/"
 
 [preprocessor]
 
