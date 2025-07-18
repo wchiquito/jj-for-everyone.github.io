@@ -38,15 +38,17 @@ JJ:
 JJ: Lines starting with "JJ:" (like this one) will be removed.
 ```
 
-There is a little bit of structure here that you should respect.
+There is a little bit of structure here that you should follow.
 The first line of the description is called the **subject**.
-It should be **no longer than 50 characters**.
+Ideally, it should be **no longer than 50 characters**.
 Making it too long can cause some of Jujutsu's command outputs hard to read.
 After the subject, there is an optional **body** where you can describe your changes in much more detail.
 The body is always separated from the subject by **one empty line**.
 Lastly, the body should **not exceed 72 characters** per line.
-If you don't obey these rules, the world won't descend into chaos, but you might make some people sad.
 
-If you're working on a version-controlled project with other people, these people might have additional expectations about the content and structure of commit descriptions.
+These guidelines are not legally binding, but experienced VCS users generally abide by them.
+The most controversial one is the 50 character limit for the subject.
+Some people find it too limiting and go above it if necessary.
+
+If you're working on a project with other people, your collaborators might have additional expectations about the content and structure of commit descriptions.
 Make sure to adhere to existing conventions, consistency is key.
-
