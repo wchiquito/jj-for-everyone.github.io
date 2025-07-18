@@ -13,7 +13,6 @@ outputs = ["docs"]
 [tasks.deploy]
 depends = "build"
 run = [
-  "mise build",
   "touch .nojekyll",
   "jj describe --message 'deploy to github pages'",
   "jj bookmark track gh-pages@origin &> /dev/null",
