@@ -45,7 +45,7 @@ Let's go over it one-by-one:
   Author and committer are usually the same, the difference is not important.
   If you're curious anyway, there's a short explanation in the info box below.
 
-- Then there's the commit description.
+- Then there's the commit message.
   Notice that we see the full description here including its body.
   `jj log` only displays the subject line to save space.
 
