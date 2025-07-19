@@ -191,12 +191,12 @@ These two concepts can be combined in a phrase like this:
 "I pushed my changes to the `main` branch."
 This may be confusing, because `main` is a bookmark, right?
 Why are we talking about the "main" branch?
-Well, the `main` bookmark points to a commit, and that commit is the tip of the branch we mean when we say "the `main` branch".
+Well, the `main` bookmark points to a commit, and that commit is the tip of the branch we mean when we say "the main branch".
 
 There's one more thing to look out for when talking to people who primarily use Git.
 Git always uses the word **branch** for both things.
 The term "bookmark" carries no meaning in Git.
-So, when Git users say the word "branch", they may be talking about an actual branch, meaning a chain of commits comprised of a tip and all its ancestors.
+So, when Git users say the word "branch", they may be talking about an actual branch, meaning a set of commits with a tip and all its ancestors.
 They may also be talking about a bookmark, meaning a named label pointing to a single commit, without attaching any significance to the ancestors of that pointed-to commit.
 ```
 
