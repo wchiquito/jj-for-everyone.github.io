@@ -4,6 +4,7 @@ mdbook = "latest"
 
 [tasks]
 serve = "mdbook serve"
+open = "firefox --new-window localhost:3000"
 
 [tasks.build]
 run = "mdbook build --dest-dir docs"
