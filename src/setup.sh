@@ -52,7 +52,11 @@ git init --bare --quiet
 cd ~/jj-tutorial
 jj git remote add origin ~/jj-tutorial-remote
 jj bookmark create main --revision @- --quiet
-jj git push --bookmark main --quiet
+# TODO: fix use of --allow-new.
+# The tutorial doesn't actually tell readers to add the --allow-new flag, which
+# is because there is no way of explaining it well. It's simply bad UI. Work on
+# a better UI is ongoing.
+jj git push --bookmark main --quiet --allow-new
 cd ~
 rm -rf ~/jj-tutorial
 jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial --quiet
