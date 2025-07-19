@@ -69,7 +69,7 @@ The tarball `submission_alice_bob.tar.gz` has no business being tracked in versi
 By default, Jujutsu records every single file in the project into your working copy, which is usually what you want.
 But sometimes, you need to tell Jujutsu to ignore certain files and exclude them from being recorded.
 For this purpose, Jujutsu reads a special `.gitignore` file if it exists in the project.
-This file can contain a list of file names, directories and patterns which describe the set of files that should not be tracked in version control.
+This file can contain a list of file names, directories, and patterns which describe the set of files that should not be tracked in version control.
 
 To fix the problem, Bob adds a pattern for tarballs to the `.gitignore` file:
 
@@ -77,8 +77,8 @@ To fix the problem, Bob adds a pattern for tarballs to the `.gitignore` file:
 echo "*.tar.gz" > .gitignore
 ```
 
-The star `*` symbol is a special [glob](https://en.wikipedia.org/wiki/Glob_(programming)) character which can expand to match any file name, including `submission_alice_bob`.
-Adding only the precise file name `submission_alice_bob.tar.gz` to the `.gitignore` file would've worked as well, but the above pattern takes care of _any_ tarball.
+The star `*` symbol is a special [glob](https://en.wikipedia.org/wiki/Glob_(programming)) character which can expand to match any filename, including `submission_alice_bob`.
+Adding only the precise filename `submission_alice_bob.tar.gz` to the `.gitignore` file would've worked as well, but the above pattern takes care of _any_ tarball.
 
 ````admonish info title="Ignoring files globally" collapsible=true
 Sometimes you might have the same files lying around in several projects that are only intended for your personal use.

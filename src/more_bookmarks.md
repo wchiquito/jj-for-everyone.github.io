@@ -36,7 +36,7 @@ jj new
 ```
 
 Pushing work-in-progress (WIP) changes like this directly to the main bookmark would be a bad idea.
-Imagine if Bob later created a submission tarball and it acidentally included Alice's incomplete, incorrect code!
+Imagine if Bob later created a submission tarball and it accidentally included Alice's incomplete, incorrect code!
 That would be no good.
 To avoid that, Alice decides to push her commit to a **new bookmark**.
 

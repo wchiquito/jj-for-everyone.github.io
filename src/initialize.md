@@ -2,7 +2,7 @@
 
 A "repository" is a directory (folder) where Jujutsu keeps track of all files, including the ones in subdirectories.
 A repository usually corresponds to a project, so the version history of unrelated projects are not tied to each other.
-To create a repository, make a new folder on your file system.
+To create a repository, make a new folder on your filesystem.
 I will assume you use `~/jj-tutorial`, but you can use any location you like.
 `cd` into that directory and run `jj git init --colocate`.
 
@@ -21,7 +21,7 @@ I highly recommend always using the `--colocate` flag.
 It allows third-party tools with Git-integration to work seamlessly.
 
 What does "initializing a repository" mean?
-Essentially, jj creates two directories `.git` and `.jj`.
+Essentially, Jujutsu creates two directories `.git` and `.jj`.
 These contain all information about the version history.
 Why two directories?
 The `.git` directory contains all the important stuff, stored in a way that is compatible with Git.

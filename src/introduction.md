@@ -76,7 +76,7 @@ Thank you for helping me improve this tutorial!
 ## What is version control and why should you use it?
 
 I will assume you're using version control for software development, but it can be used for other things as well.
-For example, authoring professionally formatted documents with tools like [typst](https://typst.app/).
+For example, authoring professionally formatted documents with tools like [Typst](https://typst.app/).
 The source of this book is stored in version control too!
 
 What these scenarios have in common is that a large body of work (mostly in the form of text) is slowly being expanded and improved over time.

@@ -13,7 +13,7 @@ However, I will explain a simpler approach, which is to just have a second repos
 These two options work pretty much exactly the same way.
 When you set up a remote, you just tell Jujutsu where it is.
 In the case of an online service, that will be a web URL.
-In the case of a local repository, that will be a file system path.
+In the case of a local repository, that will be a filesystem path.
 There are no other differences, so we're not missing out on any important lessons by avoiding GitHub.
 At the end of this section, there are a few tips about using GitHub itself.
 
@@ -218,7 +218,7 @@ All you need to do is choose an owner (probably your username) and a repo name.
 Also check that the visibility matches what you want (can be changed later).
 
 If you already have a local repository with content that you want to push to this new remote, make sure to **not initialize the repo with any content**.
-That means, no template, no README, no .gitignore and no license.
+That means, no template, no README, no `.gitignore` and no license.
 
 Finally, click on "Create repository".
 

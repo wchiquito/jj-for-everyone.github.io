@@ -40,7 +40,7 @@ cat hello.py
 ```
 
 Jujutsu tries to be smart about how to combine changes, but not too smart.
-Combinging changes which modify the same part of the project leads to a **conflict**.
+Combining changes which modify the same part of the project leads to a **conflict**.
 Conflicts are not necessarily bad, they are just a signal that you need to combine some changes manually, making sure to preserve the spirit of what each change was trying to achieve individually.
 How to resolve conflicts is a topic reserved for the next level.
 

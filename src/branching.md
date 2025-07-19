@@ -62,7 +62,7 @@ Here's how the repository should look at this point:
 
 Next, we simulate Bob's work.
 He's working on a different computer than Alice, with a different copy of the repository.
-Since Bob is working at the same time as her, he doens't have the commit made by Alice yet.
+Since Bob is working at the same time as her, he doesn't have the commit made by Alice yet.
 We can simulate that by creating a third repository, which has the same remote as our primary one:
 
 ```
@@ -165,7 +165,7 @@ Here's the resulting `jj log`:
 Oh!
 That's something we haven't seen before.
 Our version history is split into two **branches**.
-This is not unusal and lies at the core of how Jujutsu enables people to work independently from one another.
+This is not unusual and lies at the core of how Jujutsu enables people to work independently from one another.
 But we don't know how to deal with this situation yet.
 
 If Jujutsu allowed Alice to push the `main` bookmark without knowing about Bob's update, his work would accidentally get deleted.

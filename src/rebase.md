@@ -101,7 +101,7 @@ Here's a hopefully balanced overview of the main trade-off:
 
 | | advantage | disadvantage |
 | --- | --- | --- |
-| **merge** | preserves the history exactly as it happened | can result in a tangled, hard-to-read history |
-| **rebase** | results in an easy-to-read, linear history | lies about the order in which things happened |
+| **merge** | Preserves the history exactly as it happened. | Can result in a tangled, hard-to-read history. |
+| **rebase** | Results in an easy-to-read, linear history. | Lies about the order in which things happened. |
 
 Once you have determined the correct opinion about which one is better, please let everybody on the internet know about your important discovery!
