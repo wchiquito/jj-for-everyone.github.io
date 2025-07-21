@@ -8,7 +8,7 @@ If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](
 
 I do assume you know how to run commands in the terminal.
 I will often suggest you run commands to modify files, which only work on Unix-like operating systems like Linux and Mac.
-If you're using Windows, you could use WSL or do the file modifications manually.
+If you're on Windows, consider using WSL (or simply switching to Linux).
 
 ## How to read this book
 
@@ -41,23 +41,31 @@ Throughout the book, you will build an example repository.
 Later chapters depend on the repo state of previous ones.
 Losing the state of the example repo can therefore block you from making smooth progress.
 This might happen for several valid reasons:
-- You change computers or reinstall the OS.
+- You switch computers or reinstall the OS.
 - You intentionally delete it to clean up your home directory.
 - You use the example repo for off-road experimentation with Jujutsu.
 
-To solve this problem, there is a [script](./setup.sh) which automates the task of recreating the example repo.
-It expects the number of your most recently completed chapter as the first argument.
+To solve this problem, there is a script which automates the task of recreating the example repo.
+It expects the number of the next chapter as the first argument.
 For example, to set everything up to continue with chapter **4**, you can run:
 
 ```sh
-curl https://senekor.github.io/jj-for-everyone/setup.sh | bash -s 3
-#                                                                ^^^
-#                               your most recently completed chapter
+curl https://senekor.github.io/jj-for-everyone/restore_script.sh | bash -s 4
+#                                                                         ^^^
+#                                                            the next chapter
 ```
 
 ```admonish info title="Always be careful when executing scripts from the internet!"
-The script is not complicated, you can easily verify that it's not doing anything malicious.
+The script is not complicated, you can verify that it's not doing anything malicious.
+For convenience, it's included in the expandable text box below.
+You can also download the script [here](./restore_script.sh) and then execute it locally once you have inspected it.
 ```
+
+`````admonish note title="Source of restore script" collapsible=true
+````sh
+{{ #include restore_script.sh }}
+````
+`````
 
 ## Help make this book better
 
@@ -86,7 +94,7 @@ Often, several people need to work on the project at the same time.
 A general-purpose backup solution can keep a few copies of your files around.
 A graphical document editor can allow multiple people to edit the text simultaneously.
 But sometimes, you need a sharper knife.
-Version control is the sharpest knife you can find.
+Jujutsu is the sharpest knife available.
 
 ## Why Jujutsu instead of Git?
 
@@ -100,6 +108,7 @@ Here's my elevator pitch:
 - **Jujutsu is compatible with Git.**
   You're not actually losing _anything_ by using Jujutsu.
   You can work with it on any existing project that uses Git for version control without issues.
+  Tools that integrate with Git mostly work just as well with Jujutsu.
 
 - **Jujutsu is easier to learn than Git.**
   (That is, assuming I did a decent job writing this tutorial.)
