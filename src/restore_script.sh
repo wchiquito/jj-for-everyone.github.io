@@ -58,7 +58,7 @@ jj bookmark create main --revision @- --quiet
 # The tutorial doesn't actually tell readers to add the --allow-new flag, which
 # is because there is no way of explaining it well. It's simply bad UI. Work on
 # a better UI is ongoing.
-jj git push --bookmark main --quiet --allow-new
+jj git push --bookmark main --allow-new --quiet
 cd ~
 rm -rf ~/jj-tutorial
 jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial --quiet
