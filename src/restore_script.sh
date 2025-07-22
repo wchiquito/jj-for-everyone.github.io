@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euxo pipefail
 
 if [ "${1:-x}" = "x" ] ; then
     echo "Please provide the number of the next chapter as the first argument."
@@ -8,7 +8,14 @@ fi
 chapter="$1"
 
 function success() {
-    echo "Script completed successfully."
+    set +x
+    echo "
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                                                                      │
+    │                Restore script completed successfully!                │
+    │                                                                      │
+    └──────────────────────────────────────────────────────────────────────┘
+"
     exit 0
 }
 
@@ -28,11 +35,11 @@ if [ "$chapter" = 2 ] ; then success ; fi
 
 mkdir ~/jj-tutorial
 cd ~/jj-tutorial
-jj git init --colocate --quiet
+jj git init --colocate
 
-jj config set --repo user.name "Alice" &> /dev/null
-jj config set --repo user.email "alice@local" &> /dev/null
-jj describe --reset-author --no-edit --quiet
+jj config set --repo user.name "Alice"
+jj config set --repo user.email "alice@local"
+jj describe --reset-author --no-edit
 
 if [ "$chapter" = 3 ] ; then success ; fi
 
@@ -43,7 +50,7 @@ jj log -r 'none()' # trigger snapshot
 
 if [ "$chapter" = 5 ] ; then success ; fi
 
-jj describe --quiet --message "Add readme with project title
+jj describe --message "Add readme with project title
 
 It's common practice for software projects to include a file called
 README.md in the root directory of their source code repository. As the
@@ -54,38 +61,38 @@ prefixed \`#\` symbol.
 
 if [ "$chapter" = 6 ] ; then success ; fi
 
-jj new --quiet
+jj new
 
 if [ "$chapter" = 7 ] ; then success ; fi
 
 mkdir ~/jj-tutorial-remote
 cd ~/jj-tutorial-remote
-git init --bare --quiet
+git init --bare
 cd ~/jj-tutorial
 jj git remote add origin ~/jj-tutorial-remote
-jj bookmark create main --revision @- --quiet
+jj bookmark create main --revision @-
 # TODO: fix use of --allow-new.
 # The tutorial doesn't actually tell readers to add the --allow-new flag, which
 # is because there is no way of explaining it well. It's simply bad UI. Work on
 # a better UI is ongoing.
-jj git push --bookmark main --allow-new --quiet
+jj git push --bookmark main --allow-new
 cd ~
 rm -rf ~/jj-tutorial
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial --quiet
+jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial
 cd ~/jj-tutorial
-jj config set --repo user.name "Alice" &> /dev/null
-jj config set --repo user.email "alice@local" &> /dev/null
-jj describe --reset-author --no-edit --quiet
+jj config set --repo user.name "Alice"
+jj config set --repo user.email "alice@local"
+jj describe --reset-author --no-edit
 
 if [ "$chapter" = 8 ] ; then success ; fi
 
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj describe -m "Add project description to readme" --quiet
-jj new --quiet
+jj describe -m "Add project description to readme"
+jj new
 
-jj bookmark move main --to @- --quiet
+jj bookmark move main --to @-
 
-jj git push --quiet
+jj git push
 
 if [ "$chapter" = 9 ] ; then success ; fi
 
@@ -95,15 +102,15 @@ jj describe -m "Add Python script for greeting the world
 
 Printing the text \"Hello, world!\" is a classic exercise in introductory
 programming courses. It's easy to complete in basically any language and
-makes students feel accomplished and curious for more at the same time." --quiet
+makes students feel accomplished and curious for more at the same time."
 
-jj new --quiet
+jj new
 
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob --quiet
+jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob
 cd ~/jj-tutorial-bob
-jj config set --repo user.name Bob 2> /dev/null
-jj config set --repo user.email bob@local 2> /dev/null
-jj describe --reset-author --no-edit --quiet
+jj config set --repo user.name Bob
+jj config set --repo user.email bob@local
+jj describe --reset-author --no-edit
 
 echo "# jj-tutorial
 
@@ -113,26 +120,26 @@ Programming is fun!" > README.md
 jj describe -m "Document hello.py in README.md
 
 The file hello.py doesn't exist yet, because Alice is working on that.
-Once our changes are combined, this documentation will be accurate." --quiet
-jj new --quiet
+Once our changes are combined, this documentation will be accurate."
+jj new
 
-jj bookmark move main --to @- --quiet
-jj git push --quiet
+jj bookmark move main --to @-
+jj git push
 
 cd ~/jj-tutorial
-jj bookmark move main --to @- --quiet
-jj git fetch --quiet
+jj bookmark move main --to @-
+jj git fetch
 
 if [ "$chapter" = 10 ] ; then success ; fi
 
 if [ "$chapter" = 11 ] ; then success ; fi
 
-jj new main@origin @- --quiet
+jj new main@origin @-
 
-jj describe -m "Combine code and documentation for hello-world" --quiet
-jj new --quiet
-jj bookmark move main --to @- --quiet
-jj git push --quiet
+jj describe -m "Combine code and documentation for hello-world"
+jj new
+jj bookmark move main --to @-
+jj git push
 
 if [ "$chapter" = 12 ] ; then success ; fi
 
@@ -149,7 +156,7 @@ Run the following command to create the submission tarball:
 tar czf submission_alice_bob.tar.gz [FILE...]
 ~~~" >> README.md
 
-jj describe -m "Add submission instructions" --quiet
+jj describe -m "Add submission instructions"
 
 echo "*.tar.gz" > .gitignore
 
@@ -157,11 +164,11 @@ jj file untrack submission_alice_bob.tar.gz
 
 if [ "$chapter" = 13 ] ; then success ; fi
 
-jj new --quiet
-jj bookmark move main --to @- --quiet
-jj git fetch --quiet
-jj rebase --destination main@origin --quiet
-jj git push --quiet
+jj new
+jj bookmark move main --to @-
+jj git fetch
+jj rebase --destination main@origin
+jj git push
 
 if [ "$chapter" = 14 ] ; then success ; fi
 
@@ -171,13 +178,13 @@ echo "
 for (i = 0; i < 10; i = i + 1):
     print('Hello, world!')" >> hello.py
 
-jj describe -m "WIP add for loop (need to fix syntax)" --quiet
-jj new --quiet
+jj describe -m "WIP add for loop (need to fix syntax)"
+jj new
 
-jj git push --change @- --quiet
+jj git push --change @-
 
-jj git fetch --quiet
-jj new main --quiet
+jj git fetch
+jj new main
 
 if [ "$chapter" = 15 ] ; then success ; fi
 
