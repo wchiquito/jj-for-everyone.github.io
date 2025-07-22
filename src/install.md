@@ -9,7 +9,7 @@ mkdir -p ~/.local/bin
 curl --silent --location \
     https://raw.githubusercontent.com/houseabsolute/ubi/master/bootstrap/bootstrap-ubi.sh |
     TARGET=~/.local/bin sh
-ubi -p jj-vcs/jj
+~/.local/bin/ubi -p jj-vcs/jj
 ```
 
 Run `jj --version` to verify the installation.
