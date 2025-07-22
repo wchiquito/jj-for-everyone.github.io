@@ -8,7 +8,7 @@ If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](
 
 I do assume you know how to run commands in the terminal.
 I will often suggest you run commands to modify files, which only work on Unix-like operating systems like Linux and Mac.
-If you're on Windows, consider using WSL (or simply switching to Linux).
+If you're on Windows and can't switch to Linux, consider using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## How to read this book
 
