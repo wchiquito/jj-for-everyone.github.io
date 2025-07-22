@@ -18,11 +18,21 @@ rm -rf ~/jj-tutorial-bob
 
 if [ "$chapter" = 1 ] ; then success ; fi
 
+if ! command -v jj > /dev/null ; then
+    echo "ERROR: Jujutsu doesn't seem to be installed."
+    echo "       Please install it and rerun the script."
+    exit 1
+fi
+
 if [ "$chapter" = 2 ] ; then success ; fi
 
 mkdir ~/jj-tutorial
 cd ~/jj-tutorial
 jj git init --colocate --quiet
+
+jj config set --repo user.name "Alice" &> /dev/null
+jj config set --repo user.email "alice@local" &> /dev/null
+jj describe --reset-author --no-edit --quiet
 
 if [ "$chapter" = 3 ] ; then success ; fi
 
@@ -63,6 +73,9 @@ cd ~
 rm -rf ~/jj-tutorial
 jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial --quiet
 cd ~/jj-tutorial
+jj config set --repo user.name "Alice" &> /dev/null
+jj config set --repo user.email "alice@local" &> /dev/null
+jj describe --reset-author --no-edit --quiet
 
 if [ "$chapter" = 8 ] ; then success ; fi
 
@@ -75,10 +88,6 @@ jj bookmark move main --to @- --quiet
 jj git push --quiet
 
 if [ "$chapter" = 9 ] ; then success ; fi
-
-jj config set --repo user.name Alice 2> /dev/null
-jj config set --repo user.email alice@local 2> /dev/null
-jj describe --reset-author --no-edit --quiet
 
 echo "print('Hello, world!')" > hello.py
 

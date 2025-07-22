@@ -54,8 +54,8 @@ Here are some additional conventions that are good practice for any type of proj
 While 72 characters is the hard limit, the subject line usually benefits from being as concise as possible.
 It is shown in many places where space is scarce and people want to get a general idea of your changes without reading too much.
 If you find yourself exceeding 50 characters regularly, you may be combining multiple unrelated changes into a single commit.
-If you put unrelated changes separated commits, finding concise subject lines becomes easier.
-However, there are definitely situations where 50 characters is just too restrictive, so don't worry about going above when necessary.
+If you put unrelated changes into separate commits, finding concise subject lines becomes easier.
+However, there are often situations where 50 characters is just too restrictive, so don't worry about going above when necessary.
 
 **Use imperative mood in the subject line**\
 A common instinct when writing commit messages it to describe what you did in the **past tense**, e.g. "Fixed bugs and improved code".

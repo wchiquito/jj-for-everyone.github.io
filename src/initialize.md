@@ -40,3 +40,19 @@ Files and directories staring with a dot are hidden by default, but you can veri
 $ ls -a
 .git  .jj
 ```
+
+In the last chapter, you configured Jujutsu with your name and email address.
+This configuration applies to all of your repositories by default.
+However, for our example repository, we'll actually pretend to be "Alice", who is later joined by "Bob" to simulate collaboration.
+The below commands perform the author configuration only for this specific repo.
+There's no need to memorize these commands, they are normally not needed.
+
+```sh
+# applies configuration to a single repository only
+#             vvvvvv
+jj config set --repo user.name "Alice"
+jj config set --repo user.email "alice@local"
+
+# reset already recorded global authorship information:
+jj describe --reset-author --no-edit
+```
