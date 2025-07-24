@@ -183,10 +183,12 @@ jj new
 
 jj git push --change @-
 
+if [ "$chapter" = 15 ] ; then success ; fi
+
 jj git fetch
 jj new main
 
-if [ "$chapter" = 15 ] ; then success ; fi
+if [ "$chapter" = 16 ] ; then success ; fi
 
 echo "Error: unrecognized chapter."
 exit 1

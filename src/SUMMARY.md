@@ -21,11 +21,11 @@
 - [Excluding files from version control](./gitignore.md)
 - [Rebasing](./rebase.md)
 - [Adding more bookmarks](./more_bookmarks.md)
+- [Navigating the history](./history_navigation.md)
 
 <!-- # Level 2 -->
 <!-- problem solving -->
 
-<!-- - [history navigation]() -->
 <!-- - [conflict resolution]() -->
 <!-- - [restore]() -->
 <!-- - [op log]() -->
