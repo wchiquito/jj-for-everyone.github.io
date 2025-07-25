@@ -26,14 +26,20 @@
 <!-- # Level 2 -->
 <!-- problem solving -->
 
-<!-- - [conflict resolution]() -->
-<!-- - [restore]() -->
-<!-- - [op log]() -->
+<!-- - [Undoing mistakes]() -->
+<!-- - [Tracking remote bookmarks]() <!-- delete and clone repo to simulate new PC --> -->
+<!-- - [Resolving merge conflicts]() <!-- only side note: `jj resolve` with different tools --> -->
+<!-- - [Deleting commits and bookmarks]() -->
+<!-- - [Restoring file contents]() -->
 
 <!-- # Level 3 -->
 <!-- history rewirting -->
 
 <!-- - [edit & squash]() -->
+<!-- - [describe]() -->
+<!-- - [advanced rebase]() -->
+<!-- - [restore from anywhere]() -->
+<!-- - [Cascading conflicts while rebasing]() -->
 
 <!-- # Level 4 -->
 <!-- everything else a Jujutsu expert should know -->
@@ -41,9 +47,9 @@
 <!-- - [absorb]() -->
 <!-- - [megamerge]() -->
 <!-- - [configuration (aliases (tug))]() -->
-<!-- - [bookmark tracking]() -->
 <!-- - [revsets]() -->
-<!-- - [merkle trees]() -->
+<!-- - [templates (extract infos for scripts)]() -->
+<!-- - [VCS theory: what even is a commit]() -->
 
 <!-- # Level 5 -->
 <!-- situational topics -->
@@ -51,3 +57,8 @@
 <!-- - [tags]() -->
 <!-- - [submodules]() -->
 <!-- - [workspaces]() -->
+<!-- - [sparse]() -->
+<!-- - [jj fix]() -->
+<!-- - [evolog]() -->
+<!-- - [jj revert]() -->
+<!-- - [git bisect]() -->
