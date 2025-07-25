@@ -19,6 +19,9 @@ function success() {
     exit 0
 }
 
+# Ensure existing user configuration does not affect script behavior.
+export JJ_CONFIG=/dev/null
+
 rm -rf ~/jj-tutorial
 rm -rf ~/jj-tutorial-remote
 rm -rf ~/jj-tutorial-bob
