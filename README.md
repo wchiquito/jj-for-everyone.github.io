@@ -2,7 +2,7 @@
 
 A Jujutsu tutorial that requires no previous experience with Git or other version control systems.
 
-It's rendered with [mdBook](https://github.com/rust-lang/mdBook) and hosted at [jj-for-everyone.github.io](https://github.com/jj-for-everyone/jj-for-everyone.github.io).
+It's rendered with [mdBook](https://github.com/rust-lang/mdBook) and hosted at [jj-for-everyone.github.io](https://jj-for-everyone.github.io).
 
 ## Contributing
 
