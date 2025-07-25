@@ -22,3 +22,18 @@ run = [
   "jj git push --bookmark gh-pages -N",
   "jj new @-",
 ]
+
+[tasks."zellij:bg-tasks"]
+run = """zellij action new-tab --layout <(echo '
+layout {
+	tab name="bg tasks" {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+		}
+		pane name="serve book" {
+			command "mise"
+			args "run" "serve"
+		}
+	}
+}
+')"""
