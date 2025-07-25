@@ -33,7 +33,7 @@ Here's an overview of the planned levels:
 Only a few levels are complete right now, the rest are on the way.
 If you want to be notified when a new level becomes available, **subscribe to releases of the GitHub repo**.
 I will "cut a release" every time a new level is complete, causing you to get an email from GitHub.
-Go to [the repo](https://github.com/senekor/jj-for-everyone) and click on "watch > custom > releases".
+Go to [the repo](https://github.com/jj-for-everyone/jj-for-everyone.github.io) and click on "watch > custom > releases".
 
 ### Restoring your progress
 
@@ -50,9 +50,9 @@ It expects the number of the next chapter as the first argument.
 For example, to set everything up to continue with chapter **4**, you can run:
 
 ```sh
-curl https://senekor.github.io/jj-for-everyone/restore_script.sh | bash -s 4
-#                                                                         ^^^
-#                                                            the next chapter
+curl https://jj-for-everyone.github.io/restore_script.sh | bash -s 4
+#                                                                 ^^^
+#                                                    the next chapter
 ```
 
 ```admonish info title="Always be careful when executing scripts from the internet!"
@@ -70,7 +70,7 @@ You can also download the script [here](./restore_script.sh) and then execute it
 ## Help make this book better
 
 If you find a typo, you can suggest a fix directly by clicking on the "edit" icon in the top-right corner.
-If you have general suggestions for improvement, please [open an issue](https://github.com/senekor/jj-for-everyone/issues/new).
+If you have general suggestions for improvement, please [open an issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new).
 I am also very interested in experience reports, for example:
 - Do you have any frustrations with Jujutsu which the tutorial did not help you overcome?
 - Was there a section that wasn't explained clearly?
