@@ -3,7 +3,6 @@
 Now that Bob is happy with his second commit, he tries to push it to the remote:
 
 ```sh
-jj new
 jj bookmark move main --to @-
 jj git push
 ```

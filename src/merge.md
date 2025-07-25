@@ -3,13 +3,18 @@
 I've strung you along for long enough, let's finally create that version with the combined changes.
 
 There are actually two approaches to achieve this, one of them we'll see later.
-This time, we're going to create a **merge commit**.
+For now, we're going to create a **merge commit**.
 As the name implies, a merge commit merges changes from two (or more!) commits.
 
-Until now, we've created new commits with the command `jj new` and merge commits are no different.
-We just have to explicitly specific which commits we want to merge as additional arguments.
-You can check the log and use the change IDs of the commits or simply exploit that (1) `main@origin` is pointing to Bob's commit and (2) Alice's commit is the working copy's parent, i.e. `@-`.
-A working command is therefore:
+Until now, we've created new commits with the command `jj commit`.
+That command actually does two things at once:
+It adds a description to the commit you just finished working on and starts a new commit on top of it.
+Unfortunately it can't create merge commits.
+
+There is a slightly more "low-level" command for creating new commits called `jj new`.
+It only creates a new commit and doesn't modify any descriptions.
+Importantly, it takes a **list of parents** as additional arguments.
+This allows us to create a commit with two parents, i.e. a merge commit:
 
 ```sh
 jj new main@origin @-
@@ -31,7 +36,7 @@ Let's view the result with `jj log`:
 </pre>
 
 Interesting!
-The resulting merge commit has **two parents** - precisely the ones we specified.
+The two parents of the new merge commit are easily visible in the commit graph.
 You can confirm that this new commit contains both changes from Alice and Bob:
 
 ```sh
@@ -41,14 +46,13 @@ cat hello.py
 
 Jujutsu tries to be smart about how to combine changes, but not too smart.
 Combining changes which modify the same part of the project leads to a **conflict**.
-Conflicts are not necessarily bad, they are just a signal that you need to combine some changes manually, making sure to preserve the spirit of what each change was trying to achieve individually.
+Conflicts are not necessarily bad, they are just a signal that you need to combine some changes manually, making sure to preserve the essence of what each change was trying to achieve individually.
 How to resolve conflicts is a topic reserved for the next level.
 
-Let's give this merge commit a description and send it to the remote:
+Let's wrap up this merge commit and send it to the remote:
 
 ```sh
-jj describe -m "Combine code and documentation for hello-world"
-jj new
+jj commit -m "Combine code and documentation for hello-world"
 jj bookmark move main --to @-
 jj git push
 ```

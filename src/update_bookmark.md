@@ -13,17 +13,11 @@ You can just copy these commands:
 
 ```sh
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj describe -m "Add projcet description to readme"
-jj new
+jj commit -m "Add projcet description to readme"
 ```
 
-Recall how these three commands correspond to our basic VCS-workflow:
-1. make changes
-1. describe the changes
-1. create a new commit
-
-There's also a neat trick here for the `describe` command:
-If you already have a short message in mind, you can pass it directly with the `-m` flag (short for `--message`).
+There's a neat trick here for the `commit` command:
+If you already have a short description in mind, you can pass it directly with the `-m` flag (short for `--message`).
 This can be faster than opening a separate text editor.
 
 `jj log` shows us a new commit on top of the one we pushed to the remote:
@@ -90,7 +84,6 @@ You made it!
 At this point, you have all the skills needed for simple solo projects with proper backup.
 Let's summarize the workflow again:
 1. make changes
-1. describe the changes
 1. create a new commit
 1. move the bookmark
 1. push to the remote

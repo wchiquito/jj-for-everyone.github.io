@@ -19,7 +19,7 @@ Unfortunately, she seems to have made a mistake.
 Running `python hello.py` prints an error:
 
 ```
-  File "/home/remo/jj-tutorial/repo/hello.py", line 3
+  File "/home/user/jj-tutorial/repo/hello.py", line 3
     for (i = 0; i < 10; i = i + 1):
          ^^^^^
 SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
@@ -27,26 +27,26 @@ SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
 
 Alice doesn't have time to figure out the problem.
 She decides it's best to wait for the teacher to explain how to do it correctly in next week's lecture.
-She doesn't just want to throw her changes away though, she wants to keep the experiment around so she can compare it to the correct version later.
-As usual, she describes her changes and makes a new commit before pushing:
+She doesn't just want to throw her changes away though.
+She wants to keep the experiment around so she can compare it to the correct version later.
+As usual, she creates a new commit before pushing:
 
 ```sh
-jj describe -m "WIP add for loop (need to fix syntax)"
-jj new
+jj commit -m "WIP add for loop (need to fix syntax)"
 ```
 
 Pushing work-in-progress (WIP) changes like this directly to the main bookmark would be a bad idea.
 Imagine if Bob later created a submission tarball and it accidentally included Alice's incomplete, incorrect code!
 That would be no good.
-To avoid that, Alice decides to push her commit to a **new bookmark**.
+To avoid that, Alice decides to push her commit to a new bookmark.
 
 What should be the name of that bookmark?
 Having a `main` bookmark is a strong convention, but for additional ones, anything goes.
 A simple approach is to just use a super short description of your changes, like `add-for-loop`.
 Some people like to prefix their bookmark names with their own name or username, allowing everyone to easily identify who's working on what: `alice/add-for-loop`.
-Still others include a ticket number from the bug-tracker software in the bookmark name.
+Still others include a ticket number from their bug-tracker software in the bookmark name.
 These are all fine options, but sometimes you _just don't care_.
-Jujutsu has a handy way to push changes by generating a generic bookmark name for you:
+Jujutsu has a handy way to push changes quickly by generating a bookmark name for you:
 
 ```sh
 jj git push --change @-

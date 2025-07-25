@@ -8,8 +8,7 @@
 - [Initializing a repository](./initialize.md)
 - [Inspecting the state of a repository](./jj_log.md)
 - [Making changes](./making_changes.md)
-- [Describing changes](./describe.md)
-- [Creating a new commit](./create_commit.md)
+- [Creating a new commit](./commit.md)
 - [Working with remotes](./remotes.md)
 - [Updating bookmarks](./update_bookmark.md)
 

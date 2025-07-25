@@ -49,12 +49,8 @@ jj new main
 ~
 </pre>
 
-This is very similar to creating a merge commit, where we specify the commits to merge as additional arguments to `jj new`.
-In this case however, we only specify one parent commit instead of two.
-Now we can summarize more generally what `jj new` does:
-It creates a new commit with its parents specified as additional arguments.
-If no parents are specified, the working copy is used as the default.
-(You can even create merge commits with more than two parents!)
+We use the same command as the one for creating a merge commit, but we only specify **one** parent.
+The simple act of creating a new commit allows us to achieve many different use cases.
 
 Notice that we used to have an empty commit on top of the loop experiment commit, but that is now gone.
 Jujutsu automatically deletes commits that are empty (no changes and no description).

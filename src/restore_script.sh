@@ -55,7 +55,7 @@ jj log -r 'none()' # trigger snapshot
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-jj describe --message "Add readme with project title
+jj commit --message "Add readme with project title
 
 It's common practice for software projects to include a file called
 README.md in the root directory of their source code repository. As the
@@ -63,10 +63,6 @@ file extension indicates, the content is usually written in markdown,
 where the title of the document is written on the first line with a
 prefixed \`#\` symbol.
 "
-
-if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
-
-jj new
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
@@ -92,8 +88,7 @@ jj describe --reset-author --no-edit
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj describe -m "Add project description to readme"
-jj new
+jj commit -m "Add project description to readme"
 
 jj bookmark move main --to @-
 
@@ -103,13 +98,11 @@ if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 echo "print('Hello, world!')" > hello.py
 
-jj describe -m "Add Python script for greeting the world
+jj commit -m "Add Python script for greeting the world
 
 Printing the text \"Hello, world!\" is a classic exercise in introductory
 programming courses. It's easy to complete in basically any language and
 makes students feel accomplished and curious for more at the same time."
-
-jj new
 
 jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
 cd ~/jj-tutorial/repo-bob
@@ -122,11 +115,10 @@ echo "# jj-tutorial
 The file hello.py contains a script that greets the world.
 It can be executed with the command 'python hello.py'.
 Programming is fun!" > README.md
-jj describe -m "Document hello.py in README.md
+jj commit -m "Document hello.py in README.md
 
 The file hello.py doesn't exist yet, because Alice is working on that.
 Once our changes are combined, this documentation will be accurate."
-jj new
 
 jj bookmark move main --to @-
 jj git push
@@ -141,8 +133,7 @@ if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj new main@origin @-
 
-jj describe -m "Combine code and documentation for hello-world"
-jj new
+jj commit -m "Combine code and documentation for hello-world"
 jj bookmark move main --to @-
 jj git push
 
@@ -161,15 +152,14 @@ Run the following command to create the submission tarball:
 tar czf submission_alice_bob.tar.gz [FILE...]
 ~~~" >> README.md
 
-jj describe -m "Add submission instructions"
-
 echo "*.tar.gz" > .gitignore
 
 jj file untrack submission_alice_bob.tar.gz
 
+jj commit -m "Add submission instructions"
+
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-jj new
 jj bookmark move main --to @-
 jj git fetch
 jj rebase --destination main@origin
@@ -183,8 +173,7 @@ echo "
 for (i = 0; i < 10; i = i + 1):
     print('Hello, world!')" >> hello.py
 
-jj describe -m "WIP add for loop (need to fix syntax)"
-jj new
+jj commit -m "WIP add for loop (need to fix syntax)"
 
 jj git push --change @-
 
