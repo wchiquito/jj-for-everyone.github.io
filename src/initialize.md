@@ -34,7 +34,7 @@ If you corrupt the database format, you might completely brick the repository.
 We'll talk about a second layer of backup in [chapter 7](./remotes.md).
 ```
 
-Files and directories staring with a dot are hidden by default, but you can verify they were created with `ls -a`:
+Files and directories starting with a dot are hidden by default, but you can verify they were created with `ls -a`:
 
 ```
 $ ls -a
