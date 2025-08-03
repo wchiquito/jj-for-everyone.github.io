@@ -5,7 +5,11 @@ if [ "${1:-x}" = "x" ] ; then
     echo "Please provide the number of the next chapter as the first argument."
     exit 1
 fi
-chapter="$1"
+if ! [[ $1 =~ ^[0-9]+$ ]]; then
+    echo "The provided chapter must be a number."
+    exit 1
+fi
+chapter=$(($1-1))
 
 function success() {
     set +x
@@ -26,7 +30,7 @@ rm -rf ~/jj-tutorial/repo
 rm -rf ~/jj-tutorial/remote
 rm -rf ~/jj-tutorial/repo-bob
 
-if [ "$chapter" = 1 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 if ! command -v jj > /dev/null ; then
     echo "ERROR: Jujutsu doesn't seem to be installed."
@@ -34,7 +38,7 @@ if ! command -v jj > /dev/null ; then
     exit 1
 fi
 
-if [ "$chapter" = 2 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 mkdir -p ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
@@ -44,14 +48,14 @@ jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 jj describe --reset-author --no-edit
 
-if [ "$chapter" = 3 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-if [ "$chapter" = 4 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 echo "# jj-tutorial" > README.md
 jj log -r 'none()' # trigger snapshot
 
-if [ "$chapter" = 5 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj describe --message "Add readme with project title
 
@@ -62,11 +66,11 @@ where the title of the document is written on the first line with a
 prefixed \`#\` symbol.
 "
 
-if [ "$chapter" = 6 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj new
 
-if [ "$chapter" = 7 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 mkdir ~/jj-tutorial/remote
 cd ~/jj-tutorial/remote
@@ -87,7 +91,7 @@ jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 jj describe --reset-author --no-edit
 
-if [ "$chapter" = 8 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
 jj describe -m "Add project description to readme"
@@ -97,7 +101,7 @@ jj bookmark move main --to @-
 
 jj git push
 
-if [ "$chapter" = 9 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 echo "print('Hello, world!')" > hello.py
 
@@ -133,9 +137,9 @@ cd ~/jj-tutorial/repo
 jj bookmark move main --to @-
 jj git fetch
 
-if [ "$chapter" = 10 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-if [ "$chapter" = 11 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj new main@origin @-
 
@@ -144,7 +148,7 @@ jj new
 jj bookmark move main --to @-
 jj git push
 
-if [ "$chapter" = 12 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 cd ~/jj-tutorial/repo-bob
 
@@ -165,7 +169,7 @@ echo "*.tar.gz" > .gitignore
 
 jj file untrack submission_alice_bob.tar.gz
 
-if [ "$chapter" = 13 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj new
 jj bookmark move main --to @-
@@ -173,7 +177,7 @@ jj git fetch
 jj rebase --destination main@origin
 jj git push
 
-if [ "$chapter" = 14 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 cd ~/jj-tutorial/repo
 
@@ -186,12 +190,12 @@ jj new
 
 jj git push --change @-
 
-if [ "$chapter" = 15 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj git fetch
 jj new main
 
-if [ "$chapter" = 16 ] ; then success ; fi
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-echo "Error: unrecognized chapter."
+echo "Error: The book doesn't have that many chapters."
 exit 1
