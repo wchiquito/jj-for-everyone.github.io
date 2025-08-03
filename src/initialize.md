@@ -3,14 +3,16 @@
 A "repository" is a directory (folder) where Jujutsu keeps track of all files, including the ones in subdirectories.
 A repository usually corresponds to a project, so the version history of unrelated projects are not tied to each other.
 To create a repository, make a new folder on your filesystem.
-I will assume you use `~/jj-tutorial`, but you can use any location you like.
-`cd` into that directory and run `jj git init --colocate`.
+For this tutorial, you should use `~/jj-tutorial/repo`.
+Otherwise, some commands I tell you to run later won't work.
+(If you don't like the clutter in your home directory, you can always delete it and use the [restore script](./introduction#restoring-your-progress) when you continue with the tutorial.)
+In that directory, run `jj git init --colocate` to initialize a new repository.
 
-In summary:
+As commands to copy-paste:
 
 ```sh
-mkdir ~/jj-tutorial
-cd ~/jj-tutorial
+mkdir -p ~/jj-tutorial/repo
+cd ~/jj-tutorial/repo
 jj git init --colocate
 ```
 

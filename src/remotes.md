@@ -23,11 +23,11 @@ We start by creating a new repository in a different location than our main one.
 The command is slightly different than the one we used to create our main repository:
 
 ```sh
-mkdir ~/jj-tutorial-remote
-cd ~/jj-tutorial-remote
+mkdir ~/jj-tutorial/remote
+cd ~/jj-tutorial/remote
 git init --bare # initialize "remote" ("bare") repository
 
-cd ~/jj-tutorial # return to main repo
+cd ~/jj-tutorial/repo # return to main repo
 ```
 
 The difference between a "remote" repository (also known as "bare" repository) and a normal one is irrelevant, don't think too hard about it.
@@ -48,8 +48,8 @@ Since we will only use the remote repository for sending and receiving commits, 
 
 If you inspect the content of the new bare repository, it will look very similar in structure to the content of the `.git` directory in our main repository:
 ```
-ls -lah ~/jj-tutorial/.git
-ls -lah ~/jj-tutorial-remote
+ls -lah ~/jj-tutorial/repo/.git
+ls -lah ~/jj-tutorial/remote
 ```
 ````
 
@@ -59,7 +59,7 @@ A repository is connected to a remote by storing its location under a specific n
 Remotes can be called anything, but when there is only one, the convention is to call it **origin**:
 
 ```sh
-jj git remote add origin ~/jj-tutorial-remote
+jj git remote add origin ~/jj-tutorial/remote
 ```
 
 ## Adding a bookmark
@@ -133,7 +133,7 @@ First, the deletion:
 
 ```sh
 cd ~
-rm -rf ~/jj-tutorial
+rm -rf ~/jj-tutorial/repo
 ```
 
 The next step is restoring the repo, but you can also think of it in a different way.
@@ -143,7 +143,7 @@ The process to do that with Jujutsu is the exact same process as restoring the p
 Here's the command:
 
 ```sh
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial
+jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
 ```
 
 The `clone` command takes a flag `--colocate` just like `jj git init` and I recommend you always use it for the same reason.
@@ -151,7 +151,7 @@ The last two arguments are (1) the **source** from which to clone and (2) the **
 We'll also need to recreate our repo-specific authorship configuration:
 
 ```sh
-cd ~/jj-tutorial
+cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 jj describe --reset-author --no-edit

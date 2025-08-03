@@ -58,13 +58,13 @@ Since Bob is working at the same time as her, he doesn't have the commit made by
 We can simulate that by creating a third repository, which has the same remote as our primary one:
 
 ```
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob
+jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
 ```
 
 Let's go into that repo, configure our author information for the role-play and make sure the log looks the same way as when Alice started her work:
 
 ```sh
-cd ~/jj-tutorial-bob
+cd ~/jj-tutorial/repo-bob
 jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
 jj describe --reset-author --no-edit
@@ -108,7 +108,7 @@ jj git push
 A little later, Alice is also finished and now she attempts to update the `main` bookmark:
 
 ```sh
-cd ~/jj-tutorial
+cd ~/jj-tutorial/repo
 jj bookmark move main --to @-
 jj git push
 ```

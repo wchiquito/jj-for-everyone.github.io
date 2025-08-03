@@ -22,9 +22,9 @@ function success() {
 # Ensure existing user configuration does not affect script behavior.
 export JJ_CONFIG=/dev/null
 
-rm -rf ~/jj-tutorial
-rm -rf ~/jj-tutorial-remote
-rm -rf ~/jj-tutorial-bob
+rm -rf ~/jj-tutorial/repo
+rm -rf ~/jj-tut/rial/remote
+rm -rf ~/jj-tutorial/repo-bob
 
 if [ "$chapter" = 1 ] ; then success ; fi
 
@@ -36,8 +36,8 @@ fi
 
 if [ "$chapter" = 2 ] ; then success ; fi
 
-mkdir ~/jj-tutorial
-cd ~/jj-tutorial
+mkdir -p ~/jj-tutorial/repo
+cd ~/jj-tutorial/repo
 jj git init --colocate
 
 jj config set --repo user.name "Alice"
@@ -68,11 +68,11 @@ jj new
 
 if [ "$chapter" = 7 ] ; then success ; fi
 
-mkdir ~/jj-tutorial-remote
-cd ~/jj-tutorial-remote
+mkdir ~/jj-tutorial/remote
+cd ~/jj-tutorial/remote
 git init --bare
-cd ~/jj-tutorial
-jj git remote add origin ~/jj-tutorial-remote
+cd ~/jj-tutorial/repo
+jj git remote add origin ~/jj-tutorial/remote
 jj bookmark create main --revision @-
 # TODO: fix use of --allow-new.
 # The tutorial doesn't actually tell readers to add the --allow-new flag, which
@@ -80,9 +80,9 @@ jj bookmark create main --revision @-
 # a better UI is ongoing.
 jj git push --bookmark main --allow-new
 cd ~
-rm -rf ~/jj-tutorial
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial
-cd ~/jj-tutorial
+rm -rf ~/jj-tutorial/repo
+jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
+cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 jj describe --reset-author --no-edit
@@ -109,8 +109,8 @@ makes students feel accomplished and curious for more at the same time."
 
 jj new
 
-jj git clone --colocate ~/jj-tutorial-remote ~/jj-tutorial-bob
-cd ~/jj-tutorial-bob
+jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
+cd ~/jj-tutorial/repo-bob
 jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
 jj describe --reset-author --no-edit
@@ -129,7 +129,7 @@ jj new
 jj bookmark move main --to @-
 jj git push
 
-cd ~/jj-tutorial
+cd ~/jj-tutorial/repo
 jj bookmark move main --to @-
 jj git fetch
 
@@ -146,7 +146,7 @@ jj git push
 
 if [ "$chapter" = 12 ] ; then success ; fi
 
-cd ~/jj-tutorial-bob
+cd ~/jj-tutorial/repo-bob
 
 tar czf submission_alice_bob.tar.gz README.md
 
@@ -175,7 +175,7 @@ jj git push
 
 if [ "$chapter" = 14 ] ; then success ; fi
 
-cd ~/jj-tutorial
+cd ~/jj-tutorial/repo
 
 echo "
 for (i = 0; i < 10; i = i + 1):

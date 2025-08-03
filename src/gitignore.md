@@ -5,7 +5,7 @@
 Let's check up on Bob:
 
 ```sh
-cd ~/jj-tutorial-bob
+cd ~/jj-tutorial/repo-bob
 ```
 
 Done with his part of the assignment, he's already thinking about the submission.

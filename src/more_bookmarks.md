@@ -3,7 +3,7 @@
 Let's switch back to Alice:
 
 ```sh
-cd ~/jj-tutorial
+cd ~/jj-tutorial/repo
 ```
 
 She heard rumors that next week's assignment is going to be about writing loops in Python.
@@ -19,7 +19,7 @@ Unfortunately, she seems to have made a mistake.
 Running `python hello.py` prints an error:
 
 ```
-  File "/home/remo/jj-tutorial/hello.py", line 3
+  File "/home/remo/jj-tutorial/repo/hello.py", line 3
     for (i = 0; i < 10; i = i + 1):
          ^^^^^
 SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
