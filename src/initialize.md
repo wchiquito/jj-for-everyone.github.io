@@ -43,7 +43,7 @@ $ ls -a
 .git  .jj
 ```
 
-In the last chapter, you configured Jujutsu with your name and email address.
+In the previous chapter, you configured Jujutsu with your name and email address.
 This configuration applies to all of your repositories by default.
 However, for our example repository, we'll actually pretend to be "Alice", who is later joined by "Bob" to simulate collaboration.
 The below commands perform the author configuration only for this specific repo.
