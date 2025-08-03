@@ -26,9 +26,7 @@ function success() {
 # Ensure existing user configuration does not affect script behavior.
 export JJ_CONFIG=/dev/null
 
-rm -rf ~/jj-tutorial/repo
-rm -rf ~/jj-tutorial/remote
-rm -rf ~/jj-tutorial/repo-bob
+rm -rf ~/jj-tutorial
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
