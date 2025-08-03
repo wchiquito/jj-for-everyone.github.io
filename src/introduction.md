@@ -3,7 +3,8 @@
 This is a tutorial for the [Jujutsu](https://github.com/jj-vcs/jj) version control system.
 It requires **no previous experience with Git** or any other version control system.
 
-At the time of writing, most Jujutsu tutorials are targeted at experienced Git users, teaching them how to transfer their existing Git skills over to Jujutsu. This blog post is my attempt to fill the void of beginner learning material for Jujutsu.
+At the time of writing, most Jujutsu tutorials are targeted at experienced Git users, teaching them how to transfer their existing Git skills over to Jujutsu.
+This book is my attempt to fill the void of beginner learning material for Jujutsu.
 If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](https://steveklabnik.github.io/jujutsu-tutorial) instead of this book.
 
 I do assume you know how to run commands in the terminal.
