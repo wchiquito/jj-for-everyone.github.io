@@ -18,24 +18,26 @@ That's why there's not a single, easy command we can run to install Jujutsu on a
 Instead, we first install another program that specializes in installing software called `mise`.
 (You can read more about mise on [its website](https://mise.jdx.dev/).)
 The first command `curl https://mise.run | sh` downloads and runs a script from the internet that installs `mise` for you.
-This is kinda dangerous and you should be careful when executing scripts from the internet.
-People could place malicious code at the URL you're downloading the script from.
-But the option is there for people who don't care and just want to get up and running quickly.
+This is kind of dangerous and you should be careful when executing scripts from the internet.
+People could place malicious commands in the script you're downloading.
+But it's a convenient technique if you trust the owner of the website you're loading the script from.
 
 The second command runs `mise` to download Jujutsu into a temporary directory.
-We have to specify the full path to the `mise` binary (`~/.local/bin/mise`), because at this point we don't know if `~/.local/bin` is a location where your shell will search for binaries.
+We have to specify the full path to the `mise` binary (`~/.local/bin/mise`), because at this point we don't know if `~/.local/bin` is included in your `PATH` variable.
+(See the ["Terminal basics" chapter](./terminal_basics.md#the-path-variable) for an explanation of that.)
 `mise` takes care of downloading the right binary for your operating system and CPU architecture.
 
 The following command moves the downloaded binary to `~/.local/bin`, which is the customary place for user-local programs.
 `rm -rf /tmp/jj-install` cleans up the temporary download directory.
 
-Lastly, `exec $SHELL` restarts your shell, which causes its init scripts to run again.
-Some Linux distributions like Ubuntu only add `~/.local/bin` to the list of paths to search for executable binaries if it exists when the shell is started.
-So, restarting the shell after installing Jujutsu is a simple way to make sure the system will find the new program.
+Lastly, `exec $SHELL` restarts your shell, which causes its startup scripts to run again.
+Some Linux distributions like Ubuntu only add `~/.local/bin` to the `PATH` variable if that directory exists when the terminal is started.
+So, restarting the terminal after installing Jujutsu is a simple way to make sure the system will find the new program.
 
-Maybe there are distributions which don't search for programs in `~/.local/bin` **at all**, which would mean those commands don't work on such a system.
+Maybe there are distributions which don't add `~/.local/bin` to `PATH` **at all**, which would mean those commands don't work on such a system.
 I'm not aware of such distrubtions.
 (Please [open an issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new) if you know of a relevant one!)
+You can fix such an issue for yourself by extending the `PATH` variable in your [shell startup script](http://localhost:3210/terminal_basics.html#startup-scripts).
 ```
 
 ````admonish info title="Other installation methods" collapsible=true

@@ -38,7 +38,7 @@ We'll talk about a second layer of backup in the [chapter about remotes](./remot
 
 Files and directories starting with a dot are hidden by default, but you can verify they were created with `ls -a`:
 
-```
+```console
 $ ls -a
 .git  .jj
 ```

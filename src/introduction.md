@@ -7,9 +7,10 @@ At the time of writing, most Jujutsu tutorials are targeted at experienced Git u
 This book is my attempt to fill the void of beginner learning material for Jujutsu.
 If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](https://steveklabnik.github.io/jujutsu-tutorial) instead of this book.
 
-I do assume you know how to run commands in the terminal.
-I will often suggest you run commands to modify files, which only work on Unix-like operating systems like Linux and Mac.
-If you're on Windows and can't switch to Linux, consider using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+This tutorial requires you to work in the terminal.
+Don't worry, there's a chapter covering some terminal basics in case you're not 100% comfortable with that yet.
+The commands I tell you to run will often only work on Unix-like operating systems like Linux and Mac.
+If you're on Windows (and can't switch to Linux), consider using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## How to read this book
 

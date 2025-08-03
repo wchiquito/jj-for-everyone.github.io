@@ -92,7 +92,7 @@ It tells Jujutsu to select the commit that matches the description.
 jj new 'description("Document hello.py in README.md")'
 ```
 
-Don't forget the outer single quotes, they prevent your shell from interpreting the inner double quotes.
+Don't forget the outer single quotes, they prevent your terminal from interpreting the inner double quotes.
 There is a powerful system behind selecting commits with functions like that, which we'll learn about in the future.
 
 Let's confirm our maneuver by checking the log:
