@@ -23,7 +23,7 @@ function success() {
 export JJ_CONFIG=/dev/null
 
 rm -rf ~/jj-tutorial/repo
-rm -rf ~/jj-tut/rial/remote
+rm -rf ~/jj-tutorial/remote
 rm -rf ~/jj-tutorial/repo-bob
 
 if [ "$chapter" = 1 ] ; then success ; fi
