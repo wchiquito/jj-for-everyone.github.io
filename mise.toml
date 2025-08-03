@@ -24,6 +24,7 @@ run = [
 ]
 
 [tasks."zellij:bg-tasks"]
+hide = true
 run = """zellij action new-tab --layout <(echo '
 layout {
 	tab name="bg tasks" {
