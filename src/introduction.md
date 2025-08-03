@@ -122,7 +122,7 @@ Here's my elevator pitch:
 - **Jujutsu is more powerful than Git.**
   Despite the fact that it's easier to learn and more intuitive, it actually has loads of awesome capabilities for power users that completely leave Git in the dust.
   Don't worry, you don't have to use that power right away.
-  But you can be confident that if your VCS-workflows become more demanding in the future, Jujutsu will have your back.
+  But you can be confident that if your VCS-workflow becomes more demanding in the future, Jujutsu will have your back.
   This is not a watered-down "we have Git at home" for slow learners!
 
 Learning Jujutsu instead of Git as your first VCS does have some downsides:
