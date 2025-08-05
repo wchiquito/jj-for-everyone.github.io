@@ -11,8 +11,9 @@ run = """
 #!/usr/bin/env bash
 set -euxo pipefail
 
-loc="$(jj log -r@ --no-graph -T change_id)"
-loc_parent="$(jj log -r@- --no-graph -T change_id)"
+rm -rf /tmp/jj-for-everyone-deploy-workspace
+jj workspace add /tmp/jj-for-everyone-deploy-workspace
+cd /tmp/jj-for-everyone-deploy-workspace
 jj new main
 
 mdbook build --dest-dir docs
@@ -22,7 +23,11 @@ jj bookmark track gh-pages@origin &> /dev/null
 jj abandon --retain-bookmarks gh-pages
 jj bookmark move gh-pages --to @ --allow-backwards
 jj git push --bookmark gh-pages -N
-jj edit "$loc" 2> /dev/null || jj new "$loc_parent"
+jj new main
+jj bookmark forget gh-pages
+jj git export
+
+jj workspace forget jj-for-everyone-deploy-workspace
 """
 
 [tasks."zellij:bg-tasks"]
