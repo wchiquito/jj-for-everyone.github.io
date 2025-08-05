@@ -6,22 +6,24 @@ mdbook = "latest"
 serve = "mdbook serve"
 open = "firefox --new-window localhost:3000"
 
-[tasks.build]
-run = "mdbook build --dest-dir docs"
-sources = ["book.toml", "src", "theme"]
-outputs = ["docs"]
-
 [tasks.deploy]
-depends = "build"
-run = [
-  "touch .nojekyll",
-  "jj describe --message 'deploy to github pages'",
-  "jj bookmark track gh-pages@origin &> /dev/null",
-  "jj abandon --retain-bookmarks gh-pages",
-  "jj bookmark move gh-pages --to @ --allow-backwards",
-  "jj git push --bookmark gh-pages -N",
-  "jj new @-",
-]
+run = """
+#!/usr/bin/env bash
+set -euxo pipefail
+
+loc="$(jj log -r@ --no-graph -T change_id)"
+loc_parent="$(jj log -r@- --no-graph -T change_id)"
+jj new main
+
+mdbook build --dest-dir docs
+touch .nojekyll
+jj describe --message 'deploy to github pages'
+jj bookmark track gh-pages@origin &> /dev/null
+jj abandon --retain-bookmarks gh-pages
+jj bookmark move gh-pages --to @ --allow-backwards
+jj git push --bookmark gh-pages -N
+jj edit "$loc" 2> /dev/null || jj new "$loc_parent"
+"""
 
 [tasks."zellij:bg-tasks"]
 hide = true
