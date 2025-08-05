@@ -169,11 +169,10 @@ if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 cd ~/jj-tutorial/repo
 
-echo "
-for (i = 0; i < 10; i = i + 1):
-    print('Hello, world!')" >> hello.py
+echo "for (i = 0; i < 10; i = i + 1):
+    print('Hello, world!')" > hello.py
 
-jj commit -m "WIP add for loop (need to fix syntax)"
+jj commit -m "WIP: Add for loop (need to fix syntax)"
 
 jj git push --change @-
 
