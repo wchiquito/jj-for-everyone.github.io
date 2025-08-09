@@ -33,8 +33,10 @@ Here's an overview of the planned levels:
 
 Only a few levels are complete right now, the rest are on the way.
 If you want to be notified when a new level becomes available, **subscribe to releases of the GitHub repo**.
-I will "cut a release" every time a new level is complete, causing you to get an email from GitHub.
+I will "cut a release" every time a new level is complete (or the tutorial is significantly updated in another way), causing you to get an email from GitHub.
 Go to [the repo](https://github.com/jj-for-everyone/jj-for-everyone.github.io) and click on "watch > custom > releases".
+
+![screenshot of how to subscribe to release announcements](./watch_releases.png)
 
 ### Restoring your progress
 
