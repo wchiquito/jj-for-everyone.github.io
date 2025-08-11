@@ -76,7 +76,7 @@ jj git push
 What Bob has just done is a paradigm shift:
 He has **rewritten history**.
 The history used to say that Bob's second commit descended from his first one, but now it says it descended from Alice's commit.
-The extent of this revisionism is still benign, but as we progress through the book, we will explore the dark arts of history manipulation ever more deeply.
+The extent of this revisionism is still benign, but as we progress through the tutorial, we will explore the dark arts of history manipulation ever more deeply.
 
 <div style="display: flex; justify-content: center">
 <b style="color: red">

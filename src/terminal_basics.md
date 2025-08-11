@@ -97,7 +97,7 @@ If a command doesn't do what you want, you might just be in the wrong place.
 
 ## Copy-pasting commands
 
-This book contains many code blocks that contain commands for you to copy-paste into your terminal.
+This tutorial contains many code blocks that contain commands for you to copy-paste into your terminal.
 Multiple commands can be on separate lines and you can copy-paste them all at once without issues.
 If you hover your mouse over the top-right corner of a code block, a hidden copy-button will appear.
 Very useful!
@@ -248,7 +248,7 @@ If your shell is `bash`, you should add your custom startup commands to the file
 In the case of `zsh`, the startup script is **`~/.zshrc`**.
 
 There are actually many more shells besides `bash` and `zsh`.
-Learning about them can be useful, but your shell doesn't matter in this book, so I will skip that topic.
+Learning about them can be useful, but your shell doesn't matter in this tutorial, so I will skip that topic.
 
 Let's practice:
 Add the following line to the startup script of your shell:
@@ -263,7 +263,7 @@ Then remove the command from the startup script again.
 ```admonish tip title="Now you know the basics of the terminal ! 🎉"
 If most of this stuff was news to you, pat yourself on the back!
 You've already learned a lot.
-This should be enough knowledge about the terminal to get you through the book.
+This should be enough knowledge about the terminal to get you through the tutorial.
 
 Don't hesitate to come back here and revise from time to time.
 The rules of the terminal are not the most intuitive, so it can take a couple attempts for them to settle in.

@@ -183,5 +183,5 @@ jj new main
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-echo "Error: The book doesn't have that many chapters."
+echo "Error: The tutorial doesn't have that many chapters."
 exit 1

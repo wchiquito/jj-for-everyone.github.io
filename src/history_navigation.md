@@ -134,6 +134,6 @@ Let's summarize what we've learned:
 - Work-in-progress changes can be stored on the remote with additional bookmarks, avoiding chaos on the main branch.
 - You can navigate to any branch or past version of your repository with `jj new`.
 
-It's time to take a break from this book and practice what you've learned on a real project.
+It's time to take a break from this tutorial and practice what you've learned on a real project.
 Level 2 will teach you how to **solve everyday problems** like merge conflicts, so I recommend you come back for it relatively soon.
 ```

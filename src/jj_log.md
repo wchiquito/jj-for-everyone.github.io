@@ -44,8 +44,8 @@ It's also an identification number, but this one is called the **commit hash** o
 The change ID is more important than the commit hash, which is reflected in their position in the log output: the important one comes first.
 We'll discuss the purpose of these IDs in more detail later.
 
-Note that in the example output I provide in this book, the change IDs and timestamps are not always consistent.
-While writing the book, I go back and forth, changing stuff and recreating my example repository.
+Note that in the example output I provide in this tutorial, the change IDs and timestamps are not always consistent.
+While writing the tutorial, I go back and forth, changing stuff and recreating my example repository.
 This causes change IDs and timestamps to change.
 
 On the second line, the word "(empty)" indicates that none of the files in this commit were changed compared to the previous commit.
