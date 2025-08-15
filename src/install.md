@@ -8,7 +8,7 @@ curl https://mise.run | sh
 ~/.local/bin/mise install-into jujutsu@latest /tmp/jj-install
 mv /tmp/jj-install/jj ~/.local/bin
 rm -rf /tmp/jj-install
-exec $SHELL
+exec $SHELL --login
 ```
 
 ```admonish info title="Explanation of these commands" collapsible=true
@@ -30,7 +30,7 @@ We have to specify the full path to the `mise` binary (`~/.local/bin/mise`), bec
 The following command moves the downloaded binary to `~/.local/bin`, which is the customary place for user-local programs.
 `rm -rf /tmp/jj-install` cleans up the temporary download directory.
 
-Lastly, `exec $SHELL` restarts your shell, which causes its startup scripts to run again.
+Lastly, `exec $SHELL --login` restarts your shell, which causes its startup scripts to run again.
 Some Linux distributions like Ubuntu only add `~/.local/bin` to the `PATH` variable if that directory exists when the terminal is started.
 So, restarting the terminal after installing Jujutsu is a simple way to make sure the system will find the new program.
 
