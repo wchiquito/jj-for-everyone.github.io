@@ -148,6 +148,7 @@ jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
 
 The `clone` command takes a flag `--colocate` just like `jj git init` and I recommend you always use it for the same reason.
 The last two arguments are (1) the **source** from which to clone and (2) the **destination** - where to store the copied repo. 
+When you clone from a remote, you're automatically connected to it with the default name `origin`.
 We'll also need to recreate our repo-specific authorship configuration:
 
 ```sh
