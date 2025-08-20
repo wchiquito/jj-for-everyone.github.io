@@ -19,8 +19,9 @@ jj git init --colocate
 Let's examine our first `jj` command.
 `git` is the subcommand responsible for various Git-specific compatibility features.
 One of them is the `init` command, which initializes a new repository that's compatible with Git.
-I highly recommend always using the `--colocate` flag, it improves compatibility with Git-tooling.
-If you're interested in the details, there's an info box a little further below.
+I won't explain the `--colocate` flag, because the details are irrelevant and it's behavior will become the default anyway the near future.
+Just use the flag for now.
+You'll likely be able to omit it starting in version `0.34` at the beginning of October.
 
 What does "initializing a repository" mean?
 Essentially, Jujutsu creates two directories `.git` and `.jj`.
@@ -41,40 +42,6 @@ Files and directories starting with a dot are hidden by default, but you can ver
 ```console
 $ ls -a
 .git  .jj
-```
-
-```admonish info title="Deep-dive about the --colocate flag" collapsible=true
-We just discussed the purpose of the two directories `.git` and `.jj`.
-The `--colocate` flag makes it so they are placed "next to each other".
-
-If we were using Git instead of Jujutsu, the command we'd use to initialize a repository would be `git init`.
-This creates only a single `.git` directory.
-That makes sense:
-Git uses one database, just for itself, in one directory.
-
-Well, Jujutsu works the same way by default.
-If you just run `jj git init`, that will only create a single `.jj` directory.
-Everything is stored in there: both the Git-compatible database as well as additional, Jujutsu-specific data.
-As far as Jujutsu is concerned, that makes sense and works without any issues.
-
-The problem arises when third-party tools offer you features related to integration with version control.
-Git has such a huge chunk of the market share that most tools only integrate with Git and don't bother supporting any other VCS.
-The way they do that is by reading the `.git` directory, which has a known, stable format.
-If there is only a `.jj` directory, these tools won't know that you're using version control in the first place.
-
-That's where the `--colocate` flag comes into play.
-As the name implies, it tells Jujutsu to place the Git-compatible database and the Jujutsu-specific one "next to each other".
-That way, third-party tools don't even notice you're using Jujutsu and their functionality just works, as if you were using Git directly.
-
-Here's a small word of caution about using third-party tools with Jujutsu.
-Most of them only read from the `.git` database, which is no problem at all.
-However, some of them will also modify the database.
-For example, IDEs often let you perform version control tasks right in their GUI.
-This is not _dangerous_ per se, you won't loose any progress by doing that.
-But it can confuse Jujutsu a little bit and lead to weirdness.
-Most likely, you'll just end up with duplicate commits.
-That's slighly annoying, but not destructive.
-You can get rid of duplicate commits with the `jj abandon` command.
 ```
 
 In the previous chapter, you configured Jujutsu with your name and email address.
