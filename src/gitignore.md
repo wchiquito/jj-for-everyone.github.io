@@ -136,6 +136,7 @@ jj file untrack submission_alice_bob.tar.gz
 
 The `untrack` command only works if the file to untrack is already present in `.gitignore`.
 Otherwise, Jujutsu would immediately start tracking the file again just after untracking it.
+Note that you can also ignore and untrack entire directories at once.
 
 Let's check the commit content one more time:
 
