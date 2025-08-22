@@ -116,9 +116,9 @@ $ ^[[200~echo Hello, terminal!~
 
 These weird characters are an "escape sequence" caused by typing <kbd>Ctrl</kbd>+<kbd>V</kbd> without <kbd>Shift</kbd>.
 This command will not work.
-So, if you make the mistake of forgetting <kbd>Shift</kbd>, just hit <kbd>Enter</kbd> a couple of times until you get a new prompt, then try again.
+So, if you make the mistake of forgetting <kbd>Shift</kbd>, just hit <kbd>Enter</kbd> a couple of times until you get a fresh prompt, then try again.
 
-Some of the commands will contain **comments**, which is a line of text following a pound **`#`** character.
+Some of the commands will contain **comments**, which are lines of text following a pound **`#`** character.
 The terminal simply ignores them.
 They are used to make commands more understandable to human readers, but they don't affect the command execution.
 
@@ -133,6 +133,21 @@ You can practice by copy-pasting the following command into your terminal:
 # v  v      v
 echo Hello, terminal! # Comments can follow a command on the same line!
 ```
+
+## Redirection
+
+We've seen how the `echo` command prints its arguments back to the terminal.
+But that's just the default.
+`echo` just prints to something called "standard out", or "stdout".
+That is usually connected to your terminal.
+But you can also **redirect** the stdout of a program, for example to a file with the `>` operator.
+An example looks like this:
+
+```sh
+echo "bread, onions, tee" > groceries.txt
+```
+
+In this book, I will often tell you to manipulate a file by running a command that looks like the one above.
 
 ## Variables and the environment
 
@@ -150,7 +165,7 @@ Normal variables like above cannot be read by programs you run.
 They are only for your own use in the current terminal session.
 However, variables can be **exported** into the **environment**, which makes them accessible for programs to read.
 This is an alternative way to tell programs what you want them to do.
-The more common way is with arguments on the command line, but environment variables are useful in some situations.
+The more common way is with arguments on the command line, but exported variables are useful in some situations.
 
 You can export a variable separately from setting its value or do it all in one line:
 
@@ -163,8 +178,9 @@ $ export MY_NAME
 $ export MY_NAME=Alice
 ```
 
-Environment variables are not _required_ to be uppercase, but it's a strong convention.
-It makes it easy to know which variables can be read by other programs, so I recommend you stick to it.
+Such exported variable are usually referred to as **environment variables**.
+They are not _required_ to be uppercase, but it's a strong convention.
+It makes it easy to know which variables can be read by other programs.
 
 ## The `PATH` variable
 
