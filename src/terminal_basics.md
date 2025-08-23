@@ -149,6 +149,8 @@ echo "bread, onions, tee" > groceries.txt
 
 In this book, I will often tell you to manipulate a file by running a command that looks like the one above.
 
+The `>` operator _overwrites_ a file, but there is also the `>>` operator, which _appends_ to the end of a file.
+
 ## Variables and the environment
 
 Running programs on your computer by typing their name is only scratching the surface of what the terminal can do.
