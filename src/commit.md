@@ -9,17 +9,27 @@ To finish working on your current commit and start a new one, run the following 
 jj commit
 ```
 
-This will open a text editor for giving the commit a description.
-Which editor is opened depends on your system.
-(Your EDITOR environment variable will be respected.)
-If you would like to use a specific editor, you can configure Jujutsu to do so.
-Let's assume you want to use [Visual Studio Code](https://code.visualstudio.com/), here's how you do it:
+This will open a text editor so you can write a description for the commit.
+If you followed my instructions during [installation and setup](/src/install.md#installing-a-simple-text-editor), the text editor will be `edit`.
+When you're done writing the description, click on "File", then "Exit", in the menu bar or press <kbd>Ctrl+Q</kbd> to exit the text editor.
+Confirm that you want to save the file by pressing <kbd>Enter</kbd>.
 
-```sh
-jj config set --user ui.editor "code --wait"
+You may notice that the text file doesn't start empty.
+It already contains a few lines:
+
+```
+JJ: This commit contains the following changes:
+JJ:     A README.md
+JJ:
+JJ: Lines starting with "JJ:" (like this one) will be removed.
 ```
 
-Here's an example description you could use:
+These lines starting with `JJ:` are _comments_, similar to lines starting with a pound `#` in the terminal.
+They will not be part of the final commit description, so you don't need to delete them.
+Jujutsu uses these comments to remind you which files you modified when working on this commit.
+That can be helpful inspiration for a good commit description.
+
+Here's an example description you could type (or copy-paste) into the text editor:
 
 ```
 Add readme with project title
@@ -29,12 +39,8 @@ README.md in the root directory of their source code repository. As the
 file extension indicates, the content is usually written in markdown,
 where the title of the document is written on the first line with a
 prefixed `#` symbol.
-
-JJ: This commit contains the following changes:
-JJ:     A README.md
-JJ:
-JJ: Lines starting with "JJ:" (like this one) will be removed.
 ```
+
 
 There is a little bit of structure here that you should follow.
 The first line of the description is called the **subject**.

@@ -124,3 +124,31 @@ jj config set --user user.email "anon@local"
 
 If you want shell completions, follow the instructions [here](https://jj-vcs.github.io/jj/latest/install-and-setup/#command-line-completion).
 If you don't know what a "shell completion" is, don't worry, it's not important.
+
+## Installing a simple text editor
+
+Jujutsu will sometime ask you to edit a text file.
+To do that, it opens a text editor for you.
+Which text editor is opened can be configured.
+There are many interesting options for text editors in the terminal.
+If you know about these options, you probably already have a favorite.
+For everyone else, I'm just gonna tell you to install what I consider to be the simplest and most intuitive one:
+
+```sh
+mise install-into edit@latest /tmp/edit-install
+mv /tmp/edit-install/edit ~/.local/bin
+rm -rf /tmp/edit-install
+```
+
+Running these commands will install the text editor called `edit`.
+Next, we need to tell Jujutsu to use that specific one when opening a text file for us:
+
+```sh
+jj config set --user ui.editor edit
+```
+
+From now on, when Jujutsu opens a text file for you, it will do so using `edit`.
+When you're done editing a file, click on "File", then "Exit", in the menu bar or press <kbd>Ctrl+Q</kbd> to exit the text editor.
+It will ask you if you want to save the file, which you confirm by pressing <kbd>Enter</kbd>.
+That's it!
+I will remind you how it works the first time we need it.
