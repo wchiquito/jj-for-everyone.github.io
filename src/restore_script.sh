@@ -13,13 +13,7 @@ chapter=$(($1-1))
 
 function success() {
     set +x
-    echo "
-    ┌──────────────────────────────────────────────────────────────────────┐
-    │                                                                      │
-    │                Restore script completed successfully!                │
-    │                                                                      │
-    └──────────────────────────────────────────────────────────────────────┘
-"
+    echo "✅✅✅ Restore script completed successfully! ✅✅✅"
     exit 0
 }
 
