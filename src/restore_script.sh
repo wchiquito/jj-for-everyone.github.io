@@ -127,7 +127,7 @@ if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 jj new main@origin @-
 
-jj commit -m "Combine code and documentation for hello-world"
+jj commit -m "Merge code and documentation for hello-world"
 jj bookmark move main --to @-
 jj git push
 

@@ -52,7 +52,7 @@ How to resolve conflicts is a topic reserved for the next level.
 Let's wrap up this merge commit and send it to the remote:
 
 ```sh
-jj commit -m "Combine code and documentation for hello-world"
+jj commit -m "Merge code and documentation for hello-world"
 jj bookmark move main --to @-
 jj git push
 ```

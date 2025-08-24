@@ -16,7 +16,7 @@ jj git fetch
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">tqlsyyr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">07a18a9</span>
 ├─╯  Add submission instructions
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 ~
 </pre>
 
@@ -45,7 +45,7 @@ jj new main
 │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
 ├─╯  WIP: Add for loop (need to fix syntax)
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 ~
 </pre>
 
@@ -70,7 +70,7 @@ Here's the full log for reference:
 │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
 ├─╯  WIP: Add for loop (need to fix syntax)
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>    <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-├─╮  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+├─╮  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">ux</span><span class="highlighted dimgray ">vvmtos</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">a9</span><span class="highlighted dimgray ">946efd</span>
 │ │  Add Python script for greeting the world
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span> │  <span class="bold "></span><span class="bold purple ">qx</span><span class="highlighted dimgray ">kprvsu</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">e05718a</span>
@@ -106,7 +106,7 @@ Let's confirm our maneuver by checking the log:
 │ │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
 │ ├─╯  WIP: Add for loop (need to fix syntax)
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-╭─┤  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+╭─┤  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 │ │
 │ ~
 │

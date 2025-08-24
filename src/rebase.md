@@ -23,7 +23,7 @@ Here's what Bob's log looks like now:
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">mswwyok</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:29:27</span> <span class="purple ">main?? main@git</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">583fa6e</span>
 │  Add submission instructions
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">wywpklt</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 21:27:24</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">06959ce</span>
-╭─┤  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+╭─┤  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 │ │
 │ ~
 │
@@ -61,7 +61,7 @@ What does the log say?
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">mswwyok</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:30:38</span> <span class="purple ">main*</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">2bd1179</span>
 │  Add submission instructions
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">wywpklt</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 21:27:24</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">06959ce</span>
-│  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 ~
 </pre>
 

@@ -58,7 +58,7 @@ jj git push --change @-
 ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
 │  WIP: Add for loop (need to fix syntax)
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Combine code and documentation for hello-world
+│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
 ~
 </pre>
 
