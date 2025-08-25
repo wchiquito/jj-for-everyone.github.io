@@ -11,6 +11,20 @@ So, there are conceptually two things we need to do now:
 1. Give a description to the changes we just finished making, the ones that were recorded in the existing working-copy (`@`) commit.
 1. Start working on a completely new commit, which is the child of the one we just finished.
 
+```admonish title="A source of confusion if you know Git" collapsible=true
+This tutorial assumes that you have no experience with Git.
+However, if you _have_ used Git before, it might actually be more difficult for you to understand this.
+The reason is that both Git and Jujutsu have a subcommand called `commit`, but they work differently.
+
+In Git, changes you make are not recorded automatically into commits.
+Instead, they exist outside of any commit, until you add them to one manually.
+The command `git commit` creates a new commit and stores both changes as well as the commit message in it.
+
+In Jujutsu, there is always a commit already and any changes you make are automatically recorded into it.
+So, the description you type during `jj commit` will be applied to a commit that has already existed for some time.
+The **new** commit that's being created is completely empty, ready for auto-recording of the next changes.
+```
+
 The command to complete both oft these tasks at once is:
 
 ```sh
