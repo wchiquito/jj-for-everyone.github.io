@@ -110,8 +110,8 @@ There are a few things to observe here:
 - The previous commit has a different symbol (circle) than the root commit (diamond).
   This is related to an important feature, which we'll learn about later.
 
-We've closed the most basic version control workflow:
+We now have the tools for the most basic version control workflow:
 1. make some changes
 1. create a new commit
 
-Rinse and repeat.
+Repeating these two steps is what you'll do the most, when working on a version-controlled project.
