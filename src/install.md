@@ -28,7 +28,7 @@ We have to specify the full path to the `mise` binary (`~/.local/bin/mise`), bec
 `mise` takes care of downloading the right binary for your operating system and CPU architecture.
 
 The following command moves the downloaded binary to `~/.local/bin`, which is the customary place for user-local programs.
-`rm -rf /tmp/jj-install` cleans up the temporary download directory.
+`rm -rf /tmp/jj-install` ("remove recursive force") deletes the temporary download directory and its content.
 
 Lastly, `exec $SHELL --login` restarts your shell, which causes its startup scripts to run again.
 Some Linux distributions like Ubuntu only add `~/.local/bin` to the `PATH` variable if that directory exists when the terminal is started.
