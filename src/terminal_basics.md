@@ -151,6 +151,26 @@ In this book, I will often tell you to manipulate a file by running a command th
 
 The `>` operator _overwrites_ a file, but there is also the `>>` operator, which _appends_ to the end of a file.
 
+## Pagers
+
+Some commands you run in the terminal print a lot of text.
+It can be tedious to scroll all the way back up to the point where the command output started.
+This is where a **pager** can help.
+It takes the output from another program shows it to you from the beginning.
+
+Some programs will display their output in a pager automatically, because they know they will be printing a lot of text.
+Jujutsu also does that sometimes.
+Given that you may "accidentally" end up in a pager, you need to know that you can **exit a pager by typing** <kbd>Q</kbd>!
+
+If the output of Jujutsu is displayed in a pager, the bottom left corner will be a colon `:` character and your prompt won't be shown.
+One way you can experiment with using a pager is by running `man tar`, which opens the manual page for the `tar` command.
+
+Various key bindings let you navigate in the pager.
+The arrow keys, "page up" and "page down" all work as expected.
+Another super useful one is this:
+Typing <kbd>/</kbd> allows you to enter a search term, then <kbd>Enter</kbd> starts the search.
+Step through the search hits with (lowercase) <kbd>n</kbd> and step backwards with (uppercase) <kbd>N</kbd>.
+
 ## Variables and the environment
 
 Running programs on your computer by typing their name is only scratching the surface of what the terminal can do.
