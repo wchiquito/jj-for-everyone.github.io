@@ -1,9 +1,17 @@
 # Creating a new commit
 
-Once we are done with a change, we should create a new commit.
-Having many small commits is generally a good idea, but we'll learn about the benefits a little later.
+Once we are done with a set of changes, we should create a new commit.
+If we don't do that, the next changes we make will be recorded into the same commit as the previous ones.
+That would make it harder to understand the evolution of a project later.
 
-To finish working on your current commit and start a new one, run the following command:
+Before we create a new commit, we also need to give a description to the one we've been working on so far.
+Every commit needs to have a description, even if it's a short one.
+
+So, there are conceptually two things we need to do now:
+1. Give a description to the changes we just finished making, the ones that were recorded in the existing working-copy (`@`) commit.
+1. Start working on a completely new commit, which is the child of the one we just finished.
+
+The command to complete both oft these tasks at once is:
 
 ```sh
 jj commit
