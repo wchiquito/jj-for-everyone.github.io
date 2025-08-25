@@ -223,7 +223,7 @@ In this case, there are three paths:
 - `/usr/local/bin`
 - `/usr/bin`
 
-What do these four paths mean?
+What do these three paths mean?
 They are the places where your terminal searches for programs to run!
 Let's mess with it to see what happens.
 Set the `PATH` variable to the empty string:
