@@ -290,16 +290,6 @@ In the case of `zsh`, the startup script is **`~/.zshrc`**.
 There are actually many more shells besides `bash` and `zsh`.
 Learning about them can be useful, but your shell doesn't matter in this tutorial, so I will skip that topic.
 
-Let's practice:
-Add the following line to the startup script of your shell:
-
-```sh
-echo "This command runs every time you open a new terminal!"
-```
-
-Now open a new terminal window and observe the above text being printed before your first prompt.
-Then remove the command from the startup script again.
-
 ```admonish tip title="Now you know the basics of the terminal ! 🎉"
 If most of this stuff was news to you, pat yourself on the back!
 You've already learned a lot.
