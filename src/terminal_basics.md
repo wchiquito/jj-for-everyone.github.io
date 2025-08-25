@@ -125,13 +125,15 @@ They are used to make commands more understandable to human readers, but they do
 You can practice by copy-pasting the following command into your terminal:
 
 ```sh
+# Here are some example comments:
+#
 # This is the program being run.
 # |
 # |  This is the start of the first argument.
 # |  |
 # |  |      This is the start of the second argument.
 # v  v      v
-echo Hello, terminal! # Comments can follow a command on the same line!
+echo Hello, terminal! # Placing a comment next to a command is also allowed.
 ```
 
 ## Redirection
