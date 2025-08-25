@@ -2,7 +2,8 @@
 
 We now have a commit which we don't want to lose.
 The way we're using Jujutsu right now, we don't have a backup at all.
-If we delete the directory on disk, the `.git` and `.jj` subdirectories will be deleted as well and we won't be able to recover any of our work.
+What would happen if we delete the `~/jj-tutorial/repo` directory on disk?
+The `.git` and `.jj` subdirectories would be deleted as well and we wouldn't be able to recover any of our work!
 
 We can fix that by duplicating our commit at another location, a so-called **remote**.
 Besides providing a backup, sending commits to a remote also allows you to share your work more easily for collaboration.
