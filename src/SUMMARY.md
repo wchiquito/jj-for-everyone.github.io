@@ -7,7 +7,7 @@
 
 - [Installation and setup](./install.md)
 - [Initializing a repository](./initialize.md)
-- [Inspecting the state of a repository](./jj_log.md)
+- [Inspecting the state of a repository](./log.md)
 - [Making changes](./making_changes.md)
 - [Creating a new commit](./commit.md)
 - [Working with remotes](./remotes.md)
@@ -18,7 +18,7 @@
 - [Branching](./branching.md)
 - [Inspecting a commit](./inspect.md)
 - [Creating a merge commit](./merge.md)
-- [Excluding files from version control](./gitignore.md)
+- [Excluding files from version control](./ignore.md)
 - [Rebasing](./rebase.md)
 - [Adding more bookmarks](./more_bookmarks.md)
 - [Navigating the history](./history_navigation.md)
