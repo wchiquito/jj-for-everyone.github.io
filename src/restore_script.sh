@@ -60,24 +60,21 @@ prefixed \`#\` symbol.
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
-mkdir ~/jj-tutorial/remote
-cd ~/jj-tutorial/remote
-git init --bare
-cd ~/jj-tutorial/repo
+git init --bare ~/jj-tutorial/remote
 jj git remote add origin ~/jj-tutorial/remote
 jj bookmark create main --revision @-
-# TODO: fix use of --allow-new.
-# The tutorial doesn't actually tell readers to add the --allow-new flag, which
-# is because there is no way of explaining it well. It's simply bad UI. Work on
-# a better UI is ongoing.
 jj git push --bookmark main --allow-new
-cd ~
+
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
+
 rm -rf ~/jj-tutorial/repo
 jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 jj describe --reset-author --no-edit
+
+if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 
 if [ "$chapter" = 0 ] ; then success ; else chapter=$((chapter-1)) ; fi
 

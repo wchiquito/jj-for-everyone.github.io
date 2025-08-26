@@ -10,7 +10,9 @@
 - [Inspecting the state of a repository](./log.md)
 - [Making changes](./making_changes.md)
 - [Creating a new commit](./commit.md)
-- [Working with remotes](./remotes.md)
+- [Sending commits to a remote](./remotes.md)
+- [Cloning a remote](./clone.md)
+- [Using GitHub (optional)](./github.md)
 - [Updating bookmarks](./update_bookmark.md)
 
 # Level 1

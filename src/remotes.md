@@ -1,40 +1,32 @@
-# Working with remotes
+# Sending commits to a remote
 
 We now have a commit which we don't want to lose.
 The way we're using Jujutsu right now, we don't have a backup at all.
 What would happen if we delete the `~/jj-tutorial/repo` directory on disk?
-The `.git` and `.jj` subdirectories would be deleted as well and we wouldn't be able to recover any of our work!
+The `.git` and `.jj` subdirectories would be deleted as well.
+Since our entire version control database is stored in there, we wouldn't be able to recover any of our work!
 
 We can fix that by duplicating our commit at another location, a so-called **remote**.
 Besides providing a backup, sending commits to a remote also allows you to share your work more easily for collaboration.
 
-The most common form of a remote is to host a repository with an online service like [GitHub](https://github.com/).
-For maximum realism, it would be good to do that in this tutorial and you certainly can.
-However, I will explain a simpler approach, which is to just have a second repository in a different location on your filesystem.
-These two options work pretty much exactly the same way.
-When you connect to a remote, you just tell Jujutsu where it is.
-In the case of an online service, that will be a web URL.
-In the case of a local repository, that will be a filesystem path.
-There are no other differences, so we're not missing out on any important lessons by avoiding GitHub.
-At the end of this section, there are a few tips about using GitHub itself.
+The most popular form of a remote is to host a repository with an online service like [GitHub](https://github.com/).
+That requires an account and a little setup though, so we'll use a simpler approach in this tutorial.
+Your remote will be stored in a new directory on your computer, at a different location than your primary repository.
+That style of remote is bad as a backup and bad for collaboration, but it's perfect for learning how remotes work.
+There are a few practical tips about using GitHub in a later chapter.
 
 ## Initializing the remote
 
-We start by creating a new repository in a different location than our main one.
-The command is slightly different than the one we used to create our main repository:
+The following command will initialize a new repository for use as a remote:
 
 ```sh
-mkdir ~/jj-tutorial/remote
-cd ~/jj-tutorial/remote
-git init --bare # initialize "remote" ("bare") repository
-
-cd ~/jj-tutorial/repo # return to main repo
+git init --bare ~/jj-tutorial/remote # initialize "remote" ("bare") repository
 ```
 
-The difference between a "remote" repository (also known as "bare" repository) and a normal one is irrelevant, don't think too hard about it.
-If your curiosity is unrelenting, expand the info box below.
+Since you will likely use a different style of remote for real projects, you don't need to understand the details here.
+If you're curious anyway, expand the text box below.
 
-````admonish note title="You really don't need to know this" collapsible=true
+````admonish note title="The difference between remote (bare) and regular repositories" collapsible=true
 `git init --bare` is very similar to `jj git init`, which we used to create our main repository.
 However, instead of a "normal" repository, it creates a "bare" one.
 But what's the difference?
@@ -63,6 +55,10 @@ Remotes can be called anything, but when there is only one, the convention is to
 jj git remote add origin ~/jj-tutorial/remote
 ```
 
+Here we connect to the remote by specifying its path on our filesystem.
+When using a repository hosted on GitHub or similar services, the path is replaced with a URL.
+More on that later.
+
 ## Adding a bookmark
 
 There is one last speed bump before we can send our work to the remote.
@@ -73,6 +69,7 @@ With bookmarks!
 
 A bookmark is a simple named label that's attached to a commit.
 Every commit with such a bookmark label is considered important and won't be deleted automatically.
+Because of that mechanism, a bookmark is _required_ for sending commits to a remote.
 
 Let's create a bookmark called **main** and point it to our completed commit.
 The name "main" is a convention that represents the primary state of the project.
@@ -97,9 +94,9 @@ Let's check the result with `jj log`:
 </pre>
 
 Great!
-We can see that the bookmark `main` is correctly pointing to our most recently completed commit.
+We can see that the bookmark `main` is correctly pointing to our recently completed commit.
 
-## Sending commits to a remote
+## Pushing the bookmark
 
 Now that we're connected and have a bookmark, let's finally send our commit to the remote.
 The technical term for sending commits is "pushing" them.
@@ -125,128 +122,4 @@ This command should work:
 
 ```sh
 jj git push --bookmark main --allow-new
-```
-
-## Cloning an existing remote
-
-To drive home the point that the remote repository functions as a backup, we're now going to completely delete our main repository and restore it from the remote.
-First, the deletion:
-
-```sh
-cd ~
-rm -rf ~/jj-tutorial/repo
-```
-
-The next step is restoring the repo, but you can also think of it in a different way.
-Imagine there is an ongoing project and you have just joined the team.
-In order to contribute changes to the project, you first need to get a copy of it on your own computer.
-The process to do that with Jujutsu is the exact same process as restoring the project from a backup remote.
-Here's the command:
-
-```sh
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
-```
-
-Just like `jj git init`, you should use the `--colocate` flag with the `clone` command until it becomes the default soon.
-The last two arguments are (1) the **source** from which to clone and (2) the **destination** - where to store the copied repo. 
-When you clone from a remote, you're automatically connected to it with the default name `origin`.
-We'll also need to recreate our repo-specific authorship configuration:
-
-```sh
-cd ~/jj-tutorial/repo
-jj config set --repo user.name "Alice"
-jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
-```
-
-Let's run `jj log` in our fresh clone to see if we restored the repo successfully:
-
-<!-- generated by aha script -->
-<pre class="aha">
-<span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">k</span><span class="bold highlighted dimgray ">xqyrwux</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 20:32:47</span><span class="bold "> </span><span class="bold highlighted blue ">7e</span><span class="bold highlighted dimgray ">fef483</span><span class="bold "></span>
-│  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">79</span><span class="highlighted dimgray ">39d4cf</span>
-│  Add readme with project title
-~
-</pre>
-
-This looks mostly right, but there are little differences.
-We can't see the root commit anymore and our commit is marked with a diamond, instead of a circle like before.
-As mentioned, the diamond and circle markers are related to a feature we'll learn about later.
-For now, we can say that ancestors of diamond commits are hidden by default, because you won't care about them most of the time.
-We can tell Jujutsu to show us _all_ commits with `jj log --revisions 'all()'`:
-
-<!-- generated by aha script -->
-<pre class="aha">
-<span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">k</span><span class="bold highlighted dimgray ">xqyrwux</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 20:32:47</span><span class="bold "> </span><span class="bold highlighted blue ">7e</span><span class="bold highlighted dimgray ">fef483</span><span class="bold "></span>
-│  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">79</span><span class="highlighted dimgray ">39d4cf</span>
-│  Add readme with project title
-<span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">0000000</span>
-</pre>
-
-Great!
-Now we can be sure our repository was fully restored from the remote.
-
-## Using GitHub
-
-As promised, here are a few tips about using [GitHub](https://github.com/).
-If you are not interested in this, feel free to skip to the next chapter, it won't become relevant later.
-
-I want to mention that GitHub is not the only provider of Git-hosting services, but certainly the most popular one.
-Others include [GitLab](https://about.gitlab.com/) and [Codeberg](https://codeberg.org/).
-Codeberg is a free instance of [Forgejo](https://forgejo.org/), which is open-source software you can host yourself.
-
-All of these providers work very similarly to what I'm describing below, so you should have no trouble adapting to other providers.
-
-### Authenticating with an SSH key
-
-Jujutsu needs to authenticate as your GitHub user in order to send and receive commits on your behalf.
-It's possible to do that with username and password, but it's very tedious and I don't recommend it at all.
-If making backup is tedious, you will do it **less often**.
-Fewer backups means more risk of losing your work!
-So let's make the authentication as seamless as possible.
-
-The best authentication method is to use an SSH key.
-It's more convenient and safer than a password.
-GitHub has great documentation about how to set that up, so please follow the instructions here:
-- [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- [Adding an SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-
-You can verify the setup with the following command:
-
-```sh
-ssh -T git@github.com
-```
-
-The expected output is:
-
-```
-Hi user! You've successfully authenticated, but GitHub does not provide shell access.
-```
-
-### Creating a new repository on GitHub
-
-Skip ahead if you intend to use an already existing repo.
-
-To create a new repository on GitHub, [click here](https://github.com/new) and fill out the form.
-All you need to do is choose an owner (probably your username) and a repo name.
-Also check that the visibility matches what you want (can be changed later).
-
-If you already have a local repository with content that you want to push to this new remote, make sure to **not initialize the repo with any content**.
-That means, no template, no README, no `.gitignore` and no license.
-
-Finally, click on "Create repository".
-
-### Cloning an existing repo
-
-Navigate to the page of the existing repo in the browser.
-You should see a big green button that says "<> Code".
-Click on it and select "SSH" in the drop-down (assuming you have set up an SSH key as explained above).
-Copy the URL that's displayed.
-
-Finally, paste the URL into Jujutsu's clone command:
-
-```sh
-jj git clone --colocate <COPIED_URL>
 ```
