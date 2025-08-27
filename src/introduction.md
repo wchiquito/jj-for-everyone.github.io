@@ -34,35 +34,25 @@ Here's an overview of the planned levels:
 
 Only a few levels are complete right now, the rest are on the way.
 
-
-## Stay up to date
-
-Both this tutorial and Jujutsu are still evolving.
-In order to keep your Jujutsu knowledge updated, **consider subscribing to releases of the GitHub repo**.
-You will be notified of important changes:
-- A new level becomes available.
-- An existing level is changed significantly.
-
-I especially intend to keep this tutorial updated as new version of Jujutsu come out with features and changes that are relevant to the tutorial's content.
-I consider this tutorial up-to-date with the latest version of Jujutsu (`0.32`) as of **August 2025**.
-If that's more than a couple months in the past, I probably stopped updating this tutorial.
-
-You can subscribe to these updates by visiting the [GitHub repo](https://github.com/jj-for-everyone/jj-for-everyone.github.io) and clicking on "Watch", "Custom" and then selecting "Releases".
-
-![screenshot of how to subscribe to release announcements](./watch_releases.png)
-
 ## Restoring your progress
 
 Throughout the tutorial, you will build an example repository.
 Later chapters depend on the repo state of previous ones.
 Losing the state of the example repo can therefore block you from making smooth progress.
 This might happen for several valid reasons:
+- You use the example repo for practice and experimentation.
+  This is totally fine, but you will likely need to restore it to a known state so can continue with the tutorial as intended.
 - You switch computers or reinstall the OS.
 - You intentionally delete it to clean up your home directory.
-- You use the example repo for off-road experimentation with Jujutsu.
 
 To solve this problem, there is a script which automates the task of recreating the example repo.
 It expects the number of the next chapter as the first argument.
+
+```admonish tip
+Since the restore script works at the chapter boundary, the end of a chapter is the best time to practice and experiment.
+If you mess up the repo in the middle of a chapter, you'll have to restore to the start of the chapter and manually progress to the middle, before continuing.
+```
+
 For example, to set everything up to continue with chapter **4**, you can run:
 
 ```sh
@@ -82,6 +72,22 @@ You can also download the script [here](./restore_script.sh) and then execute it
 {{ #include restore_script.sh }}
 ````
 `````
+
+## Stay up to date
+
+Both this tutorial and Jujutsu are still evolving.
+In order to keep your Jujutsu knowledge updated, **consider subscribing to releases of the GitHub repo**.
+You will be notified of important changes:
+- A new level becomes available.
+- An existing level is changed significantly.
+
+I especially intend to keep this tutorial updated as new version of Jujutsu come out with features and changes that are relevant to the tutorial's content.
+I consider this tutorial up-to-date with the latest version of Jujutsu (`0.32`) as of **August 2025**.
+If that's more than a couple months in the past, I probably stopped updating this tutorial.
+
+You can subscribe to these updates by visiting the [GitHub repo](https://github.com/jj-for-everyone/jj-for-everyone.github.io) and clicking on "Watch", "Custom" and then selecting "Releases".
+
+![screenshot of how to subscribe to release announcements](./watch_releases.png)
 
 ## Help make this tutorial better
 
