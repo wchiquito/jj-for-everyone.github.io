@@ -1,14 +1,14 @@
 # Rebasing
 
-Now that Bob is happy with his second commit, he tries to push it to the remote:
+Now that Bob is happy with his second commit, he tries to push it to the remote.
+It will fail just like it did for Alice earlier:
 
 ```sh
 jj bookmark move main --to @-
 jj git push
 ```
 
-As you might've already guessed, Bob gets the same error message as Alice did earlier.
-He also decides to follow the hint of fetching from the remote (after watching some cat videos):
+The solution for Bob is to fetch from the remote, just like it was for Alice:
 
 ```sh
 jj git fetch
@@ -95,7 +95,7 @@ In our example, there was only one commit to move.
 
 Creating a merge commit and rebasing are both valid ways of recombining changes that branched-off into different directions.
 They both have advantages and disadvantages.
-Some people care more about one aspect than another, so they end up having strong opinions about which approach is best.
+Some people care more about one aspect than another, so they may end up having strong opinions about which approach is best.
 Here's a hopefully balanced overview of the main trade-off:
 
 | | advantage | disadvantage |
@@ -103,4 +103,4 @@ Here's a hopefully balanced overview of the main trade-off:
 | **merge** | Preserves the history exactly as it happened. | Can result in a tangled, hard-to-read history. |
 | **rebase** | Results in an easy-to-read, linear history. | Lies about the order in which things happened. |
 
-Once you have determined the correct opinion about which one is better, please let everybody on the internet know about your important discovery!
+Once you have determined the correct opinion regarding which one is better, please let everybody on the internet know about your important discovery!

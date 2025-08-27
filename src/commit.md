@@ -18,11 +18,12 @@ The reason is that both Git and Jujutsu have a subcommand called `commit`, but t
 
 In Git, changes you make are not recorded automatically into commits.
 Instead, they exist outside of any commit, until you add them to one manually.
-The command `git commit` creates a new commit and stores both changes as well as the commit message in it.
+The command `git commit` creates a commit containing the new changes as well as the new commit message.
 
 In Jujutsu, there is always a commit already and any changes you make are automatically recorded into it.
 So, the description you type during `jj commit` will be applied to a commit that has already existed for some time.
-The **new** commit that's being created is completely empty, ready for auto-recording of the next changes.
+The _new_ commit that's being created is completely empty and has no description.
+It's ready for auto-recording of the upcoming changes you will be making.
 ```
 
 The command to complete both oft these tasks at once is:

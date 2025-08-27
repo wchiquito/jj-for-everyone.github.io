@@ -193,16 +193,16 @@ The more common way is with arguments on the command line, but exported variable
 
 You can export a variable separately from setting its value or do it all in one line:
 
-```console
-$ MY_NAME=Alice
-$ export MY_NAME
+```sh
+MY_NAME=Alice
+export MY_NAME
 ```
 
-```console
-$ export MY_NAME=Alice
+```sh
+export MY_NAME=Alice
 ```
 
-Such exported variable are usually referred to as **environment variables**.
+Such exported variables are usually referred to as **environment variables**.
 They are not _required_ to be uppercase, but it's a strong convention.
 It makes it easy to know which variables can be read by other programs.
 
@@ -243,8 +243,8 @@ Oops.
 Setting the `PATH` variable to the empty string tells the terminal to _not search for programs anywhere_.
 Therefore, the programs `ls` cannot be found anymore.
 
-We could fix this by copy-pasting the previous value of `PATH` to export that again.
-But if mess up the value of an environment variable for real, you often don't know what the previous, correct value was.
+We could fix this by copy-pasting the previous value of `PATH` and export that again.
+But if you mess up the value of an environment variable for real, you often don't know what the previous, correct value was.
 So it's easiest to just close the terminal window and open a new one.
 All variables will be reset to their default.
 
@@ -287,8 +287,19 @@ $ echo $SHELL
 If your shell is `bash`, you should add your custom startup commands to the file **`~/.bashrc`**.
 In the case of `zsh`, the startup script is **`~/.zshrc`**.
 
-There are actually many more shells besides `bash` and `zsh`.
-Learning about them can be useful, but your shell doesn't matter in this tutorial, so I will skip that topic.
+For now, print the content of your startup script.
+It's probably complicated, so don't try to understand it all.
+Nevertheless, taking a look is a great way to get acquainted with the terminal:
+
+```sh
+# for bash
+cat ~/.bashrc
+```
+
+```sh
+# for zsh
+cat ~/.zshrc
+```
 
 ```admonish tip title="Now you know the basics of the terminal ! 🎉"
 If most of this stuff was news to you, pat yourself on the back!
