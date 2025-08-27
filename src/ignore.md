@@ -1,6 +1,13 @@
 # Excluding files from version control
 
-<!-- Bob makes second commit without fetching, use .DS_Store for global example and another local one -->
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s ignore
+cd ~/jj-tutorial/repo
+```
+````
 
 Let's check up on Bob:
 

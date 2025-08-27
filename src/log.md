@@ -1,5 +1,14 @@
 # Inspecting the state of a repository
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s log
+cd ~/jj-tutorial/repo
+```
+````
+
 So, now we've got an empty repository.
 Let's take a closer look at it.
 The command `jj log` shows you a visual representation of your version history.

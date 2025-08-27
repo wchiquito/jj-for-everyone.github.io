@@ -1,7 +1,16 @@
-# Branching
+# Branching history
+
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s branch
+cd ~/jj-tutorial/repo
+```
+````
 
 ```admonish tip title="Welcome to level 1 !" 
-If you took a break after finishing the previous level, remember that you can [restore the state](./introduction.md#restoring-your-progress) of your example repo in case you lost it.
+If you took a break after finishing the previous level, remember that you can [reset the state](./introduction.md#reset-your-progress) of your example repo in case you lost it.
 ```
 
 The previous level only covered situations where you are working on a project on your own.

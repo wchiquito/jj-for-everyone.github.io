@@ -1,5 +1,14 @@
 # Sending commits to a remote
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s remote
+cd ~/jj-tutorial/repo
+```
+````
+
 We now have a commit which we don't want to lose.
 The way we're using Jujutsu right now, we don't have a backup at all.
 What would happen if we delete the `~/jj-tutorial/repo` directory on disk?

@@ -1,5 +1,14 @@
 # Creating a new commit
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s commit
+cd ~/jj-tutorial/repo
+```
+````
+
 Once we are done with a set of changes, we should create a new commit.
 If we don't do that, the next changes we make will be recorded into the same commit as the previous ones.
 That would make it harder to understand the evolution of a project later.

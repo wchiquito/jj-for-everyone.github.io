@@ -1,11 +1,19 @@
 # Initializing a repository
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s initialize
+```
+````
+
 A "repository" is a directory (folder) where Jujutsu keeps track of all files, including the ones in subdirectories.
 A repository usually corresponds to a project, so the version history of unrelated projects are not tied to each other.
 To create a repository, make a new folder on your filesystem.
 For this tutorial, you should use `~/jj-tutorial/repo`.
 Otherwise, some commands I tell you to run later won't work.
-(If you don't like the clutter in your home directory, you can always delete it and use the [restore script](./introduction#restoring-your-progress) when you continue with the tutorial.)
+(If you don't like the clutter in your home directory, you can always delete it and use the [reset script](./introduction.md#reset-your-progress) when you continue with the tutorial.)
 In that directory, run `jj git init --colocate` to initialize a new repository.
 
 As commands to copy-paste:

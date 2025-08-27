@@ -3,30 +3,29 @@
 [Introduction](./introduction.md)
 [Terminal basics](./terminal_basics.md)
 
-# Level 0
+- [Bootcamp]()
 
-- [Installation and setup](./install.md)
-- [Initializing a repository](./initialize.md)
-- [Inspecting the state of a repository](./log.md)
-- [Making changes](./making_changes.md)
-- [Creating a new commit](./commit.md)
-- [Sending commits to a remote](./remotes.md)
-- [Cloning a remote](./clone.md)
-- [Using GitHub (optional)](./github.md)
-- [Updating bookmarks](./update_bookmark.md)
+  - [Installation and setup](./install.md)
+  - [Initializing a repository](./initialize.md)
+  - [Inspecting the state of a repository](./log.md)
+  - [Making changes](./make_changes.md)
+  - [Creating a new commit](./commit.md)
+  - [Sending commits to a remote](./remote.md)
+  - [Cloning a remote](./clone.md)
+  - [Using GitHub (optional)](./github.md)
+  - [Updating bookmarks](./update_bookmark.md)
 
-# Level 1
+- [Collaboration]()
 
-- [Branching](./branching.md)
-- [Inspecting a commit](./inspect.md)
-- [Creating a merge commit](./merge.md)
-- [Excluding files from version control](./ignore.md)
-- [Rebasing](./rebase.md)
-- [Adding more bookmarks](./more_bookmarks.md)
-- [Navigating the history](./history_navigation.md)
+  - [Branching history](./branch.md)
+  - [Inspecting a commit](./show.md)
+  - [Creating a merge commit](./merge.md)
+  - [Excluding files from version control](./ignore.md)
+  - [Rebasing](./rebase.md)
+  - [Adding more bookmarks](./more_bookmarks.md)
+  - [Navigating the history](./navigate.md)
 
-<!-- # Level 2 -->
-<!-- problem solving -->
+<!-- - [Problem solving]() -->
 
 <!-- - [Undoing mistakes]() -->
 <!-- - [Tracking remote bookmarks]() <!-- delete and clone repo to simulate new PC --> -->
@@ -34,8 +33,7 @@
 <!-- - [Deleting commits and bookmarks]() -->
 <!-- - [Restoring file contents]() -->
 
-<!-- # Level 3 -->
-<!-- history rewirting -->
+<!-- - [History rewriting]() -->
 
 <!-- - [edit & squash]() -->
 <!-- - [describe]() -->
@@ -43,7 +41,7 @@
 <!-- - [restore from anywhere]() -->
 <!-- - [Cascading conflicts while rebasing]() -->
 
-<!-- # Level 4 -->
+<!-- - [Mastery]() -->
 <!-- everything else a Jujutsu expert should know -->
 
 <!-- - [absorb]() -->
@@ -53,8 +51,7 @@
 <!-- - [templates (extract infos for scripts)]() -->
 <!-- - [VCS theory: what even is a commit]() -->
 
-<!-- # Level 5 -->
-<!-- situational topics -->
+<!-- - [Situational topics]() -->
 
 <!-- - [tags]() -->
 <!-- - [submodules]() -->

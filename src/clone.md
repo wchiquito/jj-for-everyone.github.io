@@ -1,5 +1,14 @@
 # Cloning a remote
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s clone
+cd ~/jj-tutorial/repo
+```
+````
+
 In order to drive home the point that the remote repository functions as a backup, we're now going to completely delete our main repository and restore it from the remote.
 First, the deletion:
 

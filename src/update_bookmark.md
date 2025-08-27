@@ -1,5 +1,14 @@
 # Updating bookmarks
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s update_bookmark
+cd ~/jj-tutorial/repo
+```
+````
+
 We have learned how to push a new bookmark to a remote for the first time.
 We _could_ do that for every single commit we create and want to push to the remote.
 However, that would lead to a lot of unnecessary bookmarks lying around.

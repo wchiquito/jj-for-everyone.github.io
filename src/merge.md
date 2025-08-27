@@ -1,5 +1,14 @@
 # Creating a merge commit
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s merge
+cd ~/jj-tutorial/repo
+```
+````
+
 I've strung you along for long enough, let's finally create that version with the combined changes.
 
 There are actually two approaches to achieve this, one of them we'll see later.

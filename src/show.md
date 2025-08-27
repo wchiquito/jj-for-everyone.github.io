@@ -1,5 +1,14 @@
 # Inspecting a commit
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s show
+cd ~/jj-tutorial/repo
+```
+````
+
 Alice has just found out that Bod made changes at the same time as she did.
 Before she attempts to somehow create a version that includes both changes, she wants to verify the two changes are compatible.
 She therefore decides to check out Bob's changes by using `jj show`.

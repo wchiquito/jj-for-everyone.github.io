@@ -1,5 +1,14 @@
 # Adding more bookmarks
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s more_bookmarks
+cd ~/jj-tutorial/repo
+```
+````
+
 Let's switch back to Alice:
 
 ```sh

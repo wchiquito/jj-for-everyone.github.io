@@ -1,5 +1,20 @@
 # Rebasing
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s rebase
+cd ~/jj-tutorial/repo-bob
+```
+````
+
+Remember that we're still in Bob's repo from the last chapter:
+
+```sh
+cd ~/jj-tutorial/repo-bob
+```
+
 Now that Bob is happy with his second commit, he tries to push it to the remote.
 It will fail just like it did for Alice earlier:
 

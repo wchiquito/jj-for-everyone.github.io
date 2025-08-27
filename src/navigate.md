@@ -1,5 +1,14 @@
 # Navigating the history
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s navigate
+cd ~/jj-tutorial/repo
+```
+````
+
 Alice just got a text from Bob telling her that he pushed another commit.
 She decides to fetch them:
 

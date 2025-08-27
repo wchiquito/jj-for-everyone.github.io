@@ -1,5 +1,14 @@
 # Making changes
 
+````admonish quote title="Reset your progress" collapsible=true
+To reset your progress to the start of this chapter, run the following command:
+
+```sh
+curl https://jj-for-everyone.github.io/reset.sh | bash -s make_changes
+cd ~/jj-tutorial/repo
+```
+````
+
 Your primary goal is always to work on a project, Jujutsu just helps you manage your work.
 So let's pretend we're doing some actual work by putting stuff in a file:
 
