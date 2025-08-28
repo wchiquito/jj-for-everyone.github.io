@@ -51,9 +51,11 @@ Finally, click on "Create repository".
 ## Cloning an existing repo
 
 Navigate to the page of the existing repo in the browser.
-You should see a big green button that says "<> Code".
-Click on it and select "SSH" in the drop-down (assuming you have set up an SSH key as explained above).
+Cick on the green button that says "Code".
+**Select SSH** in the drop-down (assuming you have set up an SSH key as explained above).
 Copy the URL that's displayed.
+
+![](./github_ssh_url.png)
 
 Finally, paste the URL into Jujutsu's clone command:
 
