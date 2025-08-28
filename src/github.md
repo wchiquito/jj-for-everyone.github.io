@@ -1,4 +1,4 @@
-# Using GitHub
+# Using GitHub (optional)
 
 As promised, here are a few tips about using [GitHub](https://github.com/).
 If you are not interested in this, feel free to skip to the next chapter, it won't become relevant later.
