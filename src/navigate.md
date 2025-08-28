@@ -133,7 +133,7 @@ You can go back to the current state of the repository by running `jj new main`.
 Alright, so Alice now has the latest changes from Bob and can continue to do other work.
 She can always come back to her loop experiment later with `jj new`, finish the work and then combine it with the main branch.
 
-```admonish success title="You've completed Level 1 ! 🎉"
+```admonish success title="You've completed Level 2 ! 🎉"
 Now you have the basic skills to collaborate on projects with other people.
 Let's summarize what we've learned:
 - A branching history is normal when multiple people work together.
@@ -144,5 +144,5 @@ Let's summarize what we've learned:
 - You can navigate to any branch or past version of your repository with `jj new`.
 
 It's time to take a break from this tutorial and practice what you've learned on a real project.
-Level 2 will teach you how to **solve everyday problems** like merge conflicts, so I recommend you come back for it relatively soon.
+Level 3 will teach you how to **solve everyday problems** like merge conflicts, so I recommend you come back for it relatively soon.
 ```

@@ -9,11 +9,7 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-```admonish tip title="Welcome to level 1 !" 
-If you took a break after finishing the previous level, remember that you can [reset the state](./introduction.md#reset-your-progress) of your example repo in case you lost it.
-```
-
-The previous level only covered situations where you are working on a project on your own.
+Before now, we only covered situations where you are working on a project on your own.
 What if several people want to collaborate on the project?
 Let's simulate such a scenario and see what happens.
 

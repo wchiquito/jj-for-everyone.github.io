@@ -3,7 +3,7 @@
 [Introduction](./introduction.md)
 [Terminal basics](./terminal_basics.md)
 
-- [Bootcamp]()
+- [Level 1](./level_1.md)
 
   - [Installation and setup](./install.md)
   - [Initializing a repository](./initialize.md)
@@ -15,7 +15,7 @@
   - [Using GitHub (optional)](./github.md)
   - [Updating bookmarks](./update_bookmark.md)
 
-- [Collaboration]()
+- [Level 2](./level_2.md)
 
   - [Branching history](./branch.md)
   - [Inspecting a commit](./show.md)

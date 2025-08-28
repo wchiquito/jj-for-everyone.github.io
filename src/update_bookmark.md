@@ -88,7 +88,7 @@ Luckily it is not.
 Commits store a reference to their parent commit, which is why Jujutsu knows the order in which to draw the commits in the output of `jj log`.
 So, a commit with a bookmark pointing to it also protects all its ancestors from being deleted.
 
-```admonish success title="You've completed Level 0 ! 🎉"
+```admonish success title="You've completed Level 1 ! 🎉"
 You made it!
 At this point, you have all the skills needed for simple solo projects with proper backup.
 Let's summarize the workflow again:
@@ -98,9 +98,9 @@ Let's summarize the workflow again:
 1. push to the remote
 
 Ideally, you can take a little break now and practice what you've learned.
-Once you feel comfortable with the above, come back quickly for level 1, we're just scratching the surface.
+Once you feel comfortable with the above, come back quickly for level 2, we're just scratching the surface.
 
-If you need to collaborate with other people, level 1 is just as essential as this one.
+If you need to collaborate with other people, level 2 is just as essential as this one.
 I encourage you keep going right away!
 You've earned yourself a quick bathroom break though.
 ```
