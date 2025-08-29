@@ -1,7 +1,7 @@
 # Summary
 
-[Introduction](./introduction.md)
-[Terminal basics](./terminal_basics.md)
+- [Introduction](./introduction.md)
+  - [Terminal basics](./terminal_basics.md)
 
 - [Level 1](./level_1.md)
 
