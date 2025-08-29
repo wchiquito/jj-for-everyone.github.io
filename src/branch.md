@@ -168,7 +168,7 @@ If Jujutsu allowed Alice to push the `main` bookmark without knowing about Bob's
 Remember: The remote only considers commits worth keeping around if they are **reachable** from a bookmark.
 But if the `main` bookmark points to Alice's commit, Bob's commit is **not reachable** anymore, because it is not an ancestor of Alice's commit.
 
-Notice that the `main` bookmark appears **twice** in the log, both times with question marks `??`.
+Notice that the `main` bookmark appears **twice** in the log, both times with question marks **`??`**.
 This means Jujutsu isn't sure where the bookmark should point to.
 Alice moved it to her commit, while it was moved to Bob's commit on the remote.
 Once Alice has decided where it should actually point, she can tell Jujutsu by explicitly moving it there.
