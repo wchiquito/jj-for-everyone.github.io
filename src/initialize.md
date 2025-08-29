@@ -1,6 +1,6 @@
 # Initializing a repository
 
-````admonish quote title="Reset your progress" collapsible=true
+````admonish reset title="Reset your progress" collapsible=true
 To reset your progress to the start of this chapter, run the following command:
 
 ```sh

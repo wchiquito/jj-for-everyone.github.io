@@ -1,6 +1,6 @@
 [tools]
-"cargo:mdbook-admonish" = "latest"
-mdbook = "latest"
+"cargo:mdbook-admonish" = "1.20.0"
+mdbook = "0.4.51"
 
 [tasks]
 serve = "mdbook serve --port 3210"
