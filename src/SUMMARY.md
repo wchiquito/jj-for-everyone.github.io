@@ -33,6 +33,8 @@
   - [Deleting commits and bookmarks](./abandon.md)
   - [Restoring file contents](./restore.md)
 
+- [Must-know secret commands](./to_be_continued.md)
+
 <!-- - [History rewriting]() -->
 
 <!-- - [edit & squash]() -->
