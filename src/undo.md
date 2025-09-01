@@ -21,7 +21,7 @@ There are some low-level commands to inspect this "operation log" and restore th
 For now though, I will only teach you about the high-level commands to undo and redo operations one-by-one.
 
 ```admonish warning title="This chapter requires Jujutsu v0.33"
-The following only works if you're using at least version `0.33` of Jujutsu.
+The commands we'll learn in this chapter behave differently since version `0.33`.
 If you have an older one (check with `jj --version`), please update to a more recent version before continuing.
 Actually, at the time of writing, `0.33` isn't even released yet 😅.
 It will be released on Wednesday September 3rd, so you don't have to wait for long.
