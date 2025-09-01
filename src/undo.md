@@ -20,10 +20,11 @@ Turns out we can, because Jujutsu stores not only a version history of our proje
 There are some low-level commands to inspect this "operation log" and restore the repository to a specific state in time.
 For now though, I will only teach you about the high-level commands to undo and redo operations one-by-one.
 
-```admonish warning title="This chapter requires Jujutsu v0.33"
-The commands we'll learn in this chapter behave differently since version `0.33`.
+```admonish warning title="This chapter requires at least Jujutsu version 0.33"
+The commands we're going to run behave slightly differently with older versions.
 If you have an older one (check with `jj --version`), please update to a more recent version before continuing.
-Actually, at the time of writing, `0.33` isn't even released yet 😅.
+
+Actually, at the time of writing, `0.33` isn't even released yet... 😅
 It will be released on Wednesday September 3rd, so you don't have to wait for long.
 ```
 
