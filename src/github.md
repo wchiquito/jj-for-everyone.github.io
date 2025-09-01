@@ -4,10 +4,17 @@ As promised, here are a few tips about using [GitHub](https://github.com/).
 If you are not interested in this, feel free to skip to the next chapter, it won't become relevant later.
 
 I want to mention that GitHub is not the only provider of Git-hosting services, but certainly the most popular one.
-Others include [GitLab](https://about.gitlab.com/) and [Codeberg](https://codeberg.org/).
-Codeberg is a free instance of [Forgejo](https://forgejo.org/), which is open-source software you can host yourself.
+Unfortunately, it is proprietary.
+Proprietary software denies you the freedom to read, modify and share its source code.
+Here is a list of open-source Git-hosting software and service providers who use them.
+If your digital freedom is important to you, consider using one of these alternatives for hosting your repositories.
 
-All of these providers work very similarly to what I'm describing below, so you should have no trouble adapting to other providers.
+- [Forgejo](https://forgejo.org/)
+- [Codeberg](https://codeberg.org/)
+- [Sourcehut](https://sourcehut.org/)
+- [Gerrit](https://www.gerritcodereview.com/)
+- [Tangled](https://tangled.sh/)
+- [Radicle](https://radicle.xyz/)
 
 ## Authenticating with an SSH key
 
