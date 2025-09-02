@@ -25,8 +25,8 @@ printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
 jj commit -m "Add project description to readme"
 ```
 
-There's a neat trick here for the `commit` command:
-If you already have a short description in mind, you can pass it directly with the `-m` flag (short for `--message`).
+The above command uses a neat trick.
+If you already have a short description in mind, you can pass it directly to `jj commit` with the `-m` flag (short for `--message`).
 This can be faster than opening a separate text editor.
 
 `jj log` shows us a new commit on top of the one we pushed to the remote:
@@ -102,5 +102,4 @@ Once you feel comfortable with the above, come back quickly for level 2, we're j
 
 If you need to collaborate with other people, level 2 is just as essential as this one.
 I encourage you keep going right away!
-You've earned yourself a quick bathroom break though.
 ```

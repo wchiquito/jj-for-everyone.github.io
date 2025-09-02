@@ -131,7 +131,7 @@ There are a few things to observe here:
 - The new commit became our working copy, meaning any further file changes will be recorded into the new commit.
 - The previous commit is marked with `git_head()`.
   This marker is not important and you can ignore it.
-- The previous commit has a different symbol (circle) than the root commit (diamond).
+- The previous commit has a different symbol (circle `○`) than the root commit (diamond `◆`).
   This is related to an important feature, which we'll learn about later.
 
 We now have the tools for the most basic version control workflow:

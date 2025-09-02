@@ -67,6 +67,11 @@ jj git remote add origin ~/jj-tutorial/remote
 Here we connect to the remote by specifying its path on our filesystem.
 When using a repository hosted on GitHub or similar services, the path is replaced with a URL.
 More on that later.
+If everything went well, `origin` should now appear in the list of remotes:
+
+```sh
+jj git remote list
+```
 
 ## Adding a bookmark
 
@@ -121,7 +126,7 @@ This safety measure prevents you from pushing bookmarks you intended to remain l
 
 Many people find this safety measure annoying.
 The Jujutsu contributors are aware of this and a better solution is being worked on.
-For now, you can disable it with the following command:
+If you want, you can disable it with the following command:
 
 ```sh
 jj config set --user git.push-new-bookmarks true
