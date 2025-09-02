@@ -13,7 +13,7 @@ A repository usually corresponds to a project, so the version history of unrelat
 To create a repository, make a new folder on your filesystem.
 For this tutorial, you should use `~/jj-tutorial/repo`.
 Otherwise, some commands I tell you to run later won't work.
-(If you don't like the clutter in your home directory, you can always delete it and use the [reset script](./introduction.md#reset-your-progress) when you continue with the tutorial.)
+(If you don't like the clutter in your home directory, you can always delete it and use the [reset script](./how_to_read.md#reset-your-progress) when you continue with the tutorial.)
 In that directory, run `jj git init --colocate` to initialize a new repository.
 
 As commands to copy-paste:

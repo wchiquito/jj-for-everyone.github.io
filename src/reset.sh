@@ -9,7 +9,7 @@ chapter="$1"
 
 function success() {
     set +x
-    echo "✅✅✅ Reset script completed successfully! ✅✅✅"
+    echo "✅ Reset script completed successfully! ✅"
     exit 0
 }
 
@@ -17,6 +17,8 @@ function success() {
 export JJ_CONFIG=/dev/null
 
 rm -rf ~/jj-tutorial
+
+if [ "$chapter" = install ] ; then success ; fi
 
 if ! command -v jj > /dev/null ; then
     echo "ERROR: Jujutsu doesn't seem to be installed."
