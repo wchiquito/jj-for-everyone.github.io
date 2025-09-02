@@ -22,7 +22,7 @@ You can just copy these commands:
 
 ```sh
 printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj commit -m "Add projcet description to readme"
+jj commit -m "Add project description to readme"
 ```
 
 There's a neat trick here for the `commit` command:
@@ -36,7 +36,7 @@ This can be faster than opening a separate text editor.
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">z</span><span class="bold highlighted dimgray ">zywylnt</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 20:36:38</span><span class="bold "> </span><span class="bold highlighted blue ">4</span><span class="bold highlighted dimgray ">8708b9f</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">xqyrwux</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:36:38</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">ca38e90</span>
-│  Add projcet description to readme
+│  Add project description to readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">939d4cf</span>
 │  Add readme with project title
 ~
@@ -61,7 +61,7 @@ Let's see what `jj log` has to say:
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">z</span><span class="bold highlighted dimgray ">zywylnt</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 20:36:38</span><span class="bold "> </span><span class="bold highlighted blue ">4</span><span class="bold highlighted dimgray ">8708b9f</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">xqyrwux</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:36:38</span> <span class="purple ">main*</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">ca38e90</span>
-│  Add projcet description to readme
+│  Add project description to readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">939d4cf</span>
 │  Add readme with project title
 ~

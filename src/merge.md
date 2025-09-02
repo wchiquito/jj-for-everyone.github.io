@@ -40,7 +40,7 @@ Let's view the result with `jj log`:
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span> │  <span class="bold "></span><span class="bold purple ">q</span><span class="highlighted dimgray ">uolxwkk</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:22:22</span> <span class="purple ">main?? main@origin</span> <span class="green ">git_head()</span> <span class="bold "></span><span class="bold blue ">8</span><span class="highlighted dimgray ">d538390</span>
 ├─╯  Document hello.py in README.md
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">xqyrwux</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 21:14:46</span> <span class="bold "></span><span class="bold blue ">ff</span><span class="highlighted dimgray ">df52d0</span>
-│  Add projcet description to readme
+│  Add project description to readme
 ~
 </pre>
 
