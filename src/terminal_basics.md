@@ -4,6 +4,21 @@ This chapter is not about Jujutsu or even version control.
 But the tutorial requires you to work in the terminal, so let's cover the basics.
 If you're already comfortable in the terminal, you can confidently skip this chapter.
 
+There are a lot of small things to cover, so here's a little table of contents:
+
+<!--toc:start-->
+- [What is the terminal?](#what-is-the-terminal)
+- [The prompt](#the-prompt)
+- [Entering commands](#entering-commands)
+- [The current working directory](#the-current-working-directory)
+- [Copy-pasting commands](#copy-pasting-commands)
+- [Redirection](#redirection)
+- [Pagers](#pagers)
+- [Variables and the environment](#variables-and-the-environment)
+- [The `PATH` variable](#the-path-variable)
+- [Startup scripts](#startup-scripts)
+<!--toc:end-->
+
 ## What is the terminal?
 
 The terminal is an application that lets you enter commands to the operating system in the form of text.
@@ -162,7 +177,7 @@ It takes the output from another program shows it to you from the beginning.
 
 Some programs will display their output in a pager automatically, because they know they will be printing a lot of text.
 Jujutsu also does that sometimes.
-Given that you may "accidentally" end up in a pager, you need to know that you can **exit a pager by typing** <kbd>Q</kbd>!
+Given that you may "accidentally" end up in a pager, you need to know that you can **exit a pager by typing** <kbd>q</kbd>!
 
 If the output of Jujutsu is displayed in a pager, the bottom left corner will be a colon `:` character and your prompt won't be shown.
 One way you can experiment with using a pager is by running `man tar`, which opens the manual page for the `tar` command.
