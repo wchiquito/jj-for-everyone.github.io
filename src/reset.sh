@@ -59,7 +59,7 @@ jj git init --colocate
 
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 
 if [ "$chapter" = log ] ; then success ; fi
 
@@ -94,7 +94,7 @@ jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 
 if [ "$chapter" = github ] ; then success ; fi
 
@@ -121,7 +121,7 @@ jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
 cd ~/jj-tutorial/repo-bob
 jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 
 echo "# jj-tutorial
 
@@ -223,7 +223,7 @@ cd ~/jj-tutorial/repo
 # roleplay as Alice
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 
 echo "print('Hallo, Welt!')" >> hello.py
 echo "print('Bonjour, le monde!')" >> hello.py

@@ -27,7 +27,7 @@ cd ~/jj-tutorial/repo
 # roleplay as Alice
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 ```
 
 Let's confirm everything went well with `jj log`:

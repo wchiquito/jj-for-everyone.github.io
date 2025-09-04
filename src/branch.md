@@ -71,7 +71,7 @@ Let's go into that repo, configure our author information for the role-play and 
 cd ~/jj-tutorial/repo-bob
 jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 jj log
 ```
 

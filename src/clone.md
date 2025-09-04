@@ -36,7 +36,7 @@ We'll also need to recreate our repo-specific authorship configuration:
 cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 ```
 
 Let's run `jj log` in our fresh clone to see if we restored the repo successfully:

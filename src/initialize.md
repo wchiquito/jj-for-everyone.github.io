@@ -65,5 +65,5 @@ jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
 
 # reset already recorded global authorship information:
-jj describe --reset-author --no-edit
+jj metaedit --update-author
 ```
