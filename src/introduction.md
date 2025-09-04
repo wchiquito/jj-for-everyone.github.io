@@ -14,7 +14,7 @@ If you're stuck on Windows, consider using [WSL](https://learn.microsoft.com/en-
 
 ## FAQ
 
-```admonish question title="What is version control and why should you use it?" collapsible=true
+```admonish question title="What is version control and why should I use it?" collapsible=true
 I will assume you're using version control for software development, but it can be used for other things as well.
 For example, authoring professionally formatted documents with tools like [Typst](https://typst.app/).
 The source of this tutorial is stored in version control too!
