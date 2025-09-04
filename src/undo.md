@@ -23,9 +23,6 @@ For now though, I will only teach you about the high-level commands to undo and 
 ```admonish warning title="This chapter requires at least Jujutsu version 0.33"
 The commands we're going to run behave slightly differently with older versions.
 If you have an older one (check with `jj --version`), please update to a more recent version before continuing.
-
-Actually, at the time of writing, `0.33` isn't even released yet... 😅
-It will be released on Wednesday September 3rd, so you don't have to wait for long.
 ```
 
 Let's remind ourselves what the state of our repo looks like
