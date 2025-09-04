@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
+red='\033[0;31m'
+blue='\033[0;34m'
+no_color='\033[0m' # No Color
+
+error="${red}Error:${no_color}"
+hint="${blue}Hint:${no_color}"
+
 if [ "${1:-x}" = "x" ] ; then
-    echo "Please provide the chapter keyword as the first argument."
+    set +x
+    printf "$error Please provide the chapter keyword as the first argument.\n"
     exit 1
 fi
 chapter="$1"
@@ -21,8 +29,25 @@ rm -rf ~/jj-tutorial
 if [ "$chapter" = install ] ; then success ; fi
 
 if ! command -v jj > /dev/null ; then
-    echo "ERROR: Jujutsu doesn't seem to be installed."
-    echo "       Please install it and rerun the script."
+    set +x
+    printf "$error Jujutsu doesn't seem to be installed.\n"
+    printf "       Please install it and rerun the script.\n"
+    exit 1
+fi
+
+# make sure jj version is recent enough
+detected_version="$(jj --version | cut -c 6-7)"
+required_version="33"
+if [ "$detected_version" -lt "$required_version" ] ; then
+    set +x
+    printf "$error Your Jujutsu version (0.$detected_version) is too outdated.\n"
+    printf "       Please update to version 0.$detected_version or later.\n"
+    printf "$hint If you installed Jujutsu with mise, as recommended in the installation\n"
+    printf "      chapter, use the following commands to update:\n"
+    echo "
+mise install-into jujutsu@latest /tmp/jj-install
+mv /tmp/jj-install/jj ~/.local/bin
+rm -rf /tmp/jj-install"
     exit 1
 fi
 
