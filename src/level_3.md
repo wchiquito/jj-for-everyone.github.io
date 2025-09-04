@@ -14,14 +14,14 @@ jj redo
 ```
 Track a remote bookmark in order to push to it
 ```sh
-jj bookmark track <name>@origin
+jj bookmark track <NAME>@origin
 ```
 Delete a commit (and bookmarks pointing to it)
 ```sh
-jj abandon <change-id>
+jj abandon <CHANGE_ID>
 ```
 Restore the state (of a specific file) (from a specific commit)
 ```sh
-jj restore [--from <change-id>] [file-to-restore]
+jj restore [--from <CHANGE_ID>] [FILE_TO_RESTORE]
 ```
 ````
