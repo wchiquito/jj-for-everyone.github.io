@@ -21,7 +21,7 @@ Let's simulate Alice making a fresh clone of the repo:
 ```sh
 cd ~ # move out of the directory we're about to delete
 rm -rf ~/jj-tutorial/repo
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
 
 # roleplay as Alice

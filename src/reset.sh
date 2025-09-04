@@ -21,9 +21,6 @@ function success() {
     exit 0
 }
 
-# Ensure existing user configuration does not affect script behavior.
-export JJ_CONFIG=/dev/null
-
 rm -rf ~/jj-tutorial
 
 if [ "$chapter" = install ] ; then success ; fi
@@ -51,11 +48,29 @@ rm -rf /tmp/jj-install"
     exit 1
 fi
 
+# Make sure user configured git.colocate = true
+if [ "$(jj config get git.colocate)" != "true" ] ; then
+    set +x
+    printf "$error Your configuration of git.colocate is not set to true.\n"
+    printf "       This will become the default in Jujutsu version 0.33, so don't worry"
+    printf "       about having a non-standard configuration."
+    printf "       Please run the following command:\n"
+    echo "
+jj config set --user git.colocate true"
+    exit 1
+fi
+
+# Ensure existing user configuration does not affect script behavior.
+tmp_config=/tmp/jj_for_everyone_reset_script_config.toml
+echo "git.colocate = true" > $tmp_config
+trap 'rm $tmp_config' EXIT
+export JJ_CONFIG=$tmp_config
+
 if [ "$chapter" = initialize ] ; then success ; fi
 
-mkdir -p ~/jj-tutorial/repo
+mkdir ~/jj-tutorial
+jj git init ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
-jj git init --colocate
 
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
@@ -90,7 +105,7 @@ if [ "$chapter" = clone ] ; then success ; fi
 
 cd ~
 rm -rf ~/jj-tutorial/repo
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
 jj config set --repo user.name "Alice"
 jj config set --repo user.email "alice@local"
@@ -117,7 +132,7 @@ Printing the text \"Hello, world!\" is a classic exercise in introductory
 programming courses. It's easy to complete in basically any language and
 makes students feel accomplished and curious for more at the same time."
 
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
 cd ~/jj-tutorial/repo-bob
 jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
@@ -217,7 +232,7 @@ if [ "$chapter" = track ] ; then success ; fi
 
 cd ~ # move out of the directory we're about to delete
 rm -rf ~/jj-tutorial/repo
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
 
 # roleplay as Alice

@@ -15,11 +15,11 @@ jj config set --user user.email "alice@local"
 ```
 Initialize a repository
 ```sh
-jj git init --colocate
+jj git init <DESTINATION>
 ```
 Clone an existing repository
 ```sh
-jj git clone --colocate <PATH_OR_URL>
+jj git clone <PATH_OR_URL> <DESTINATION>
 ```
 Commit the changes you made
 ```sh

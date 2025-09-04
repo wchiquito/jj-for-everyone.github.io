@@ -24,10 +24,9 @@ The process to do that with Jujutsu is the exact same process as restoring the p
 Here's the command:
 
 ```sh
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo
 ```
 
-Just like `jj git init`, you should use the `--colocate` flag with the `clone` command until it becomes the default soon.
 The last two arguments are (1) the **source** from which to clone and (2) the **destination** - where to store the copied repo. 
 When you clone from a remote, you're automatically connected to it with the default name `origin`.
 We'll also need to recreate our repo-specific authorship configuration:

@@ -125,6 +125,19 @@ jj config set --user user.email "anon@local"
 If you want shell completions, follow the instructions [here](https://jj-vcs.github.io/jj/latest/install-and-setup/#command-line-completion).
 If you don't know what a "shell completion" is, don't worry, it's not important.
 
+````admonish info title="Two flavors of repositories"
+Jujutsu can create repositories in two slightly different flavors: "colocated" and "non-colocated".
+For newcomers like you, the "colocated" flavor is the better choice.
+Run the following command to configure it as the default:
+
+```sh
+jj config set --user git.colocate true
+```
+
+I won't explain the difference, it doesn't matter to you.
+Colocated repos will become the default in Jujutsu version 0.34 anyway, at which point I can just remove this info box.
+````
+
 ## Installing a simple text editor
 
 Jujutsu will sometime ask you to edit a text file.

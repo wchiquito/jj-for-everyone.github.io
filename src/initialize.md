@@ -10,26 +10,23 @@ curl https://jj-for-everyone.github.io/reset.sh | bash -s initialize
 
 A "repository" is a directory (folder) where Jujutsu keeps track of all files, including the ones in subdirectories.
 A repository usually corresponds to a project, so the version history of unrelated projects are not tied to each other.
-To create a repository, make a new folder on your filesystem.
-For this tutorial, you should use `~/jj-tutorial/repo`.
-Otherwise, some commands I tell you to run later won't work.
+In this tutorial, we'll use `~/jj-tutorial/repo` as the location of our repository.
+Don't put it somewhere else, otherwise some commands I tell you to run won't work later.
 (If you don't like the clutter in your home directory, you can always delete it and use the [reset script](./how_to_read.md#reset-your-progress) when you continue with the tutorial.)
-In that directory, run `jj git init --colocate` to initialize a new repository.
 
-As commands to copy-paste:
+The command to initialize a new repository is `jj git init <DESTINATION>`.
+We use `cd` to change our working directory to the new repository.
+Copy-paste these commands into your terminal:
 
 ```sh
-mkdir -p ~/jj-tutorial/repo
+mkdir ~/jj-tutorial
+jj git init ~/jj-tutorial/repo
 cd ~/jj-tutorial/repo
-jj git init --colocate
 ```
 
 Let's examine our first `jj` command.
 `git` is the subcommand responsible for various Git-specific compatibility features.
 One of them is the `init` command, which initializes a new repository that's compatible with Git.
-I won't explain the `--colocate` flag, because the details are irrelevant and it's behavior will become the default anyway the near future.
-Just use the flag for now.
-You'll likely be able to omit it starting in version `0.34` at the beginning of October.
 
 What does "initializing a repository" mean?
 Essentially, Jujutsu creates two directories `.git` and `.jj`.
@@ -41,7 +38,7 @@ The `.jj` directory contains additional metadata which enable some of Jujutsu's 
 ```admonish warning
 You should never manipulate files in these directories directly!
 Their content is a well-structured database.
-If you corrupt the database format, you might completely brick the repository.
+If you corrupt the database format, the repository might become broken.
 We'll talk about a second layer of backup in the [chapter about remotes](./remotes.md).
 ```
 

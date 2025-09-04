@@ -62,7 +62,7 @@ Since Bob is working at the same time as her, he doesn't have the commit made by
 We can simulate that by creating a third repository, which has the same remote as our primary one:
 
 ```
-jj git clone --colocate ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
+jj git clone ~/jj-tutorial/remote ~/jj-tutorial/repo-bob
 ```
 
 Let's go into that repo, configure our author information for the role-play and make sure the log looks the same way as when Alice started her work:

@@ -67,5 +67,5 @@ Copy the URL that's displayed.
 Finally, paste the URL into Jujutsu's clone command:
 
 ```sh
-jj git clone --colocate <COPIED_URL>
+jj git clone <COPIED_URL>
 ```
