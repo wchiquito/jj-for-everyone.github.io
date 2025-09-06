@@ -1,7 +1,7 @@
 # Level 1
 
 This level will provide you with the bare minimum of skills you need to get work done.
-It's only enough for the simplest use cases and you're working alone.
+It's only enough for the simplest use cases and you're working on your own.
 For example, students who track and submit their homework with a Git repository won't need more than this. 
 
 The following "cheat sheet" contains the most important commands from level 1.
