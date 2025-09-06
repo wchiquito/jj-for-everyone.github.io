@@ -22,7 +22,7 @@ The most popular form of a remote is to host a repository with an online service
 That requires an account and a little setup though, so we'll use a simpler approach in this tutorial.
 Your remote will be stored in a new directory on your computer, at a different location than your primary repository.
 That style of remote is bad as a backup and bad for collaboration, but it's perfect for learning how remotes work.
-There are a few practical tips about using GitHub in a later chapter.
+There are a few practical tips about using GitHub in a [later chapter](github.md).
 
 ## Initializing the remote
 

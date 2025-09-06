@@ -101,6 +101,15 @@ jj git remote add origin ~/jj-tutorial/remote
 jj bookmark create main --revision @-
 jj git push --bookmark main --allow-new
 
+if [ "$chapter" = update_bookmark ] ; then success ; fi
+
+printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
+jj commit -m "Add project description to readme"
+
+jj bookmark move main --to @-
+
+jj git push
+
 if [ "$chapter" = clone ] ; then success ; fi
 
 cd ~
@@ -112,15 +121,6 @@ jj config set --repo user.email "alice@local"
 jj metaedit --update-author
 
 if [ "$chapter" = github ] ; then success ; fi
-
-if [ "$chapter" = update_bookmark ] ; then success ; fi
-
-printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj commit -m "Add project description to readme"
-
-jj bookmark move main --to @-
-
-jj git push
 
 if [ "$chapter" = branch ] ; then success ; fi
 

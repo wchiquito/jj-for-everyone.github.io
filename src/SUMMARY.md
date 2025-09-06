@@ -14,9 +14,9 @@
   - [Making changes](./make_changes.md)
   - [Creating a new commit](./commit.md)
   - [Sending commits to a remote](./remote.md)
+  - [Updating bookmarks](./update_bookmark.md)
   - [Cloning a remote](./clone.md)
   - [Using GitHub (optional)](./github.md)
-  - [Updating bookmarks](./update_bookmark.md)
 
 - [Level 2](./level_2.md)
 

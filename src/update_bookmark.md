@@ -49,7 +49,7 @@ Let's start by moving the bookmark:
 jj bookmark move main --to @-
 ```
 
-We could've told Jujutsu where to move the bookmark to using the change ID, i.e. `--to kxqyrwux`.
+We could've told Jujutsu where to move the bookmark using the change ID, i.e. `--to kxqyrwux`.
 Alternatively, we can use `@-`, which is a neat way to refer to the **parent of the working copy commit**.
 There are many such clever ways to refer to commits, but that's a topic for later.
 For now, just remember `@-`, because that's by far the most useful one.
@@ -68,7 +68,7 @@ Let's see what `jj log` has to say:
 </pre>
 
 The important thing to notice here is that Jujutsu shows us the discrepancy between the local bookmark `main` and its remote counterpart.
-`main*` is the local bookmark and the star next to its name means it's out-of-sync with the remote.
+`main*` is the local bookmark and the star next to the name means it's out-of-sync with the remote.
 `main@origin` is the location of the bookmark on the remote.
 
 We can fix the situation by pushing the bookmark again:
@@ -86,20 +86,4 @@ You might be wondering:
 Since the remote requires a bookmark to receive commits and the `main` bookmark is **not** pointing to the first commit anymore... is that commit now lost or deleted?
 Luckily it is not.
 Commits store a reference to their parent commit, which is why Jujutsu knows the order in which to draw the commits in the output of `jj log`.
-So, a commit with a bookmark pointing to it also protects all its ancestors from being deleted.
-
-```admonish success title="You've completed Level 1 ! 🎉"
-You made it!
-At this point, you have all the skills needed for simple solo projects with proper backup.
-Let's summarize the workflow again:
-1. make changes
-1. create a new commit
-1. move the bookmark
-1. push to the remote
-
-Ideally, you can take a little break now and practice what you've learned.
-Once you feel comfortable with the above, come back quickly for level 2, we're just scratching the surface.
-
-If you need to collaborate with other people, level 2 is just as essential as this one.
-I encourage you keep going right away!
-```
+These references form a chain that protects all ancestors of a bookmarked commit from being lost.
