@@ -1,7 +1,7 @@
 # Installation and setup
 
 There are many ways to install Jujutsu and the best one depends on your system.
-If you don't care at all about how Jujutsu is installed and you just want to get it over with, you can copy-paste these commands:
+If you don't care at all about how Jujutsu is installed, you can copy-paste these commands:
 
 ```sh
 curl https://mise.run | sh
@@ -11,7 +11,36 @@ rm -rf /tmp/jj-install
 exec $SHELL --login
 ```
 
-```admonish info title="Explanation of these commands" collapsible=true
+Now run `jj --version` to verify the installation.
+It should print the currently installed version of Jujutsu, something like `jj 0.33.0-blabla`.
+If the output is an error instead, e.g. `bash: jj: command not found...`, open the text box below.
+
+````admonish fail title="jj: command not found..." collapsible=true
+Your system probably doesn't add the installation directory `~/.local/bin` to the `PATH` environment variable.
+To fix that, you first need to figure out what shell you're using:
+
+```sh
+echo $SHELL
+```
+
+The output should end with either "bash", or "zsh".
+That's your shell.
+Next, put a command adding `~/.local/bin` to your `PATH` variable into your shell's startup script:
+
+```sh
+# for bash:
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+```
+
+```sh
+# for zsh:
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.zshrc
+```
+
+Lastly, close the terminal and open a new one so the changes take effect.
+````
+
+```admonish note title="Explanation of installation commands" collapsible=true
 Installing software is more difficult than one might think.
 It depends on many factors like CPU architecture and operating system.
 That's why there's not a single, easy command we can run to install Jujutsu on any system.
@@ -62,7 +91,7 @@ If you have the Rust toolchain installed and would like to compile from source, 
 cargo install --locked --bin jj jj-cli
 ```
 
-You can also download a binary directly from the [release page](https://github.com/jj-vcs/jj/releases/latest).
+You can also download a binary directly from Jujutsu's [release page](https://github.com/jj-vcs/jj/releases/latest).
 Scroll down to "Assets", there is a list of archives to download.
 The right one depends on two things: your operating system and your CPU architecture.
 Look for the strings matching your system in the names of the archives.
@@ -91,10 +120,6 @@ The extracted folder will contain documentation and a file called "jj".
 You need to move that into the directory `~/.local/bin/`.
 (Or another location where you keep your programs if you know what you're doing.)
 ````
-
-Run `jj -h` to verify the installation.
-It should print a list of available commands.
-If the output is something like `bash: jj: command not found...`, the installation was not successful.
 
 ## Initial configuration
 
