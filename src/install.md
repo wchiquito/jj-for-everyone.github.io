@@ -165,12 +165,14 @@ Colocated repos will become the default in Jujutsu version 0.34 anyway, at which
 
 ## Installing a simple text editor
 
-Jujutsu will sometime ask you to edit a text file.
-To do that, it opens a text editor for you.
-Which text editor is opened can be configured.
-There are many interesting options for text editors in the terminal.
-If you know about these options, you probably already have a favorite.
-For everyone else, I'm just gonna tell you to install what I consider to be the simplest and most intuitive one:
+Jujutsu will sometimes ask you to edit a text file.
+The default text editor used for that purpose is `nano` on Linux and Mac.
+It works fine, but it can be counter-intuitive for new users.
+(<kbd>Ctrl+O</kbd> is saving the file and <kbd>Ctrl+X</kbd> is closing the program.)
+
+This is optional, but I recommend you install a text editor called [edit](https://github.com/microsoft/edit).
+I consider it to be the simplest and most intuitive alternative.
+If you installed Jujutsu with `mise` (as suggested above) you can also install `edit` the same way:
 
 ```sh
 mise install-into edit@latest /tmp/edit-install
@@ -178,8 +180,9 @@ mv /tmp/edit-install/edit ~/.local/bin
 rm -rf /tmp/edit-install
 ```
 
-Running these commands will install the text editor called `edit`.
-Next, we need to tell Jujutsu to use that specific one when opening a text file for us:
+If you installed Jujutsu using another method, you'll want to install `edit` on your own as well.
+
+Next, we need to configure Jujutsu to use `edit` when opening a text file:
 
 ```sh
 jj config set --user ui.editor edit
