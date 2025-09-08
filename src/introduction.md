@@ -12,9 +12,8 @@ Don't worry, there's a chapter covering some terminal basics in case you're not 
 The commands I tell you to run will often only work on Unix-like operating systems like Linux and Mac.
 If you're stuck on Windows, consider using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-## FAQ
+## What is version control and why should you use it?
 
-```admonish question title="What is version control and why should I use it?" collapsible=true
 I will assume you're using version control for software development, but it can be used for other things as well.
 For example, authoring professionally formatted documents with tools like [Typst](https://typst.app/).
 The source of this tutorial is stored in version control too!
@@ -27,9 +26,9 @@ A general-purpose backup solution can keep a few copies of your files around.
 A graphical document editor can allow multiple people to edit the text simultaneously.
 But sometimes, you need a sharper knife.
 Jujutsu is the sharpest knife available.
-```
 
-```admonish question title="Why Jujutsu instead of Git?" collapsible=true
+## Why Jujutsu instead of Git?
+
 Git is by far the most commonly used VCS in the software development industry.
 So why not use that?
 Using the most popular thing has undeniable benefits.
@@ -79,4 +78,3 @@ Learning Jujutsu instead of Git as your first VCS does have some downsides:
   You will be notified if new versions of Jujutsu change something in a way that's relevant to what you learned in this tutorial.
 
 Despite some downsides, I think the benefits are **well worth it**.
-```
