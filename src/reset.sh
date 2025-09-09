@@ -208,6 +208,8 @@ if [ "$chapter" = navigate ] ; then success ; fi
 
 jj git fetch
 jj new main
+jj new 'description("Document hello.py in README.md")'
+jj new main
 
 if [ "$chapter" = undo ] ; then success ; fi
 

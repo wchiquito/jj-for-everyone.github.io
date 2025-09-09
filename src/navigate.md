@@ -128,7 +128,11 @@ Great!
 We created a commit on top of an old one from our history.
 The file `hello.py` didn't exist at that time, which you can confirm by running `ls`.
 
-You can go back to the current state of the repository by running `jj new main`.
+Let's go back to the state of the main branch, to get a clean state for the next chapter:
+
+```sh
+jj new main
+```
 
 Alright, so Alice now has the latest changes from Bob and can continue to do other work.
 She can always come back to her loop experiment later with `jj new`, finish the work and then combine it with the main branch.
