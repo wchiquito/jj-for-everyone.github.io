@@ -12,6 +12,11 @@ cd ~/jj-tutorial/repo
 Before now, we only covered situations where you are working on a project on your own.
 What if several people want to collaborate on the project?
 Let's simulate such a scenario and see what happens.
+We'll do so in the same repository we used in the previous level:
+
+```sh
+cd ~/jj-tutorial/repo
+```
 
 Alice and Bob are working on a group project for a computer science class.
 Their task is to write the classic "Hello, world!" program in Python.
