@@ -55,7 +55,7 @@ Let's run `jj log` in our fresh clone to see if everything was restored successf
 
 The most recent commit we made is visible, but its ancestors are hidden.
 In their place is a tilde **`~`** symbol.
-Jujutsu uses some rule to determine which commits you are probably not interesting to you.
+Jujutsu uses some rule to determine which commits are probably not interesting to you.
 These commits are hidden by default in the output of `jj log`.
 We can tell Jujutsu to show us _all_ commits with `jj log --revisions 'all()'`:
 
