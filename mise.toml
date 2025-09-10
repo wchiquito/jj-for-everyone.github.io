@@ -17,7 +17,6 @@ cd /tmp/jj-for-everyone-deploy-workspace
 jj new main
 
 mdbook build --dest-dir docs
-touch .nojekyll
 jj describe --message 'deploy to github pages'
 jj bookmark track gh-pages@origin &> /dev/null
 jj abandon --retain-bookmarks gh-pages
