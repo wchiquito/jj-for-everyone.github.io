@@ -63,7 +63,7 @@ Let's go over it one-by-one:
   So we can see that this commit removed the previous line 3 and replaced it with three new lines.
   The first line is neutral, indicating that it was not changed in this commit.
 
-````admonish info title="The difference between author and committer" collapsible=true
+````admonish note title="The difference between author and committer" collapsible=true
 The **author** of a commit is the primary person who wrote its content.
 In this case, that refers to the new paragraph being added to the readme.
 The **committer** on the other hand is the person who created the commit.

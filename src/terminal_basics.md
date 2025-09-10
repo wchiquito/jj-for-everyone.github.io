@@ -316,7 +316,7 @@ cat ~/.bashrc
 cat ~/.zshrc
 ```
 
-```admonish tip title="Now you know the basics of the terminal ! 🎉"
+```admonish success title="Now you know the basics of the terminal ! 🎉"
 If most of this stuff was news to you, pat yourself on the back!
 You've already learned a lot.
 This should be enough knowledge about the terminal to get you through the tutorial.
